@@ -175,7 +175,7 @@ async function fetchGitHubProjects() {
         {
             name: 'BizScoutAI',
             description: 'Developed an AI-powered platform that assists in identifying optimal locations for new businesses in urban areas. The system integrates geospatial data clustering, demographic trends, and economic indicators to provide recommendations.',
-            demoUrl: null, // Add demo URL here if available
+            demoUrl: null,
             githubUrl: 'https://github.com/ShamikOfficial',
             tech: ['Python', 'AI/ML', 'Geospatial Analysis', 'Data Clustering']
         }
@@ -213,18 +213,20 @@ async function fetchGitHubProjects() {
             'bizscout-ai'
         ];
 
-        // Filter and display projects (exclude portfolio repo, forks, and custom projects)
+        // Filter to only show Super-Store-Analysis
         const filteredRepos = repos.filter(repo => {
             const repoNameLower = repo.name.toLowerCase();
             return !repo.fork && 
                    repoNameLower !== username.toLowerCase() &&
                    repoNameLower !== 'shamikofficial.github.io' &&
-                   !customProjectNames.some(customName => repoNameLower.includes(customName));
+                   !customProjectNames.some(customName => repoNameLower.includes(customName)) &&
+                   (repoNameLower.includes('super-store') || repoNameLower.includes('superstore'));
         });
         
-        // Add GitHub projects
-        filteredRepos.slice(0, 4).forEach((repo, index) => {
-            const projectCard = createProjectCard(repo);
+        // Add only Super-Store-Analysis project
+        if (filteredRepos.length > 0) {
+            const superStoreRepo = filteredRepos[0];
+            const projectCard = createProjectCard(superStoreRepo);
             projectsGrid.appendChild(projectCard);
             
             // Animate on load
@@ -234,8 +236,8 @@ async function fetchGitHubProjects() {
                 projectCard.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
                 projectCard.style.opacity = '1';
                 projectCard.style.transform = 'translateY(0)';
-            }, (customProjects.length + index) * 100);
-        });
+            }, customProjects.length * 100);
+        }
     } catch (error) {
         console.error('Error fetching GitHub projects:', error);
         projectsGrid.innerHTML = `
@@ -311,6 +313,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 100);
         }
     }
+
+    // ===== Expandable Timeline Items =====
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    timelineItems.forEach(item => {
+        const timelineContent = item.querySelector('.timeline-content');
+        const expandBtn = item.querySelector('.expand-btn');
+        const timelineHeader = item.querySelector('.timeline-header');
+        
+        if (timelineContent && expandBtn && timelineHeader) {
+            // Click handler for expand button
+            expandBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                timelineContent.classList.toggle('expanded');
+            });
+            
+            // Click handler for header (also expands)
+            timelineHeader.addEventListener('click', (e) => {
+                if (e.target !== expandBtn && !expandBtn.contains(e.target)) {
+                    timelineContent.classList.toggle('expanded');
+                }
+            });
+        }
+    });
 });
 
 // ===== Lazy Load Images =====
