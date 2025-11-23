@@ -56,7 +56,10 @@
                 <p class="hero-description">Transforming data into actionable insights through AI and Data Science</p>
                 <div class="hero-highlights">
                     <div class="highlight-item">
-                        <i class="fas fa-graduation-cap"></i>
+                        <div class="highlight-logo-wrapper">
+                            <img src="assets/images/srm-logo.png" alt="SRM Logo" class="highlight-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fas fa-graduation-cap highlight-icon-fallback" style="display: none;"></i>
+                        </div>
                         <div class="highlight-text">
                             <span class="highlight-line1">Bachelors</span>
                             <span class="highlight-line2">Computer Science</span>
@@ -70,7 +73,10 @@
                         </div>
                     </div>
                     <div class="highlight-item">
-                        <i class="fas fa-graduation-cap"></i>
+                        <div class="highlight-logo-wrapper">
+                            <img src="assets/images/usc-logo.png" alt="USC Logo" class="highlight-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fas fa-graduation-cap highlight-icon-fallback" style="display: none;"></i>
+                        </div>
                         <div class="highlight-text">
                             <span class="highlight-line1">Masters</span>
                             <span class="highlight-line2">Applied Data Science</span>
@@ -124,29 +130,62 @@
     <section id="education" class="education">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Master of Science, Applied Data Science</h3>
-                        <span class="timeline-company">University of Southern California</span>
-                        <span class="timeline-date">Jan 2025 - Dec 2026</span>
-                        <p class="timeline-description">
-                            <strong>GPA:</strong> 3.7<br>
-                            <strong>Coursework:</strong> Machine Learning, Data Science, Data Management, Deep Learning
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-date">
+                        <span class="date-year">2025 - 2026</span>
+                        <span class="date-duration">Jan - Dec</span>
+                    </div>
+                    <div class="education-line">
+                        <div class="education-dot"></div>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-degree">
+                            <div class="education-logo-wrapper">
+                                <img src="assets/images/usc-logo.png" alt="USC Logo" class="education-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fas fa-graduation-cap education-icon-fallback" style="display: none;"></i>
+                            </div>
+                            <h3 class="education-title">Master of Science, Applied Data Science</h3>
+                        </div>
+                        <p class="education-university">University of Southern California</p>
+                        <p class="education-location">
+                            <i class="fas fa-map-marker-alt"></i> Los Angeles, CA, USA
                         </p>
+                        <div class="education-details">
+                            <div class="education-detail-item">
+                                <strong>GPA:</strong> 3.7/4.0
+                            </div>
+                            <div class="education-detail-item">
+                                <strong>Coursework:</strong> Machine Learning, Data Science, Data Management, Deep Learning
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Bachelor of Technology, Computer Science</h3>
-                        <span class="timeline-company">SRM Institute of Science and Technology</span>
-                        <span class="timeline-date">May 2018 - Jun 2022</span>
-                        <p class="timeline-description">
-                            <strong>GPA:</strong> 3.46<br>
-                            <strong>Location:</strong> Chennai, TN, India
+                <div class="education-item">
+                    <div class="education-date">
+                        <span class="date-year">2018 - 2022</span>
+                        <span class="date-duration">May - Jun</span>
+                    </div>
+                    <div class="education-line">
+                        <div class="education-dot"></div>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-degree">
+                            <div class="education-logo-wrapper">
+                                <img src="assets/images/srm-logo.png" alt="SRM Logo" class="education-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <i class="fas fa-graduation-cap education-icon-fallback" style="display: none;"></i>
+                            </div>
+                            <h3 class="education-title">Bachelor of Technology, Computer Science</h3>
+                        </div>
+                        <p class="education-university">SRM Institute of Science and Technology</p>
+                        <p class="education-location">
+                            <i class="fas fa-map-marker-alt"></i> Chennai, TN, India
                         </p>
+                        <div class="education-details">
+                            <div class="education-detail-item">
+                                <strong>GPA:</strong> 3.46/4.0
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,24 +196,35 @@
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-header-content">
-                                <h3 class="timeline-title">Data Scientist</h3>
-                                <span class="timeline-company">Bajaj Finserv Health</span>
-                                <span class="timeline-date">Nov 2023 - Dec 2024</span>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="date-year">2023 - 2024</span>
+                        <span class="date-duration">Nov - Dec</span>
+                    </div>
+                    <div class="experience-line">
+                        <div class="experience-dot"></div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div class="experience-title-section">
+                                <div class="experience-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    <h3 class="experience-title">Data Scientist</h3>
+                                </div>
+                                <p class="experience-company">Bajaj Finserv Health</p>
+                                <p class="experience-location">
+                                    <i class="fas fa-map-marker-alt"></i> Los Angeles, CA, USA
+                                </p>
                             </div>
                             <button class="expand-btn" aria-label="Expand details">
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
-                        <div class="timeline-preview">
+                        <div class="experience-preview">
                             <p>• Led cross-functional engineering teams, collaborating with Product, Architecture, and senior stakeholders delivering end-to-end AI and data-driven solutions...</p>
                         </div>
-                        <div class="timeline-description">
+                        <div class="experience-description">
                             <p>• Led cross-functional engineering teams, collaborating with Product, Architecture, and senior stakeholders 
                             delivering end-to-end AI and data-driven solutions, while also driving on-campus engagement through 
                             hackathons and technical hiring<br><br>
@@ -189,23 +239,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-header-content">
-                                <h3 class="timeline-title">Associate Data Scientist</h3>
-                                <span class="timeline-company">Bajaj Finserv Health</span>
-                                <span class="timeline-date">Jul 2022 - Oct 2023</span>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="date-year">2022 - 2023</span>
+                        <span class="date-duration">Jul - Oct</span>
+                    </div>
+                    <div class="experience-line">
+                        <div class="experience-dot"></div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div class="experience-title-section">
+                                <div class="experience-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    <h3 class="experience-title">Associate Data Scientist</h3>
+                                </div>
+                                <p class="experience-company">Bajaj Finserv Health</p>
+                                <p class="experience-location">
+                                    <i class="fas fa-map-marker-alt"></i> Los Angeles, CA, USA
+                                </p>
                             </div>
                             <button class="expand-btn" aria-label="Expand details">
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
-                        <div class="timeline-preview">
+                        <div class="experience-preview">
                             <p>• Optimized NER name-matching algorithm (Fraud Detection), enhancing policy holder identification accuracy by 27%...</p>
                         </div>
-                        <div class="timeline-description">
+                        <div class="experience-description">
                             <p>• Optimized NER name-matching algorithm (Fraud Detection), enhancing policy holder identification accuracy 
                             by 27%<br><br>
                             • Integrated Lead Allocation Framework through Salesforce for prioritized lead allocation and decision-making 
@@ -216,23 +277,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-header-content">
-                                <h3 class="timeline-title">Data Engineer Intern</h3>
-                                <span class="timeline-company">Bajaj Finserv Health</span>
-                                <span class="timeline-date">Jan 2022 - Jun 2022</span>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="date-year">2022</span>
+                        <span class="date-duration">Jan - Jun</span>
+                    </div>
+                    <div class="experience-line">
+                        <div class="experience-dot"></div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div class="experience-title-section">
+                                <div class="experience-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    <h3 class="experience-title">Data Engineer Intern</h3>
+                                </div>
+                                <p class="experience-company">Bajaj Finserv Health</p>
+                                <p class="experience-location">
+                                    <i class="fas fa-map-marker-alt"></i> Los Angeles, CA, USA
+                                </p>
                             </div>
                             <button class="expand-btn" aria-label="Expand details">
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
-                        <div class="timeline-preview">
+                        <div class="experience-preview">
                             <p>• Optimized Web Engagement by multivariate Events analytics & retention strategy on Google Cloud improving conversion by 37%...</p>
                         </div>
-                        <div class="timeline-description">
+                        <div class="experience-description">
                             <p>• Optimized Web Engagement by multivariate Events analytics & retention strategy on Google Cloud improving 
                             conversion by 37%<br><br>
                             • Applied Distributed Systems design to engineer Disaster Recovery, Optimization and Monitoring System for 
@@ -241,23 +313,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-header-content">
-                                <h3 class="timeline-title">Data Engineer Intern</h3>
-                                <span class="timeline-company">Reomnify</span>
-                                <span class="timeline-date">Nov 2020 - Jan 2021</span>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="date-year">2020 - 2021</span>
+                        <span class="date-duration">Nov - Jan</span>
+                    </div>
+                    <div class="experience-line">
+                        <div class="experience-dot"></div>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div class="experience-title-section">
+                                <div class="experience-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    <h3 class="experience-title">Data Engineer Intern</h3>
+                                </div>
+                                <p class="experience-company">Reomnify</p>
                             </div>
                             <button class="expand-btn" aria-label="Expand details">
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                         </div>
-                        <div class="timeline-preview">
+                        <div class="experience-preview">
                             <p>• Engineered custom web scraping solutions for 500+ templates with version control, reducing manual data collection</p>
                         </div>
-                        <div class="timeline-description">
+                        <div class="experience-description">
                             <p>• Engineered custom web scraping solutions for 500+ templates with version control, reducing manual data collection</p>
                         </div>
                     </div>
@@ -400,29 +480,46 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact">
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+12132556219">+1 (213) 255-6219</a>
+                <h3 class="footer-title">Get In Touch</h3>
+                <div class="footer-sections">
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">
+                            <i class="fas fa-address-card"></i>
+                            Contact Information
+                        </h4>
+                        <div class="footer-contact-group">
+                            <div class="footer-contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+12132556219">+1 (213) 255-6219</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:shamik1900@gmail.com">shamik1900@gmail.com</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Los Angeles, CA, USA</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:shamik1900@gmail.com">shamik1900@gmail.com</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Los Angeles, CA, USA</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">
+                            <i class="fas fa-share-alt"></i>
+                            Connect With Me
+                        </h4>
+                        <div class="footer-social-group">
+                            <a href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <p class="footer-note">Built with HTML, CSS & JavaScript</p>

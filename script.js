@@ -114,7 +114,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.timeline-item, .skill-category, .about-stats, .project-card').forEach(el => {
+document.querySelectorAll('.experience-item, .skill-category, .about-stats, .project-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
@@ -367,24 +367,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===== Expandable Timeline Items =====
-    const timelineItems = document.querySelectorAll('.timeline-item');
+    const experienceItems = document.querySelectorAll('.experience-item');
     
-    timelineItems.forEach(item => {
-        const timelineContent = item.querySelector('.timeline-content');
+    experienceItems.forEach(item => {
+        const experienceContent = item.querySelector('.experience-content');
         const expandBtn = item.querySelector('.expand-btn');
-        const timelineHeader = item.querySelector('.timeline-header');
+        const experienceHeader = item.querySelector('.experience-header');
         
-        if (timelineContent && expandBtn && timelineHeader) {
+        if (experienceContent && expandBtn && experienceHeader) {
             // Click handler for expand button
             expandBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                timelineContent.classList.toggle('expanded');
+                experienceContent.classList.toggle('expanded');
             });
             
             // Click handler for header (also expands)
-            timelineHeader.addEventListener('click', (e) => {
+            experienceHeader.addEventListener('click', (e) => {
                 if (e.target !== expandBtn && !expandBtn.contains(e.target)) {
-                    timelineContent.classList.toggle('expanded');
+                    experienceContent.classList.toggle('expanded');
                 }
             });
         }
