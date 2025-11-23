@@ -570,7 +570,7 @@ section {
 .education-timeline::before {
     content: '';
     position: absolute;
-    left: 200px;
+    left: 30px;
     top: 0;
     bottom: 0;
     width: 3px;
@@ -579,32 +579,11 @@ section {
 }
 
 .education-item {
-    display: grid;
-    grid-template-columns: 180px 40px 1fr;
+    display: flex;
     gap: 2rem;
     margin-bottom: 3rem;
     position: relative;
     align-items: start;
-}
-
-.education-date {
-    text-align: right;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.date-year {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.date-duration {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    font-weight: 500;
 }
 
 .education-line {
@@ -613,6 +592,8 @@ section {
     justify-content: center;
     align-items: start;
     padding-top: 0.5rem;
+    flex-shrink: 0;
+    width: 60px;
 }
 
 .education-dot {
@@ -634,7 +615,7 @@ section {
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
     transition: var(--transition);
-    margin-left: 1rem;
+    flex: 1;
 }
 
 .education-content:hover {
@@ -645,9 +626,28 @@ section {
 
 .education-degree {
     display: flex;
-    align-items: center;
-    gap: 0.75rem;
+    align-items: flex-start;
+    gap: 1rem;
     margin-bottom: 0.75rem;
+}
+
+.education-header-info {
+    flex: 1;
+}
+
+.education-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.education-date i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
 }
 
 .education-logo-wrapper {
@@ -895,7 +895,7 @@ section {
 .experience-timeline::before {
     content: '';
     position: absolute;
-    left: 200px;
+    left: 30px;
     top: 0;
     bottom: 0;
     width: 3px;
@@ -904,20 +904,11 @@ section {
 }
 
 .experience-item {
-    display: grid;
-    grid-template-columns: 180px 40px 1fr;
+    display: flex;
     gap: 2rem;
     margin-bottom: 3rem;
     position: relative;
     align-items: start;
-}
-
-.experience-date {
-    text-align: right;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
 }
 
 .experience-line {
@@ -926,6 +917,8 @@ section {
     justify-content: center;
     align-items: start;
     padding-top: 0.5rem;
+    flex-shrink: 0;
+    width: 60px;
 }
 
 .experience-dot {
@@ -948,7 +941,7 @@ section {
     transition: var(--transition);
     overflow: hidden;
     border: 1px solid var(--border-color);
-    margin-left: 1rem;
+    flex: 1;
 }
 
 .experience-content:hover {
@@ -1011,6 +1004,21 @@ section {
     font-weight: 600;
     color: var(--primary-color);
     margin: 0.5rem 0;
+}
+
+.experience-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.experience-date i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
 }
 
 .experience-location {
@@ -1789,31 +1797,20 @@ section {
     }
 
     .education-timeline::before {
-        left: 80px;
+        left: 20px;
     }
 
     .education-item {
-        grid-template-columns: 80px 40px 1fr;
         gap: 1rem;
         margin-bottom: 2rem;
     }
 
-    .education-date {
-        text-align: left;
-        padding-right: 0;
-    }
-
-    .date-year {
-        font-size: 0.95rem;
-    }
-
-    .date-duration {
-        font-size: 0.75rem;
+    .education-line {
+        width: 40px;
     }
 
     .education-content {
         padding: 1.5rem;
-        margin-left: 0;
     }
 
     .education-title {
@@ -1829,18 +1826,16 @@ section {
     }
 
     .experience-timeline::before {
-        left: 80px;
+        left: 20px;
     }
 
     .experience-item {
-        grid-template-columns: 80px 40px 1fr;
         gap: 1rem;
         margin-bottom: 2rem;
     }
 
-    .experience-date {
-        text-align: left;
-        padding-right: 0;
+    .experience-line {
+        width: 40px;
     }
 
     .experience-content {
