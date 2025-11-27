@@ -4,6 +4,26 @@
     document.documentElement.setAttribute('data-theme', savedTheme);
 })();
 
+// ===== Google Analytics Event Tracking =====
+function trackEvent(category, action, label = '', value = null) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+            event_category: category,
+            event_label: label,
+            value: value
+        });
+    }
+}
+
+function trackPageView(sectionName) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+            page_title: sectionName,
+            page_location: window.location.href + '#' + sectionName
+        });
+    }
+}
+
 // ===== Navigation Scroll Effect =====
 const navbar = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
@@ -29,6 +49,10 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
+        
+        // Track navigation click
+        const sectionName = link.getAttribute('href').replace('#', '');
+        trackEvent('Navigation', 'click', sectionName);
     });
 });
 
@@ -66,6 +90,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
+            
+            // Track scroll to section
+            const sectionName = this.getAttribute('href').replace('#', '');
+            if (sectionName) {
+                trackPageView(sectionName);
+            }
         }
     });
 });
@@ -108,6 +138,12 @@ const observer = new IntersectionObserver((entries) => {
                 statNumbers.forEach(stat => {
                     animateCounter(stat);
                 });
+            }
+            
+            // Track section view
+            const section = entry.target.closest('section');
+            if (section && section.id) {
+                trackPageView(section.id);
             }
         }
     });
@@ -157,6 +193,22 @@ function createCustomProjectCard(project) {
             </div>
         </div>
     `;
+
+    // Add event tracking to project buttons
+    const demoBtn = card.querySelector('.project-btn-demo');
+    const githubBtn = card.querySelector('.project-btn-github');
+    
+    if (demoBtn) {
+        demoBtn.addEventListener('click', () => {
+            trackEvent('Project', 'demo_click', project.name);
+        });
+    }
+    
+    if (githubBtn) {
+        githubBtn.addEventListener('click', () => {
+            trackEvent('Project', 'github_click', project.name);
+        });
+    }
 
     return card;
 }
@@ -295,6 +347,14 @@ function createProjectCard(repo) {
         </div>
     `;
 
+    // Add event tracking to GitHub button
+    const githubBtn = card.querySelector('.project-btn-github');
+    if (githubBtn) {
+        githubBtn.addEventListener('click', () => {
+            trackEvent('Project', 'github_click', repo.name);
+        });
+    }
+
     return card;
 }
 
@@ -335,6 +395,9 @@ function initTheme() {
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         
+        // Track theme toggle
+        trackEvent('Theme', 'toggle', newTheme);
+        
         // Update icon and text
         if (newTheme === 'dark') {
             themeIcon.classList.remove('fa-moon');
@@ -355,6 +418,53 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Fetch GitHub projects
     fetchGitHubProjects();
+    
+    // Track button clicks
+    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const buttonText = btn.textContent.trim();
+            const href = btn.getAttribute('href');
+            
+            if (buttonText.includes('Resume') || buttonText.includes('resume')) {
+                trackEvent('Button', 'download_resume', buttonText);
+            } else if (buttonText.includes('View My Work') || buttonText.includes('Projects')) {
+                trackEvent('Button', 'view_projects', buttonText);
+            } else if (buttonText.includes('Get In Touch') || buttonText.includes('Contact')) {
+                trackEvent('Button', 'contact', buttonText);
+            } else if (buttonText.includes('GitHub')) {
+                trackEvent('Button', 'github_link', buttonText);
+            } else {
+                trackEvent('Button', 'click', buttonText);
+            }
+        });
+    });
+    
+    // Track social media clicks
+    document.querySelectorAll('.social-links a, .footer-social-item').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            let platform = 'unknown';
+            
+            if (href.includes('github.com')) {
+                platform = 'GitHub';
+            } else if (href.includes('linkedin.com')) {
+                platform = 'LinkedIn';
+            } else if (href.includes('mailto:')) {
+                platform = 'Email';
+            } else if (href.includes('twitter.com') || href.includes('x.com')) {
+                platform = 'Twitter';
+            }
+            
+            trackEvent('Social', 'click', platform);
+        });
+    });
+    
+    // Track resume download from nav
+    document.querySelectorAll('.nav-resume').forEach(link => {
+        link.addEventListener('click', () => {
+            trackEvent('Navigation', 'download_resume', 'Nav Bar');
+        });
+    });
     
     // Set initial active nav link
     if (window.location.hash) {
@@ -378,13 +488,23 @@ document.addEventListener('DOMContentLoaded', () => {
             // Click handler for expand button
             expandBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
+                const isExpanding = !experienceContent.classList.contains('expanded');
                 experienceContent.classList.toggle('expanded');
+                
+                // Track experience expand/collapse
+                const company = item.querySelector('.experience-company')?.textContent || 'Unknown';
+                trackEvent('Experience', isExpanding ? 'expand' : 'collapse', company);
             });
             
             // Click handler for header (also expands)
             experienceHeader.addEventListener('click', (e) => {
                 if (e.target !== expandBtn && !expandBtn.contains(e.target)) {
+                    const isExpanding = !experienceContent.classList.contains('expanded');
                     experienceContent.classList.toggle('expanded');
+                    
+                    // Track experience expand/collapse
+                    const company = item.querySelector('.experience-company')?.textContent || 'Unknown';
+                    trackEvent('Experience', isExpanding ? 'expand' : 'collapse', company);
                 }
             });
         }
