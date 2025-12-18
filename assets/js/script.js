@@ -419,15 +419,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch GitHub projects
     fetchGitHubProjects();
     
-    // Track button clicks
+    // Track button clicks (excluding resume buttons which are tracked separately)
     document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+        // Skip resume buttons - they're tracked separately
+        if (btn.classList.contains('resume-btn-view') || btn.classList.contains('resume-btn-download')) {
+            return;
+        }
+        
         btn.addEventListener('click', (e) => {
             const buttonText = btn.textContent.trim();
             const href = btn.getAttribute('href');
             
-            if (buttonText.includes('Resume') || buttonText.includes('resume')) {
-                trackEvent('Button', 'download_resume', buttonText);
-            } else if (buttonText.includes('View My Work') || buttonText.includes('Projects')) {
+            if (buttonText.includes('View My Work') || buttonText.includes('Projects')) {
                 trackEvent('Button', 'view_projects', buttonText);
             } else if (buttonText.includes('Get In Touch') || buttonText.includes('Contact')) {
                 trackEvent('Button', 'contact', buttonText);
@@ -459,10 +462,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Track resume download from nav
-    document.querySelectorAll('.nav-resume').forEach(link => {
+    // Track resume view and download from nav
+    document.querySelectorAll('.nav-resume-view').forEach(link => {
+        link.addEventListener('click', () => {
+            trackEvent('Navigation', 'view_resume', 'Nav Bar');
+        });
+    });
+    
+    document.querySelectorAll('.nav-resume-download').forEach(link => {
         link.addEventListener('click', () => {
             trackEvent('Navigation', 'download_resume', 'Nav Bar');
+        });
+    });
+    
+    // Track resume view and download from experience section
+    document.querySelectorAll('.resume-btn-view').forEach(btn => {
+        btn.addEventListener('click', () => {
+            trackEvent('Button', 'view_resume', 'Experience Section');
+        });
+    });
+    
+    document.querySelectorAll('.resume-btn-download').forEach(btn => {
+        btn.addEventListener('click', () => {
+            trackEvent('Button', 'download_resume', 'Experience Section');
         });
     });
     

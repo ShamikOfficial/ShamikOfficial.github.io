@@ -115,6 +115,11 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-right: 2rem;
+}
+
+.nav-logo {
+    margin-right: 1rem;
 }
 
 .nav-logo a {
@@ -180,19 +185,39 @@ body {
     position: relative;
 }
 
-.nav-resume {
+.nav-resume-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    align-items: center;
+}
+
+.nav-resume-view,
+.nav-resume-download {
     background: var(--primary-color);
     color: white !important;
     padding: 0.5rem 1rem;
     border-radius: 0.375rem;
-    margin-left: 1rem;
+    white-space: nowrap;
 }
 
-.nav-resume:hover {
+.nav-resume-view {
+    background: var(--bg-secondary);
+    color: var(--text-primary) !important;
+    border: 1px solid var(--primary-color);
+}
+
+.nav-resume-view:hover {
+    background: var(--primary-color);
+    color: white !important;
+}
+
+.nav-resume-download:hover {
     background: var(--primary-dark);
 }
 
-.nav-resume::after {
+.nav-resume-view::after,
+.nav-resume-download::after {
     display: none;
 }
 
@@ -1135,6 +1160,10 @@ section {
 .resume-download {
     text-align: center;
     margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* ===== Skills Section ===== */
@@ -1688,6 +1717,11 @@ section {
 
     .nav-left {
         gap: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .nav-logo {
+        margin-right: 0.5rem;
     }
 
     .theme-toggle {
@@ -1725,10 +1759,18 @@ section {
         left: 0;
     }
 
-    .nav-resume {
+    .nav-resume-group {
         margin-left: 0;
         margin-top: 0.5rem;
-        display: inline-block;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    .nav-resume-view,
+    .nav-resume-download {
+        width: 100%;
+        text-align: center;
     }
 
     .hero-title {
