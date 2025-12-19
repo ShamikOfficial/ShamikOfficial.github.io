@@ -430,6 +430,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const buttonText = btn.textContent.trim();
             const href = btn.getAttribute('href');
             
+            // Track hero resume button
+            if (buttonText.includes('View Resume') && href && href.includes('resume.pdf')) {
+                trackEvent('Button', 'view_resume', 'Hero Section');
+                return;
+            }
+            
             if (buttonText.includes('View My Work') || buttonText.includes('Projects')) {
                 trackEvent('Button', 'view_projects', buttonText);
             } else if (buttonText.includes('Get In Touch') || buttonText.includes('Contact')) {
