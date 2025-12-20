@@ -225,14 +225,14 @@ async function fetchGitHubProjects() {
     const customProjects = [
         {
             name: 'EcoMateAI',
-            description: 'Built and hosted a gamified Generative AI based carbon footprint analyzer using StreamLit that tracks daily activities and offers personalized suggestions to optimize sustainability goals in day-to-day tasks.',
+            description: 'Developed and deployed a production-ready Generative AI application for carbon footprint analysis. Built end-to-end ML pipeline using Python and StreamLit, implementing gamification features to drive user engagement. Delivered personalized sustainability recommendations through advanced data analytics and AI models.',
             demoUrl: 'https://ecomateai.streamlit.app/',
             githubUrl: 'https://github.com/ShamikOfficial',
             tech: ['Python', 'StreamLit', 'Generative AI', 'Data Analytics']
         },
         {
             name: 'BizScoutAI',
-            description: 'Developed an AI-powered platform that assists in identifying optimal locations for new businesses in urban areas. The system integrates geospatial data clustering, demographic trends, and economic indicators to provide recommendations.',
+            description: 'Engineered an AI-powered business intelligence platform for location optimization using machine learning algorithms. Integrated geospatial data processing, demographic analysis, and predictive modeling to deliver actionable insights for strategic business decisions. Implemented scalable data clustering techniques for large-scale urban datasets.',
             demoUrl: null,
             githubUrl: 'https://github.com/ShamikOfficial',
             tech: ['Python', 'AI/ML', 'Geospatial Analysis', 'Data Clustering']
