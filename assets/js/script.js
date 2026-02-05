@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Track button clicks (excluding resume buttons which are tracked separately)
     document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
         // Skip resume buttons - they're tracked separately
-        if (btn.classList.contains('resume-btn-view') || btn.classList.contains('resume-btn-download')) {
+        if (btn.classList.contains('resume-btn-view')) {
             return;
         }
         
@@ -468,29 +468,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Track resume view and download from nav
+    // Track resume view from nav
     document.querySelectorAll('.nav-resume-view').forEach(link => {
         link.addEventListener('click', () => {
             trackEvent('Navigation', 'view_resume', 'Nav Bar');
         });
     });
     
-    document.querySelectorAll('.nav-resume-download').forEach(link => {
-        link.addEventListener('click', () => {
-            trackEvent('Navigation', 'download_resume', 'Nav Bar');
-        });
-    });
-    
-    // Track resume view and download from experience section
+    // Track resume view from experience section
     document.querySelectorAll('.resume-btn-view').forEach(btn => {
         btn.addEventListener('click', () => {
             trackEvent('Button', 'view_resume', 'Experience Section');
-        });
-    });
-    
-    document.querySelectorAll('.resume-btn-download').forEach(btn => {
-        btn.addEventListener('click', () => {
-            trackEvent('Button', 'download_resume', 'Experience Section');
         });
     });
     
