@@ -231,6 +231,13 @@ async function fetchGitHubProjects() {
             tech: ['Python', 'StreamLit', 'Generative AI', 'Data Analytics']
         },
         {
+            name: 'Custom Python Library using CUDA',
+            description: 'Implemented high-performance matrix multiplication and image convolution operations using CPU, CUDA, and optimized GPU implementations. Developed Python bindings through shared libraries, demonstrating performance comparisons between CPU, naïve CUDA, tiled CUDA, and cuBLAS approaches. Achieved significant speedups for large-scale matrix operations and image processing tasks on Tesla T4 GPU.',
+            demoUrl: null,
+            githubUrl: 'https://github.com/ShamikOfficial',
+            tech: ['CUDA', 'C/C++', 'Python', 'GPU Computing', 'Image Processing']
+        },
+        {
             name: 'BizScoutAI',
             description: 'Engineered an AI-powered business intelligence platform for location optimization using machine learning algorithms. Integrated geospatial data processing, demographic analysis, and predictive modeling to deliver actionable insights for strategic business decisions. Implemented scalable data clustering techniques for large-scale urban datasets.',
             demoUrl: null,
