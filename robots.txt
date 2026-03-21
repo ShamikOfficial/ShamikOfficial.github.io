@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shamikofficial.github.io/sitemap.xml

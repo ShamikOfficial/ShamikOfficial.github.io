@@ -1,598 +1,1358 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shamik Basu - Personal Portfolio | Data Scientist & AI Engineer">
-    <title>Shamik Basu | Portfolio</title>
-    
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GPFMXEJB4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-6GPFMXEJB4');
-    </script>
-    
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='professional'?'professional':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<title>Shamik Basu | Data Scientist | MS Data Science USC | ML & AI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shamik Basu — MS Data Science @ USC (GPA 3.78). 2+ years building production ML, RAG, and LLM systems. 1st Place UCLA SAIRS Hackathon 2025. Seeking Summer 2026 Data Science / ML internship in Los Angeles.">
+<meta name="keywords" content="Shamik Basu, Data Scientist, Machine Learning Engineer, USC Data Science, RAG, LLM, Python, PyTorch, LangChain, Los Angeles">
+<meta name="author" content="Shamik Basu">
+<meta property="og:title" content="Shamik Basu | Data Scientist & ML Engineer">
+<meta property="og:description" content="MS Data Science @ USC. Built production RAG pipelines, LLM inference systems, and AI analytics at scale. Open to Summer 2026 internships.">
+<meta property="og:url" content="https://shamikofficial.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://shamikofficial.github.io/assets/images/profile-picture.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shamik Basu | Data Scientist">
+<meta name="twitter:description" content="MS Data Science @ USC. Production ML, RAG, LLM. Seeking Summer 2026 internship.">
+<link rel="canonical" href="https://shamikofficial.github.io/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== Theme tokens (Light = default, Professional = dark) ===== */
+:root {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --bg-page: #f1f5f9;
+  --text: #475569;
+  --text-heading: #0f172a;
+  --text-muted: #64748b;
+  --text-faint: #64748b;
+  --text-subtle: #64748b;
+  --border: rgba(15, 23, 42, 0.07);
+  --border-section: rgba(15, 23, 42, 0.06);
+  --nav-scrolled-bg: rgba(255, 255, 255, 0.82);
+  --nav-border: rgba(15, 23, 42, 0.06);
+  --nav-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+  --accent: #1d4ed8;
+  --accent-hover: #1e40af;
+  --accent-soft: rgba(29, 78, 216, 0.08);
+  --accent-soft-border: rgba(29, 78, 216, 0.2);
+  --card-bg: #ffffff;
+  --card-border: rgba(15, 23, 42, 0.08);
+  --card-border-hover: #1d4ed8;
+  --card-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 16px rgba(15, 23, 42, 0.04);
+  --card-shadow-hover: 0 4px 12px rgba(15, 23, 42, 0.08), 0 12px 32px rgba(15, 23, 42, 0.06);
+  --hero-tagline: #475569;
+  --hero-photo-inner: #ffffff;
+  --hero-photo-shadow: rgba(15, 23, 42, 0.1);
+  --hero-glow: radial-gradient(ellipse 90% 70% at 50% -15%, rgba(29, 78, 216, 0.07), transparent 55%);
+  --stat-bg: #ffffff;
+  --stat-border: rgba(15, 23, 42, 0.08);
+  --stat-text: #475569;
+  --stat-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --badge-bg: rgba(29, 78, 216, 0.08);
+  --badge-border: rgba(29, 78, 216, 0.22);
+  --btn-primary-fg: #ffffff;
+  --btn-secondary-fg: #0f172a;
+  --btn-secondary-border: rgba(15, 23, 42, 0.12);
+  --btn-secondary-hover: rgba(15, 23, 42, 0.04);
+  --btn-resume-hover-fg: #ffffff;
+  --timeline-line: rgba(15, 23, 42, 0.12);
+  --pill-green-bg: rgba(34, 197, 94, 0.1);
+  --mobile-panel-bg: rgba(255, 255, 255, 0.97);
+  --toggle-border: rgba(15, 23, 42, 0.1);
+  --toggle-bg: #ffffff;
+  --toggle-icon: #0f172a;
+  --theme-switch-bg: #ffffff;
+  --theme-switch-border: rgba(15, 23, 42, 0.1);
+  --project-card-bg: #ffffff;
+  --skill-pill-bg: #f8fafc;
+  --skill-pill-border: rgba(15, 23, 42, 0.08);
+  --skill-pill-hover: rgba(29, 78, 216, 0.08);
+  --tech-tag-bg: rgba(29, 78, 216, 0.06);
+  --tech-tag-border: rgba(29, 78, 216, 0.18);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+}
+html[data-theme="professional"] {
+  color-scheme: dark;
+  --bg: #060a12;
+  --bg-page: #060a12;
+  --text: #94a3b8;
+  --text-heading: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+  --text-subtle: #64748b;
+  --border: rgba(255, 255, 255, 0.06);
+  --border-section: rgba(255, 255, 255, 0.06);
+  --nav-scrolled-bg: rgba(6, 10, 18, 0.82);
+  --nav-border: rgba(255, 255, 255, 0.06);
+  --nav-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
+  --accent: #5b9cf9;
+  --accent-hover: #7eb3fb;
+  --accent-soft: rgba(91, 156, 249, 0.12);
+  --accent-soft-border: rgba(91, 156, 249, 0.28);
+  --card-bg: rgba(255, 255, 255, 0.035);
+  --card-border: rgba(255, 255, 255, 0.09);
+  --card-border-hover: #5b9cf9;
+  --card-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 8px 32px rgba(0, 0, 0, 0.35);
+  --card-shadow-hover: 0 0 0 1px rgba(91, 156, 249, 0.35), 0 16px 48px rgba(0, 0, 0, 0.45);
+  --hero-tagline: #cbd5e1;
+  --hero-photo-inner: rgba(6, 10, 18, 0.9);
+  --hero-photo-shadow: rgba(0, 0, 0, 0.45);
+  --hero-glow: radial-gradient(ellipse 90% 70% at 50% -10%, rgba(91, 156, 249, 0.12), transparent 55%);
+  --stat-bg: rgba(255, 255, 255, 0.04);
+  --stat-border: rgba(255, 255, 255, 0.1);
+  --stat-text: #cbd5e1;
+  --stat-shadow: none;
+  --badge-bg: rgba(91, 156, 249, 0.12);
+  --badge-border: rgba(91, 156, 249, 0.28);
+  --btn-primary-fg: #060a12;
+  --btn-secondary-fg: #f1f5f9;
+  --btn-secondary-border: rgba(255, 255, 255, 0.14);
+  --btn-secondary-hover: rgba(255, 255, 255, 0.06);
+  --btn-resume-hover-fg: #060a12;
+  --timeline-line: rgba(255, 255, 255, 0.1);
+  --pill-green-bg: rgba(34, 197, 94, 0.14);
+  --mobile-panel-bg: rgba(6, 10, 18, 0.97);
+  --toggle-border: rgba(255, 255, 255, 0.1);
+  --toggle-bg: rgba(255, 255, 255, 0.04);
+  --toggle-icon: #f1f5f9;
+  --theme-switch-bg: rgba(255, 255, 255, 0.04);
+  --theme-switch-border: rgba(255, 255, 255, 0.1);
+  --project-card-bg: rgba(255, 255, 255, 0.035);
+  --skill-pill-bg: rgba(255, 255, 255, 0.05);
+  --skill-pill-border: rgba(255, 255, 255, 0.1);
+  --skill-pill-hover: rgba(91, 156, 249, 0.12);
+  --tech-tag-bg: rgba(91, 156, 249, 0.12);
+  --tech-tag-border: rgba(91, 156, 249, 0.25);
+}
+
+/* ===== Reset & base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  background: var(--bg-page);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ===== Layout ===== */
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.section {
+  padding: 88px 0;
+  border-top: 1px solid var(--border-section);
+  background: var(--bg);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 14px;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text-heading);
+  margin: 0 0 14px;
+}
+
+.section-sub {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 44px;
+  max-width: 540px;
+}
+
+/* ===== Nav ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 102;
+  padding: 18px 0;
+  transition: backdrop-filter 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+.nav.scrolled {
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  background: var(--nav-scrolled-bg);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: var(--nav-shadow);
+}
+.nav-inner {
+  position: relative;
+  z-index: 103;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--text-heading); }
+.nav-links a.active { color: var(--text-heading); }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.theme-switch {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--theme-switch-border);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  background: var(--theme-switch-bg);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+html[data-theme="professional"] .theme-switch {
+  box-shadow: none;
+}
+.theme-btn {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.theme-btn[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+.theme-btn:focus-visible {
+  outline-offset: 2px;
+}
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+.btn-resume:hover {
+  background: var(--accent);
+  color: var(--btn-resume-hover-fg);
+  transform: translateY(-1px);
+}
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--toggle-border);
+  border-radius: 8px;
+  background: var(--toggle-bg);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--toggle-icon);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-mobile-panel {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--mobile-panel-bg);
+  z-index: 101;
+  padding: 88px 24px 32px;
+  flex-direction: column;
+  gap: 8px;
+}
+.nav.open .nav-mobile-panel {
+  display: flex;
+}
+.nav-mobile-panel a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-heading);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.nav-mobile-panel .btn-resume {
+  margin-top: 16px;
+  width: 100%;
+  padding: 12px;
+}
+
+@media (min-width: 769px) {
+  .nav-mobile-panel { display: none !important; }
+}
+.nav-mobile-theme {
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.nav-mobile-theme .theme-switch {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 108px 28px 96px;
+  background: var(--hero-glow), var(--bg);
+}
+.hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-photo-wrap {
+  margin: 0 auto 44px;
+  width: fit-content;
+  border-radius: 50%;
+  padding: 6px;
+  border: 1px solid var(--accent-soft-border);
+  background: var(--accent-soft);
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 16px 48px var(--hero-photo-shadow);
+  opacity: 0;
+  transform: translateY(18px);
+  animation: heroFade 0.65s ease forwards;
+}
+.hero-photo-wrap:hover .hero-photo {
+  transform: scale(1.03);
+}
+.hero-photo {
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid var(--hero-photo-inner);
+  transition: transform 0.35s ease;
+}
+.hero-heading {
+  margin-bottom: 28px;
+}
+.hero-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  opacity: 0;
+  transform: translateY(22px);
+  animation: heroFade 0.65s ease 0.08s forwards;
+}
+.hero-tagline {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  color: var(--hero-tagline);
+  margin: 0;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(22px);
+  animation: heroFade 0.65s ease 0.18s forwards;
+}
+@keyframes heroFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.badge-avail {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  border-radius: 99px;
+  margin-bottom: 32px;
+}
+.badge-avail .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulseDot 2s ease infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.85; }
+}
+
+.stat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.stat-chip {
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--stat-text);
+  background: var(--stat-bg);
+  border: 1px solid var(--stat-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--stat-shadow);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--btn-primary-fg);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(29, 78, 216, 0.25);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+html[data-theme="professional"] .btn-primary {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1), 0 8px 20px rgba(29, 78, 216, 0.3);
+}
+html[data-theme="professional"] .btn-primary:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--btn-secondary-fg);
+  background: transparent;
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: var(--btn-secondary-hover);
+  transform: translateY(-2px);
+}
+
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.social-row a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+.social-row a:hover { color: var(--accent); }
+.social-row svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* ===== Project cards ===== */
+.project-list { display: flex; flex-direction: column; gap: 22px; }
+.project-card {
+  background: var(--project-card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 30px 34px;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.project-card:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-3px);
+}
+.project-card-inner {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.project-main { flex: 1; min-width: 0; }
+.project-side {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  text-align: right;
+}
+.award-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fbbf24;
+  background: rgba(251,191,36,0.12);
+  border: 1px solid rgba(251,191,36,0.25);
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.project-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+  margin: 0 0 8px;
+}
+.project-date {
+  font-size: 13px;
+  color: var(--text-subtle);
+  margin: 0 0 14px;
+}
+.project-bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.project-bullets li { margin-bottom: 8px; }
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.tech-tag {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  padding: 5px 11px;
+  background: var(--tech-tag-bg);
+  border: 1px solid var(--tech-tag-border);
+  border-radius: var(--radius-sm);
+}
+.project-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+.project-link:hover { color: var(--accent-hover); opacity: 1; }
+.github-more {
+  text-align: center;
+  margin-top: 36px;
+}
+.github-more a {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+.github-more a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+/* ===== Experience timeline ===== */
+.timeline { position: relative; padding-left: 0; }
+.timeline-item {
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 36px;
+  border-left: 2px solid var(--timeline-line);
+  margin-left: 6px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item.current { border-left-color: var(--accent); }
+.timeline-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+.timeline-role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--text-heading);
+}
+.timeline-meta {
+  font-size: 14px;
+  color: var(--text-subtle);
+}
+.pill-current {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #22c55e;
+  background: var(--pill-green-bg);
+  border-radius: 4px;
+}
+.timeline-bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.timeline-bullets li { margin-bottom: 8px; }
+
+/* ===== Education & leadership grids ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+.edu-card, .lead-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.edu-card:hover, .lead-card:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+.edu-card img.logo { height: 40px; width: auto; margin-bottom: 16px; }
+.edu-degree {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--text-heading);
+  margin: 0 0 6px;
+}
+.edu-school { font-size: 14px; color: var(--text-muted); margin: 0 0 4px; }
+.edu-meta { font-size: 13px; color: var(--text-subtle); margin: 0 0 12px; }
+.edu-gpa { font-size: 14px; margin: 0 0 8px; color: var(--text-muted); }
+.edu-gpa strong { color: var(--accent); font-weight: 600; }
+.edu-course { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; }
+
+.lead-role {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--text-heading);
+  margin: 0 0 6px;
+}
+.lead-org { font-size: 14px; color: var(--accent); margin: 0 0 6px; }
+.lead-dates { font-size: 13px; color: var(--text-subtle); margin: 0 0 12px; }
+.lead-desc { font-size: 14px; color: var(--text-muted); margin: 0; line-height: 1.65; }
+
+/* ===== Skills ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.skill-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.skill-card:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+.skill-cat {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 14px;
+  font-family: 'Inter', sans-serif;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skill-pill {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 6px 11px;
+  background: var(--skill-pill-bg);
+  border: 1px solid var(--skill-pill-border);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.skill-pill:hover { background: var(--skill-pill-hover); }
+
+/* ===== Contact ===== */
+.contact-intro {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.contact-card {
+  display: block;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 24px;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+}
+.contact-card:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+.contact-card .label { font-size: 12px; color: var(--text-subtle); margin-bottom: 6px; }
+.contact-card .value { font-size: 14px; color: var(--text-heading); word-break: break-all; }
+.contact-card svg { margin-bottom: 10px; color: var(--accent); }
+.contact-dl { text-align: center; }
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 40px 24px 48px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-subtle);
+  border-top: 1px solid var(--border-section);
+  background: var(--bg);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .section { padding: 56px 0; }
+  .section-title { font-size: 26px; }
+  .nav-links { display: none; }
+  .nav-right .theme-switch { display: none; }
+  .nav-toggle { display: flex; }
+  .hero { padding: 96px 20px 72px; }
+  .hero-photo-wrap { margin-bottom: 36px; padding: 5px; }
+  .hero-photo { width: 132px; height: 132px; }
+  .hero-heading { margin-bottom: 22px; }
+  .hero-name { font-size: 40px; letter-spacing: -0.015em; }
+  .hero-tagline { font-size: 18px; max-width: 100%; }
+  .badge-avail { font-size: 13px; padding: 7px 15px; margin-bottom: 26px; }
+  .stat-chip { font-size: 13px; padding: 8px 14px; }
+  .project-card-inner {
+    flex-direction: column;
+  }
+  .project-side {
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .skills-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) and (min-width: 769px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-left">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon" id="theme-icon"></i>
-                    <span id="theme-text">Dark</span>
-                </button>
-                <div class="nav-logo">
-                    <a href="#home">SB</a>
-                </div>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#leadership" class="nav-link">Leadership</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact Me</a></li>
-                <li class="nav-resume-group">
-                    <a href="assets/documents/resume.pdf" target="_blank" class="nav-link nav-resume-view"><i class="fas fa-eye"></i> View Resume</a>
-                </li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-desktop" aria-label="Primary">
+      <a href="#projects" data-nav="projects">Work</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#education" data-nav="education">Education</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#contact" data-nav="contact">Contact</a>
     </nav>
+    <div class="nav-right">
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button type="button" class="theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+        <button type="button" class="theme-btn" data-theme-set="professional" aria-pressed="false">Pro</button>
+      </div>
+      <a href="assets/documents/resume.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">View Resume</a>
+    </div>
+  </div>
+  <div class="nav-mobile-panel" id="nav-mobile-panel" aria-hidden="true">
+    <a href="#projects">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/documents/resume.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">View Resume</a>
+    <div class="nav-mobile-theme">
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button type="button" class="theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
+        <button type="button" class="theme-btn" data-theme-set="professional" aria-pressed="false">Pro</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="assets/images/profile-picture.jpg" alt="Shamik Basu" class="profile-img">
-                </div>
-                <h1 class="hero-title">
-                    <span class="name">Shamik Basu</span>
-                </h1>
-                <p class="hero-subtitle">Data Scientist | AI Enthusiast</p>
-                <p class="hero-description">Transforming data into actionable insights through AI and Data Science</p>
-                <div class="hero-highlights">
-                    <div class="highlight-item">
-                        <div class="highlight-logo-wrapper">
-                            <img src="assets/images/usc-logo.png" alt="USC Logo" class="highlight-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <i class="fas fa-graduation-cap highlight-icon-fallback" style="display: none;"></i>
-                        </div>
-                        <div class="highlight-text">
-                            <span class="highlight-line1">Masters</span>
-                            <span class="highlight-line2">Data Science</span>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-briefcase"></i>
-                        <div class="highlight-text">
-                            <span class="highlight-line1">Experience</span>
-                            <span class="highlight-line2">Over 2 Years</span>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-logo-wrapper">
-                            <img src="assets/images/srm-logo.png" alt="SRM Logo" class="highlight-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <i class="fas fa-graduation-cap highlight-icon-fallback" style="display: none;"></i>
-                        </div>
-                        <div class="highlight-text">
-                            <span class="highlight-line1">Bachelors</span>
-                            <span class="highlight-line2">Computer Science</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-skills">
-                    <span class="hero-skill-tag">Python</span>
-                    <span class="hero-skill-tag">Machine Learning</span>
-                    <span class="hero-skill-tag">Deep Learning</span>
-                    <span class="hero-skill-tag">LLM</span>
-                    <span class="hero-skill-tag">Data Engineering</span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="assets/documents/resume.pdf" target="_blank" class="btn btn-primary">
-                        <i class="fas fa-file-alt"></i> View Resume
-                    </a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:shamik1900@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="assets/images/profile-picture.jpg" alt="Portrait of Shamik Basu" width="176" height="176">
+      </div>
+      <div class="hero-heading">
+        <h1 class="hero-name">Shamik Basu</h1>
+        <p class="hero-tagline">Data Scientist &amp; ML Engineer</p>
+      </div>
+      <div class="badge-avail"><span class="dot" aria-hidden="true"></span> Open to Summer 2026 Internships</div>
+      <div class="stat-chips">
+        <span class="stat-chip">2+ Years Production ML</span>
+        <span class="stat-chip">MS Data Science @ USC</span>
+        <span class="stat-chip">GPA 3.78 / 4.0</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+      <div class="social-row">
+        <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:shamik1900@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/></svg>
+          Email
+        </a>
+        <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Portfolio PDF (resume)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Portfolio PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="projects" data-section>
+    <p class="section-label">Work</p>
+    <h2 class="section-title">Projects &amp; Impact</h2>
+    <p class="section-sub">Production systems and research built from scratch</p>
+
+    <div class="project-list">
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-main">
+            <span class="award-badge">1st Place — UCLA SAIRS Hackathon 2025 · Sustainability Track</span>
+            <h3 class="project-title">EcoMate-AI</h3>
+            <p class="project-date">April 2025</p>
+            <ul class="project-bullets">
+              <li>Built an end-to-end Streamlit application using Gemini 2.5 Flash to analyze receipts and activity logs, estimating CO₂ emissions per item and generating ranked sustainability recommendations.</li>
+              <li>Designed the full pipeline: OCR extraction → emission-factor mapping → GenAI recommendations → interactive Plotly dashboard.</li>
+              <li>Presented live to industry panelists from Microsoft, IBM, NVIDIA, Google, and LinkedIn.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Gemini 2.5 Flash</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Plotly</span>
+              <span class="tech-tag">OCR</span>
+              <span class="tech-tag">RAG</span>
             </div>
+          </div>
+          <div class="project-side">
+            <a href="https://ecomateai.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+            <a href="https://github.com/ShamikOfficial/EcoMate-AI" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
         </div>
-        <div class="scroll-indicator">
-            <a href="#about" class="scroll-down">
-                <i class="fas fa-chevron-down"></i>
-            </a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-main">
+            <h3 class="project-title">Custom CUDA Library for CNN Pre-Processing</h3>
+            <p class="project-date">Jan – Feb 2025</p>
+            <ul class="project-bullets">
+              <li>Engineered custom CUDA kernels for matrix multiplication and image convolution, benchmarking CPU, naïve CUDA, tiled CUDA (shared memory), and cuBLAS across matrix sizes up to N=2048 on NVIDIA Tesla T4 GPUs.</li>
+              <li>Compiled optimized kernels into .so shared libraries with Python bindings, achieving exponential throughput gains and enabling GPU acceleration inside standard data science workflows.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">CUDA</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">cuBLAS</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Jupyter</span>
+              <span class="tech-tag">GPU Computing</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a href="https://github.com/ShamikOfficial/GPU-Performance-Benchmarks" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- Quick Facts Section -->
-    <section id="quick-facts" class="quick-facts">
-        <div class="container">
-            <div class="quick-facts-grid">
-                <div class="quick-fact-card">
-                    <div class="quick-fact-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="quick-fact-content">
-                        <h3 class="quick-fact-title">Current Role</h3>
-                        <p class="quick-fact-text">Data Scientist at Bajaj Finserv Health</p>
-                    </div>
-                </div>
-                <div class="quick-fact-card">
-                    <div class="quick-fact-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="quick-fact-content">
-                        <h3 class="quick-fact-title">Education</h3>
-                        <p class="quick-fact-text">MS Data Science @ USC</p>
-                    </div>
-                </div>
-                <div class="quick-fact-card">
-                    <div class="quick-fact-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="quick-fact-content">
-                        <h3 class="quick-fact-title">Leadership</h3>
-                        <p class="quick-fact-text">Vice President @ GRIDS</p>
-                    </div>
-                </div>
-                <div class="quick-fact-card">
-                    <div class="quick-fact-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="quick-fact-content">
-                        <h3 class="quick-fact-title">Expertise</h3>
-                        <p class="quick-fact-text">AI/ML • LLM • Data Engineering • Cloud</p>
-                    </div>
-                </div>
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-main">
+            <h3 class="project-title">Retail Sales Intelligence</h3>
+            <p class="project-date">2024</p>
+            <ul class="project-bullets">
+              <li>End-to-end retail analytics pipeline on a 10,000+ order US superstore dataset — EDA, regional trend analysis, customer segmentation, and a 90-day sales forecast.</li>
+              <li>Built interactive HTML report with Plotly; forecast model achieved MAE ~$1,200 on 90-day holdout.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">pandas</span>
+              <span class="tech-tag">scikit-learn</span>
+              <span class="tech-tag">Plotly</span>
+              <span class="tech-tag">Matplotlib</span>
+              <span class="tech-tag">Jupyter</span>
             </div>
+          </div>
+          <div class="project-side">
+            <a href="https://github.com/ShamikOfficial/Retail-Sales-Intelligence" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            <a href="https://shamikofficial.github.io/Super-Store-Analysis/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-description">
-                        I'm Shamik Basu, a Data Scientist with over 2 years of experience in building intelligent systems, 
-                        automating decisions, and turning messy real-world data into scalable solutions.
-                    </p>
-                    <p class="about-description">
-                        I'm currently pursuing my Master's in Data Science at USC, where I also lead GRIDS, the largest data 
-                        science organization on campus, driving workshops, projects, and industry collaboration.
-                    </p>
-                </div>
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-main">
+            <h3 class="project-title">Smart Parking Optimizer</h3>
+            <p class="project-date">2022</p>
+            <ul class="project-bullets">
+              <li>Real-time parking slot allocation system using shortest-path algorithms on a live 2D map with tkinter GUI and SQLite backend.</li>
+              <li>Modular 4-layer architecture: GUI, allocation engine, authentication, and map renderer.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CUDA</span>
+              <span class="tech-tag">Algorithms</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">tkinter</span>
             </div>
+          </div>
+          <div class="project-side">
+            <a href="https://github.com/ShamikOfficial/Smart-Parking-Optimizer" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
         </div>
-    </section>
+      </article>
+    </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Highlighting some of my key projects and contributions</p>
-            <div class="projects-grid" id="projects-grid">
-                <div class="project-skeleton">
-                    <div class="skeleton-header"></div>
-                    <div class="skeleton-content"></div>
-                    <div class="skeleton-footer"></div>
-                </div>
-                <div class="project-skeleton">
-                    <div class="skeleton-header"></div>
-                    <div class="skeleton-content"></div>
-                    <div class="skeleton-footer"></div>
-                </div>
-            </div>
-            <div class="github-link">
-                <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    <i class="fab fa-github"></i> View All Projects on GitHub
-                </a>
-            </div>
+    <p class="github-more"><a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer">View all projects on GitHub →</a></p>
+  </section>
+
+  <section class="section wrap" id="experience" data-section>
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Work History</h2>
+    <div class="timeline">
+      <div class="timeline-item current">
+        <div class="timeline-head">
+          <span class="timeline-role">Data Science Associate Intern</span>
+          <span class="pill-current">Current</span>
         </div>
-    </section>
+        <p class="timeline-meta">KCC Capital Partners · Los Angeles, CA · Jan 2026 – Present</p>
+        <ul class="timeline-bullets">
+          <li>Fine-tuning and integrating an open-source SLM into a production JavaScript/Docker chatbot service to automate client service request classification and routing, reducing handling overhead for the automation team.</li>
+          <li>Evaluating model outputs against baseline response quality benchmarks to guide iteration on prompt design and fine-tuning parameters.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head"><span class="timeline-role">Data Scientist</span></div>
+        <p class="timeline-meta">Bajaj Finserv Health · Pune, India · Nov 2023 – Dec 2024</p>
+        <ul class="timeline-bullets">
+          <li>Architected a real-time medical document analytics system using RAG, LangChain, and REST APIs — processing 5M+ records/month at 92% extraction accuracy, replacing a fully manual workflow.</li>
+          <li>Engineered LLM-based inference pipelines (GPT-3.5 Turbo) to automate high-complexity decision workflows, cutting operational costs by 72%.</li>
+          <li>Built modular monitoring pipelines with LangChain and Langfuse for model observability, reducing GPU compute utilization by 15%.</li>
+          <li>Integrated ML model outputs into Power BI dashboards, cutting ad-hoc reporting turnaround time by 42% and enabling self-serve analytics for stakeholders.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head"><span class="timeline-role">Associate Data Scientist</span></div>
+        <p class="timeline-meta">Bajaj Finserv Health · Pune, India · Jul 2022 – Oct 2023</p>
+        <ul class="timeline-bullets">
+          <li>Developed a supervised ML model (Logistic Regression) for workforce performance prediction, improving efficiency outcomes by 22%.</li>
+          <li>Redesigned the NER-based name-matching algorithm in the fraud detection pipeline, increasing policyholder identification accuracy by 27% and reducing false positives.</li>
+          <li>Processed 10M+ records in Azure Synapse using SQL to deliver business intelligence reports for senior stakeholders.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head"><span class="timeline-role">Data Engineer Intern</span></div>
+        <p class="timeline-meta">Bajaj Finserv Health · Pune, India · Jan 2022 – Jun 2022</p>
+        <ul class="timeline-bullets">
+          <li>Ran A/B tests and cohort analyses identifying key user behavior patterns that improved web conversion by 37%.</li>
+          <li>Designed a distributed analytics system in C++, Trino, and Docker supporting 10M+ records across 200+ features.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head"><span class="timeline-role">Data Engineer Intern</span></div>
+        <p class="timeline-meta">Reomnify · Nov 2020 – Jan 2021</p>
+        <ul class="timeline-bullets">
+          <li>Engineered custom web scraping solutions for 500+ company templates with version control, reducing manual data collection overhead.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <div class="education-line">
-                        <div class="education-dot"></div>
-                    </div>
-                    <div class="education-content">
-                        <div class="education-degree">
-                            <div class="education-logo-wrapper">
-                                <img src="assets/images/usc-logo.png" alt="USC Logo" class="education-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <i class="fas fa-graduation-cap education-icon-fallback" style="display: none;"></i>
-                            </div>
-                            <div class="education-header-info">
-                                <h3 class="education-title">Master of Science, Data Science</h3>
-                                <p class="education-date">
-                                    <i class="fas fa-calendar"></i> Jan 2025 - Dec 2026
-                                </p>
-                            </div>
-                        </div>
-                        <p class="education-university">University of Southern California</p>
-                        <p class="education-location">
-                            <i class="fas fa-map-marker-alt"></i> Los Angeles, CA, USA
-                        </p>
-                        <div class="education-details">
-                            <div class="education-detail-item">
-                                <strong>GPA:</strong> 3.7/4.0
-                            </div>
-                            <div class="education-detail-item">
-                                <strong>Coursework:</strong> Machine Learning, Data Science, Data Management, Deep Learning
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-line">
-                        <div class="education-dot"></div>
-                    </div>
-                    <div class="education-content">
-                        <div class="education-degree">
-                            <div class="education-logo-wrapper">
-                                <img src="assets/images/srm-logo.png" alt="SRM Logo" class="education-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <i class="fas fa-graduation-cap education-icon-fallback" style="display: none;"></i>
-                            </div>
-                            <div class="education-header-info">
-                                <h3 class="education-title">Bachelor of Technology, Computer Science</h3>
-                                <p class="education-date">
-                                    <i class="fas fa-calendar"></i> May 2018 - Jun 2022
-                                </p>
-                            </div>
-                        </div>
-                        <p class="education-university">SRM Institute of Science and Technology</p>
-                        <p class="education-location">
-                            <i class="fas fa-map-marker-alt"></i> Chennai, TN, India
-                        </p>
-                        <div class="education-details">
-                            <div class="education-detail-item">
-                                <strong>GPA:</strong> 3.46/4.0
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section class="section wrap" id="education" data-section>
+    <p class="section-label">Education</p>
+    <h2 class="section-title">Academic Background</h2>
+    <div class="card-grid">
+      <article class="edu-card">
+        <img class="logo" src="assets/images/usc-logo.png" alt="University of Southern California logo" width="120" height="40" loading="lazy">
+        <h3 class="edu-degree">Master of Science, Data Science</h3>
+        <p class="edu-school">University of Southern California</p>
+        <p class="edu-meta">Los Angeles, CA · Jan 2025 – Dec 2026</p>
+        <p class="edu-gpa"><strong>GPA 3.78 / 4.0</strong></p>
+        <p class="edu-course"><strong>Coursework:</strong> Machine Learning, Deep Learning, Data Management, Data Science</p>
+      </article>
+      <article class="edu-card">
+        <img class="logo" src="assets/images/srm-logo.png" alt="SRM Institute of Science and Technology logo" width="120" height="40" loading="lazy">
+        <h3 class="edu-degree">Bachelor of Technology, Computer Science</h3>
+        <p class="edu-school">SRM Institute of Science and Technology</p>
+        <p class="edu-meta">Chennai, India · May 2018 – Jun 2022</p>
+        <p class="edu-gpa"><strong>GPA 3.46 / 4.0</strong></p>
+        <p class="edu-course"><strong>Coursework:</strong> Machine Learning, Artificial Intelligence, Data Structures &amp; Algorithms, Probability &amp; Queueing Theory</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="skills" data-section>
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">Technical Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <p class="skill-cat">Languages</p>
+        <div class="skill-tags">
+          <span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">C/C++</span><span class="skill-pill">CUDA</span><span class="skill-pill">Bash</span><span class="skill-pill">JavaScript</span><span class="skill-pill">R</span>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-line">
-                        <div class="experience-dot"></div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <div class="experience-title-section">
-                                <div class="experience-role">
-                                    <i class="fas fa-briefcase"></i>
-                                    <h3 class="experience-title">Data Scientist</h3>
-                                </div>
-                                <p class="experience-company">Bajaj Finserv Health</p>
-                                <p class="experience-date">
-                                    <i class="fas fa-calendar"></i> Nov 2023 - Dec 2024
-                                </p>
-                                <p class="experience-location">
-                                    <i class="fas fa-map-marker-alt"></i> Los Angeles, CA, USA
-                                </p>
-                            </div>
-                            <button class="expand-btn" aria-label="Expand details">
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div class="experience-preview">
-                            <p>• Led cross-functional engineering teams, collaborating with Product, Architecture, and senior stakeholders delivering end-to-end AI and data-driven solutions...</p>
-                        </div>
-                        <div class="experience-description">
-                            <p>• Led cross-functional engineering teams, collaborating with Product, Architecture, and senior stakeholders 
-                            delivering end-to-end AI and data-driven solutions, while also driving on-campus engagement through 
-                            hackathons and technical hiring<br><br>
-                            • Leading product development initiatives to create a Medical Health Files Processing framework using LLM 
-                            integration through Langchain, Langfuse, RAG and MCP architectures, improving data collection and enhanced 
-                            product personalization<br><br>
-                            • Designed and deployed a GTM Agentic AI platform service for automated Cart Recommendation, reducing TAT 
-                            by 83%, achieving a 92% capture rate, and ensuring detail-oriented extraction accuracy of 96%, eliminating 
-                            manual processing<br><br>
-                            • Migrated asynchronous cronjobs to Kafka and MySQL to MongoDB database, enhancing scalability and 
-                            real-time processing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-line">
-                        <div class="experience-dot"></div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <div class="experience-title-section">
-                                <div class="experience-role">
-                                    <i class="fas fa-briefcase"></i>
-                                    <h3 class="experience-title">Associate Data Scientist</h3>
-                                </div>
-                                <p class="experience-company">Bajaj Finserv Health</p>
-                                <p class="experience-date">
-                                    <i class="fas fa-calendar"></i> Jul 2022 - Oct 2023
-                                </p>
-                                <p class="experience-location">
-                                    <i class="fas fa-map-marker-alt"></i> Los Angeles, CA, USA
-                                </p>
-                            </div>
-                            <button class="expand-btn" aria-label="Expand details">
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div class="experience-preview">
-                            <p>• Optimized NER name-matching algorithm (Fraud Detection), enhancing policy holder identification accuracy by 27%...</p>
-                        </div>
-                        <div class="experience-description">
-                            <p>• Optimized NER name-matching algorithm (Fraud Detection), enhancing policy holder identification accuracy 
-                            by 27%<br><br>
-                            • Integrated Lead Allocation Framework through Salesforce for prioritized lead allocation and decision-making 
-                            based on lead quality forecasting and geographic proximity modeling to field agents, reducing churn by 33%<br><br>
-                            • Created a data pipeline for predictive modelling of Employee Performance calculator and integrated it using 
-                            REST API contributing to 22% Performance improvement in low performing category and 15% overall impact in 
-                            operational management</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-line">
-                        <div class="experience-dot"></div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <div class="experience-title-section">
-                                <div class="experience-role">
-                                    <i class="fas fa-briefcase"></i>
-                                    <h3 class="experience-title">Data Engineer Intern</h3>
-                                </div>
-                                <p class="experience-company">Bajaj Finserv Health</p>
-                                <p class="experience-date">
-                                    <i class="fas fa-calendar"></i> Jan 2022 - Jun 2022
-                                </p>
-                                <p class="experience-location">
-                                    <i class="fas fa-map-marker-alt"></i> Los Angeles, CA, USA
-                                </p>
-                            </div>
-                            <button class="expand-btn" aria-label="Expand details">
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div class="experience-preview">
-                            <p>• Optimized Web Engagement by multivariate Events analytics & retention strategy on Google Cloud improving conversion by 37%...</p>
-                        </div>
-                        <div class="experience-description">
-                            <p>• Optimized Web Engagement by multivariate Events analytics & retention strategy on Google Cloud improving 
-                            conversion by 37%<br><br>
-                            • Applied Distributed Systems design to engineer Disaster Recovery, Optimization and Monitoring System for 
-                            Customer CUBE (Enterprise SQL Server) with over 5M+ Data Points and 200+ Features wide driving product analytics<br><br>
-                            • Established Customer Cohorts, A/B Testing Strategies to enhance product personalization revamping conversion by 17%</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-line">
-                        <div class="experience-dot"></div>
-                    </div>
-                    <div class="experience-content">
-                        <div class="experience-header">
-                            <div class="experience-title-section">
-                                <div class="experience-role">
-                                    <i class="fas fa-briefcase"></i>
-                                    <h3 class="experience-title">Data Engineer Intern</h3>
-                                </div>
-                                <p class="experience-company">Reomnify</p>
-                                <p class="experience-date">
-                                    <i class="fas fa-calendar"></i> Nov 2020 - Jan 2021
-                                </p>
-                            </div>
-                            <button class="expand-btn" aria-label="Expand details">
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div class="experience-preview">
-                            <p>• Engineered custom web scraping solutions for 500+ templates with version control, reducing manual data collection</p>
-                        </div>
-                        <div class="experience-description">
-                            <p>• Engineered custom web scraping solutions for 500+ templates with version control, reducing manual data collection</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="resume-download">
-                <a href="assets/documents/resume.pdf" target="_blank" class="btn btn-primary resume-btn-view">
-                    <i class="fas fa-eye"></i> View Resume
-                </a>
-            </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cat">ML / AI</p>
+        <div class="skill-tags">
+          <span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">scikit-learn</span><span class="skill-pill">LLMs</span><span class="skill-pill">RAG</span><span class="skill-pill">LangChain</span><span class="skill-pill">Langfuse</span><span class="skill-pill">NLP</span><span class="skill-pill">NER</span><span class="skill-pill">BERT</span><span class="skill-pill">spaCy</span><span class="skill-pill">Deep Learning</span><span class="skill-pill">Computer Vision</span>
         </div>
-    </section>
-
-
-    <!-- Leadership Section -->
-    <section id="leadership" class="leadership">
-        <div class="container">
-            <h2 class="section-title">Leadership</h2>
-            <div class="leadership-grid">
-                <div class="leadership-card">
-                    <div class="leadership-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="leadership-title">Vice President</h3>
-                    <p class="leadership-organization">GRIDS Club (Graduates Rising in Data Science)</p>
-                    <p class="leadership-date">Sep 2025 - Present</p>
-                    <p class="leadership-description">
-                        Leading executive board members responsible for projects, tech-talks and workshops while overseeing 
-                        tech recruitments at USC.
-                    </p>
-                </div>
-                <div class="leadership-card">
-                    <div class="leadership-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3 class="leadership-title">Graduate Student Mentor</h3>
-                    <p class="leadership-organization">USC Viterbi School of Engineering</p>
-                    <p class="leadership-date">Aug 2025 - Present</p>
-                    <p class="leadership-description">
-                        Guiding peers on academics, career, and USC life to foster a strong graduate community.
-                    </p>
-                </div>
-            </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cat">Data Engineering</p>
+        <div class="skill-tags">
+          <span class="skill-pill">pandas</span><span class="skill-pill">NumPy</span><span class="skill-pill">Apache Kafka</span><span class="skill-pill">Spark</span><span class="skill-pill">Trino</span><span class="skill-pill">Informatica</span><span class="skill-pill">A/B Testing</span><span class="skill-pill">Predictive Modeling</span>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-code"></i> Programming Languages
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">Shell Scripting</span>
-                        <span class="skill-tag">Linux</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-brain"></i> AI & Machine Learning
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Keras</span>
-                        <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">Langchain</span>
-                        <span class="skill-tag">RAG</span>
-                        <span class="skill-tag">LLM</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">Med-Spacy</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-database"></i> Data & Databases
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Informatica</span>
-                        <span class="skill-tag">Predictive Modeling</span>
-                        <span class="skill-tag">A/B Testing</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-cloud"></i> Cloud & Infrastructure
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft Azure</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Apache Kafka</span>
-                        <span class="skill-tag">Spark</span>
-                        <span class="skill-tag">ELK Stack</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Salesforce</span>
-                        <span class="skill-tag">Matlab</span>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cat">Databases</p>
+        <div class="skill-tags">
+          <span class="skill-pill">MySQL</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">MongoDB</span><span class="skill-pill">Azure Synapse</span><span class="skill-pill">Snowflake</span><span class="skill-pill">SQL Server</span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <h3 class="footer-title">Get In Touch</h3>
-                <div class="footer-sections">
-                    <div class="footer-section">
-                        <h4 class="footer-section-title">
-                            <i class="fas fa-address-card"></i>
-                            Contact Information
-                        </h4>
-                        <div class="footer-contact-group">
-                            <div class="footer-contact-item">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+12132556219">+1 (213) 255-6219</a>
-                            </div>
-                            <div class="footer-contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:shamik1900@gmail.com">shamik1900@gmail.com</a>
-                            </div>
-                            <div class="footer-contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Los Angeles, CA, USA</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-section">
-                        <h4 class="footer-section-title">
-                            <i class="fas fa-share-alt"></i>
-                            Connect With Me
-                        </h4>
-                        <div class="footer-social-group">
-                            <a href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener noreferrer" class="footer-social-item">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer" class="footer-social-item">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <p class="footer-note">Built with HTML, CSS & JavaScript</p>
-            </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cat">Visualization</p>
+        <div class="skill-tags">
+          <span class="skill-pill">Power BI</span><span class="skill-pill">Tableau</span><span class="skill-pill">Plotly</span><span class="skill-pill">Matplotlib</span><span class="skill-pill">Streamlit</span>
         </div>
-    </footer>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cat">Cloud &amp; DevOps</p>
+        <div class="skill-tags">
+          <span class="skill-pill">Microsoft Azure</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">CI/CD</span><span class="skill-pill">FastAPI</span><span class="skill-pill">REST APIs</span><span class="skill-pill">ELK Stack</span><span class="skill-pill">GCP</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="assets/js/script.js"></script>
+  <section class="section wrap" id="leadership" data-section>
+    <p class="section-label">Leadership</p>
+    <h2 class="section-title">Community &amp; Mentorship</h2>
+    <div class="card-grid">
+      <article class="lead-card">
+        <h3 class="lead-role">Vice President</h3>
+        <p class="lead-org">GRIDS — Graduates Rising in Data Science, USC</p>
+        <p class="lead-dates">Sep 2025 – Present</p>
+        <p class="lead-desc">Lead analytics workshops, ideathons, and data-driven projects for 250+ members across USC's largest data science organization.</p>
+      </article>
+      <article class="lead-card">
+        <h3 class="lead-role">Graduate Student Mentor</h3>
+        <p class="lead-org">USC Viterbi School of Engineering</p>
+        <p class="lead-dates">Jan 2025 – Present</p>
+        <p class="lead-desc">Mentoring 6 graduate students on data science career paths, technical communication, and professional development at USC.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="contact" data-section>
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="contact-intro">Currently seeking Summer 2026 Data Science, ML &amp; AI internship opportunities.</p>
+    <div class="contact-grid">
+      <a href="mailto:shamik1900@gmail.com" class="contact-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/></svg>
+        <div class="label">Email</div>
+        <div class="value">shamik1900@gmail.com</div>
+      </a>
+      <a href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <div class="label">LinkedIn</div>
+        <div class="value">linkedin.com/in/shamikofficial</div>
+      </a>
+      <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <div class="label">GitHub</div>
+        <div class="value">github.com/ShamikOfficial</div>
+      </a>
+    </div>
+    <div class="contact-dl">
+      <a href="assets/documents/resume.pdf" class="btn-primary" download>Download Resume ↓</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  Shamik Basu · shamikofficial.github.io · Built with HTML, CSS &amp; JavaScript
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  function syncThemeButtons() {
+    var t = document.documentElement.getAttribute('data-theme') || 'light';
+    document.querySelectorAll('.theme-btn[data-theme-set]').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-theme-set') === t ? 'true' : 'false');
+    });
+  }
+  document.querySelectorAll('.theme-btn[data-theme-set]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var theme = btn.getAttribute('data-theme-set');
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('theme', theme); } catch (e) {}
+      syncThemeButtons();
+      var navEl = document.getElementById('nav');
+      var toggleEl = document.getElementById('nav-toggle');
+      var panelEl = document.getElementById('nav-mobile-panel');
+      if (navEl && navEl.classList.contains('open')) {
+        navEl.classList.remove('open');
+        if (toggleEl) {
+          toggleEl.setAttribute('aria-expanded', 'false');
+          toggleEl.setAttribute('aria-label', 'Open menu');
+        }
+        if (panelEl) panelEl.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+  syncThemeButtons();
+
+  // Nav scroll state
+  var nav = document.getElementById('nav');
+  function onScrollNav() {
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScrollNav, { passive: true });
+  onScrollNav();
+
+  // Mobile menu
+  var toggle = document.getElementById('nav-toggle');
+  var panel = document.getElementById('nav-mobile-panel');
+  if (toggle && panel) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    panel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        panel.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Section fade-in
+  var sections = document.querySelectorAll('.section[data-section]');
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+  sections.forEach(function (el) { revealObserver.observe(el); });
+
+  // Active nav links (IntersectionObserver — middle viewport band)
+  var navLinks = document.querySelectorAll('#nav-desktop a[data-nav]');
+  var sectionIds = ['projects', 'experience', 'education', 'skills', 'contact'];
+  var navObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.getAttribute('id');
+        navLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('data-nav') === id);
+        });
+      }
+    });
+  }, { root: null, rootMargin: '-32% 0px -48% 0px', threshold: [0, 0.05, 0.1] });
+
+  sectionIds.forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) navObserver.observe(el);
+  });
+})();
+</script>
 </body>
 </html>
-
