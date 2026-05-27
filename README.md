@@ -1,10 +1,11 @@
 # Shamik Basu - Personal Portfolio
 
-My professional portfolio website showcasing my projects, skills, and experience as a Data Scientist and AI Enthusiast.
+My professional portfolio website showcasing my projects, skills, and experience as an AI enabled data scientist.
 
 ## 🌐 Live Site
 
-Visit the live portfolio at: [https://shamikofficial.github.io](https://shamikofficial.github.io)
+Primary portfolio: **[https://www.shamik-basu.com](https://www.shamik-basu.com)**  
+This repository also mirrors the same site on GitHub Pages at [https://shamikofficial.github.io](https://shamikofficial.github.io) when enabled.
 
 ## 🛠️ Technologies
 

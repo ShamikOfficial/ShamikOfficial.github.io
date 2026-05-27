@@ -4,28 +4,28 @@
 <script>
 (function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='professional'?'professional':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
 </script>
-<title>Shamik Basu | Data Scientist | MS Data Science USC | ML & AI</title>
+<title>Shamik Basu | AI Enabled Data Scientist | MS Data Science USC | ML &amp; AI</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shamik Basu — MS Data Science @ USC (GPA 3.78). 2+ years building production ML, RAG, and LLM systems. 1st Place UCLA SAIRS Hackathon 2025. Seeking Summer 2026 Data Science / ML internship in Los Angeles.">
-<meta name="keywords" content="Shamik Basu, Data Scientist, Machine Learning Engineer, USC Data Science, RAG, LLM, Python, PyTorch, LangChain, Los Angeles">
+<meta name="description" content="Shamik Basu - MS Data Science @ USC (GPA 3.7). Portfolio at www.shamik-basu.com. 2+ years building production ML, RAG, and LLM systems. 1st Place UCLA SAIRS Hackathon 2025. Los Angeles.">
+<meta name="keywords" content="Shamik Basu, AI enabled data scientist, shamik-basu.com, www.shamik-basu.com, Data Scientist, Machine Learning Engineer, USC Data Science, RAG, LLM, Python, PyTorch, LangChain, Los Angeles">
 <meta name="author" content="Shamik Basu">
-<meta property="og:title" content="Shamik Basu | Data Scientist & ML Engineer">
-<meta property="og:description" content="MS Data Science @ USC. Built production RAG pipelines, LLM inference systems, and AI analytics at scale. Open to Summer 2026 internships.">
-<meta property="og:url" content="https://shamikofficial.github.io/">
+<meta property="og:title" content="Shamik Basu | AI Enabled Data Scientist">
+<meta property="og:description" content="MS Data Science @ USC (GPA 3.7). Primary portfolio at www.shamik-basu.com. Production RAG, LLM systems, and AI analytics at scale.">
+<meta property="og:url" content="https://www.shamik-basu.com/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://shamikofficial.github.io/assets/images/profile-picture.jpg">
+<meta property="og:image" content="https://www.shamik-basu.com/assets/images/profile-picture.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shamik Basu | Data Scientist">
-<meta name="twitter:description" content="MS Data Science @ USC. Production ML, RAG, LLM. Seeking Summer 2026 internship.">
-<link rel="canonical" href="https://shamikofficial.github.io/">
+<meta name="twitter:title" content="Shamik Basu | AI Enabled Data Scientist">
+<meta name="twitter:description" content="MS Data Science @ USC (GPA 3.7). www.shamik-basu.com - Production ML, RAG, and LLM.">
+<link rel="canonical" href="https://www.shamik-basu.com/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ===== Theme tokens (Light = default, Professional = dark) ===== */
+/* ===== Theme tokens (Light = default, Dark) ===== */
 :root {
   color-scheme: light;
   --bg: #f8fafc;
@@ -57,8 +57,6 @@
   --stat-border: rgba(15, 23, 42, 0.08);
   --stat-text: #475569;
   --stat-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --badge-bg: rgba(29, 78, 216, 0.08);
-  --badge-border: rgba(29, 78, 216, 0.22);
   --btn-primary-fg: #ffffff;
   --btn-secondary-fg: #0f172a;
   --btn-secondary-border: rgba(15, 23, 42, 0.12);
@@ -114,8 +112,6 @@ html[data-theme="professional"] {
   --stat-border: rgba(255, 255, 255, 0.1);
   --stat-text: #cbd5e1;
   --stat-shadow: none;
-  --badge-bg: rgba(91, 156, 249, 0.12);
-  --badge-border: rgba(91, 156, 249, 0.28);
   --btn-primary-fg: #060a12;
   --btn-secondary-fg: #f1f5f9;
   --btn-secondary-border: rgba(255, 255, 255, 0.14);
@@ -477,31 +473,6 @@ html[data-theme="professional"] .theme-switch {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.badge-avail {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 8px 18px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--accent);
-  background: var(--badge-bg);
-  border: 1px solid var(--badge-border);
-  border-radius: 99px;
-  margin-bottom: 32px;
-}
-.badge-avail .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  animation: pulseDot 2s ease infinite;
-}
-@keyframes pulseDot {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.4); opacity: 0.85; }
-}
-
 .stat-chips {
   display: flex;
   flex-wrap: wrap;
@@ -593,7 +564,76 @@ html[data-theme="professional"] .btn-primary:hover {
 .social-row svg { width: 18px; height: 18px; flex-shrink: 0; }
 
 /* ===== Project cards ===== */
-.project-list { display: flex; flex-direction: column; gap: 22px; }
+.project-section-head {
+  margin-bottom: 14px;
+}
+.section-title-projects { margin-bottom: 0; }
+.project-carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+}
+.project-carousel > .project-nav-btn {
+  flex-shrink: 0;
+  align-self: center;
+}
+.project-nav-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-heading);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--card-shadow);
+}
+.project-nav-btn:hover {
+  border-color: var(--card-border-hover);
+  color: var(--accent);
+}
+.project-nav-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.project-slider {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-inline: 0;
+  overscroll-behavior-x: contain;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  touch-action: pan-x;
+  container-type: inline-size;
+  container-name: projstrip;
+}
+.project-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding-inline: 0;
+  padding-bottom: 8px;
+}
 .project-card {
   background: var(--project-card-bg);
   border: 1px solid var(--card-border);
@@ -601,6 +641,15 @@ html[data-theme="professional"] .btn-primary:hover {
   padding: 30px 34px;
   box-shadow: var(--card-shadow);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  flex: 0 0 clamp(260px, 78vw, 480px);
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  box-sizing: border-box;
+}
+@container projstrip (min-width: 200px) {
+  .project-card {
+    flex: 0 0 min(480px, calc(100cqi - 4px));
+  }
 }
 .project-card:hover {
   border-color: var(--card-border-hover);
@@ -867,6 +916,10 @@ html[data-theme="professional"] .btn-primary:hover {
   border-top: 1px solid var(--border-section);
   background: var(--bg);
 }
+.site-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
@@ -881,8 +934,15 @@ html[data-theme="professional"] .btn-primary:hover {
   .hero-heading { margin-bottom: 22px; }
   .hero-name { font-size: 40px; letter-spacing: -0.015em; }
   .hero-tagline { font-size: 18px; max-width: 100%; }
-  .badge-avail { font-size: 13px; padding: 7px 15px; margin-bottom: 26px; }
   .stat-chip { font-size: 13px; padding: 8px 14px; }
+  .project-nav-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+  .project-carousel {
+    gap: 8px;
+  }
   .project-card-inner {
     flex-direction: column;
   }
@@ -919,7 +979,7 @@ html[data-theme="professional"] .btn-primary:hover {
     <div class="nav-right">
       <div class="theme-switch" role="group" aria-label="Color theme">
         <button type="button" class="theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
-        <button type="button" class="theme-btn" data-theme-set="professional" aria-pressed="false">Pro</button>
+        <button type="button" class="theme-btn" data-theme-set="professional" aria-pressed="false">Dark</button>
       </div>
       <a href="assets/documents/resume.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">View Resume</a>
     </div>
@@ -934,7 +994,7 @@ html[data-theme="professional"] .btn-primary:hover {
     <div class="nav-mobile-theme">
       <div class="theme-switch" role="group" aria-label="Color theme">
         <button type="button" class="theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
-        <button type="button" class="theme-btn" data-theme-set="professional" aria-pressed="false">Pro</button>
+        <button type="button" class="theme-btn" data-theme-set="professional" aria-pressed="false">Dark</button>
       </div>
     </div>
   </div>
@@ -948,13 +1008,12 @@ html[data-theme="professional"] .btn-primary:hover {
       </div>
       <div class="hero-heading">
         <h1 class="hero-name">Shamik Basu</h1>
-        <p class="hero-tagline">Data Scientist &amp; ML Engineer</p>
+        <p class="hero-tagline">AI Enabled Data Scientist</p>
       </div>
-      <div class="badge-avail"><span class="dot" aria-hidden="true"></span> Open to Summer 2026 Internships</div>
       <div class="stat-chips">
         <span class="stat-chip">2+ Years Production ML</span>
         <span class="stat-chip">MS Data Science @ USC</span>
-        <span class="stat-chip">GPA 3.78 / 4.0</span>
+        <span class="stat-chip">GPA 3.7 / 4.0</span>
       </div>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View My Work</a>
@@ -973,6 +1032,10 @@ html[data-theme="professional"] .btn-primary:hover {
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/></svg>
           Email
         </a>
+        <a href="https://www.shamik-basu.com/" target="_blank" rel="noopener noreferrer" aria-label="Primary portfolio website">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-9.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          shamik-basu.com
+        </a>
         <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Portfolio PDF (resume)">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Portfolio PDF
@@ -983,14 +1046,48 @@ html[data-theme="professional"] .btn-primary:hover {
 
   <section class="section wrap" id="projects" data-section>
     <p class="section-label">Work</p>
-    <h2 class="section-title">Projects &amp; Impact</h2>
+    <div class="project-section-head">
+      <h2 class="section-title section-title-projects">Projects &amp; Impact</h2>
+    </div>
     <p class="section-sub">Production systems and research built from scratch</p>
 
+    <div class="project-carousel" role="group" aria-label="Project carousel">
+      <button type="button" class="project-nav-btn" id="project-prev" aria-label="Previous projects">&#8592;</button>
+      <div class="project-slider" id="project-slider" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Featured projects">
     <div class="project-list">
       <article class="project-card">
         <div class="project-card-inner">
           <div class="project-main">
-            <span class="award-badge">1st Place — UCLA SAIRS Hackathon 2025 · Sustainability Track</span>
+            <h3 class="project-title">Agentic Trend Orchestrator</h3>
+            <p class="project-date">April 2026 – Present</p>
+            <ul class="project-bullets">
+              <li>Full-stack agentic AI workspace (Next.js + FastAPI) for creators: trend discovery pipelines, semantic content-performance signals, and team orchestration backed by persistent knowledge state.</li>
+              <li>Shipped authenticated product flows-workflow boards, real-time DM/group chat, trend-detection tooling, and video upload-with JWT / Auth.js integrated against REST APIs.</li>
+              <li>Production-grade deploy docs for Vercel (frontend) and Railway (API), aligning session cookies, CORS, and Auth.js issuer URLs across environments.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Auth.js</span>
+              <span class="tech-tag">JWT</span>
+              <span class="tech-tag">Vercel</span>
+              <span class="tech-tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="project-side">
+            <a href="https://project-l0sn8.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+            <a href="https://github.com/ShamikOfficial/agentic-trend-orchestrator" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-main">
+            <span class="award-badge">1st Place - UCLA SAIRS Hackathon 2025 · Sustainability Track</span>
             <h3 class="project-title">EcoMate-AI</h3>
             <p class="project-date">April 2025</p>
             <ul class="project-bullets">
@@ -1045,7 +1142,7 @@ html[data-theme="professional"] .btn-primary:hover {
             <h3 class="project-title">Retail Sales Intelligence</h3>
             <p class="project-date">2024</p>
             <ul class="project-bullets">
-              <li>End-to-end retail analytics pipeline on a 10,000+ order US superstore dataset — EDA, regional trend analysis, customer segmentation, and a 90-day sales forecast.</li>
+              <li>End-to-end retail analytics pipeline on a 10,000+ order US superstore dataset - EDA, regional trend analysis, customer segmentation, and a 90-day sales forecast.</li>
               <li>Built interactive HTML report with Plotly; forecast model achieved MAE ~$1,200 on 90-day holdout.</li>
             </ul>
             <div class="tech-tags">
@@ -1087,6 +1184,9 @@ html[data-theme="professional"] .btn-primary:hover {
         </div>
       </article>
     </div>
+      </div>
+      <button type="button" class="project-nav-btn" id="project-next" aria-label="Next projects">&#8594;</button>
+    </div>
 
     <p class="github-more"><a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer">View all projects on GitHub →</a></p>
   </section>
@@ -1110,7 +1210,7 @@ html[data-theme="professional"] .btn-primary:hover {
         <div class="timeline-head"><span class="timeline-role">Data Scientist</span></div>
         <p class="timeline-meta">Bajaj Finserv Health · Pune, India · Nov 2023 – Dec 2024</p>
         <ul class="timeline-bullets">
-          <li>Architected a real-time medical document analytics system using RAG, LangChain, and REST APIs — processing 5M+ records/month at 92% extraction accuracy, replacing a fully manual workflow.</li>
+          <li>Architected a real-time medical document analytics system using RAG, LangChain, and REST APIs - processing 5M+ records/month at 92% extraction accuracy, replacing a fully manual workflow.</li>
           <li>Engineered LLM-based inference pipelines (GPT-3.5 Turbo) to automate high-complexity decision workflows, cutting operational costs by 72%.</li>
           <li>Built modular monitoring pipelines with LangChain and Langfuse for model observability, reducing GPU compute utilization by 15%.</li>
           <li>Integrated ML model outputs into Power BI dashboards, cutting ad-hoc reporting turnaround time by 42% and enabling self-serve analytics for stakeholders.</li>
@@ -1152,7 +1252,7 @@ html[data-theme="professional"] .btn-primary:hover {
         <h3 class="edu-degree">Master of Science, Data Science</h3>
         <p class="edu-school">University of Southern California</p>
         <p class="edu-meta">Los Angeles, CA · Jan 2025 – Dec 2026</p>
-        <p class="edu-gpa"><strong>GPA 3.78 / 4.0</strong></p>
+        <p class="edu-gpa"><strong>GPA 3.7 / 4.0</strong></p>
         <p class="edu-course"><strong>Coursework:</strong> Machine Learning, Deep Learning, Data Management, Data Science</p>
       </article>
       <article class="edu-card">
@@ -1203,7 +1303,7 @@ html[data-theme="professional"] .btn-primary:hover {
       <div class="skill-card">
         <p class="skill-cat">Cloud &amp; DevOps</p>
         <div class="skill-tags">
-          <span class="skill-pill">Microsoft Azure</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">CI/CD</span><span class="skill-pill">FastAPI</span><span class="skill-pill">REST APIs</span><span class="skill-pill">ELK Stack</span><span class="skill-pill">GCP</span>
+          <span class="skill-pill">Microsoft Azure</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Next.js</span><span class="skill-pill">FastAPI</span><span class="skill-pill">REST APIs</span><span class="skill-pill">ELK Stack</span><span class="skill-pill">GCP</span>
         </div>
       </div>
     </div>
@@ -1215,7 +1315,7 @@ html[data-theme="professional"] .btn-primary:hover {
     <div class="card-grid">
       <article class="lead-card">
         <h3 class="lead-role">Vice President</h3>
-        <p class="lead-org">GRIDS — Graduates Rising in Data Science, USC</p>
+        <p class="lead-org">GRIDS - Graduates Rising in Data Science, USC</p>
         <p class="lead-dates">Sep 2025 – Present</p>
         <p class="lead-desc">Lead analytics workshops, ideathons, and data-driven projects for 250+ members across USC's largest data science organization.</p>
       </article>
@@ -1231,7 +1331,7 @@ html[data-theme="professional"] .btn-primary:hover {
   <section class="section wrap" id="contact" data-section>
     <p class="section-label">Contact</p>
     <h2 class="section-title">Let's Work Together</h2>
-    <p class="contact-intro">Currently seeking Summer 2026 Data Science, ML &amp; AI internship opportunities.</p>
+    <p class="contact-intro">Primary portfolio: <a href="https://www.shamik-basu.com/" target="_blank" rel="noopener noreferrer">www.shamik-basu.com</a></p>
     <div class="contact-grid">
       <a href="mailto:shamik1900@gmail.com" class="contact-card">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/></svg>
@@ -1248,6 +1348,11 @@ html[data-theme="professional"] .btn-primary:hover {
         <div class="label">GitHub</div>
         <div class="value">github.com/ShamikOfficial</div>
       </a>
+      <a href="https://www.shamik-basu.com/" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-9.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <div class="label">Portfolio website</div>
+        <div class="value">www.shamik-basu.com</div>
+      </a>
     </div>
     <div class="contact-dl">
       <a href="assets/documents/resume.pdf" class="btn-primary" download>Download Resume ↓</a>
@@ -1256,7 +1361,7 @@ html[data-theme="professional"] .btn-primary:hover {
 </main>
 
 <footer class="site-footer">
-  Shamik Basu · shamikofficial.github.io · Built with HTML, CSS &amp; JavaScript
+  Shamik Basu · <a href="https://www.shamik-basu.com/">www.shamik-basu.com</a> - primary portfolio · Built with HTML, CSS &amp; JavaScript
 </footer>
 
 <script>
@@ -1334,7 +1439,7 @@ html[data-theme="professional"] .btn-primary:hover {
 
   sections.forEach(function (el) { revealObserver.observe(el); });
 
-  // Active nav links (IntersectionObserver — middle viewport band)
+  // Active nav links (IntersectionObserver - middle viewport band)
   var navLinks = document.querySelectorAll('#nav-desktop a[data-nav]');
   var sectionIds = ['projects', 'experience', 'education', 'skills', 'contact'];
   var navObserver = new IntersectionObserver(function (entries) {
@@ -1352,6 +1457,50 @@ html[data-theme="professional"] .btn-primary:hover {
     var el = document.getElementById(id);
     if (el) navObserver.observe(el);
   });
+
+  // Horizontal projects carousel (scroll-snap + arrows)
+  var projSlider = document.getElementById('project-slider');
+  var projPrev = document.getElementById('project-prev');
+  var projNext = document.getElementById('project-next');
+  if (projSlider && projPrev && projNext) {
+    var mqReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+    function projScrollMotion() {
+      return mqReduce.matches ? 'auto' : 'smooth';
+    }
+    function projScrollStep() {
+      var card = projSlider.querySelector('.project-card');
+      if (!card) return 320;
+      var list = projSlider.querySelector('.project-list');
+      var gap = 20;
+      if (list) {
+        var g = window.getComputedStyle(list).gap;
+        var parsed = parseFloat(g);
+        if (!isNaN(parsed)) gap = parsed;
+      }
+      return card.getBoundingClientRect().width + gap;
+    }
+    function projScrollBy(direction) {
+      projSlider.scrollBy({
+        left: direction * projScrollStep(),
+        behavior: projScrollMotion(),
+      });
+    }
+    projPrev.addEventListener('click', function () {
+      projScrollBy(-1);
+    });
+    projNext.addEventListener('click', function () {
+      projScrollBy(1);
+    });
+    projSlider.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        projScrollBy(-1);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        projScrollBy(1);
+      }
+    });
+  }
 })();
 </script>
 </body>
