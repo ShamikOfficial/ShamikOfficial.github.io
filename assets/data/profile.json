@@ -1,0 +1,174 @@
+{
+  "name": "Shamik Basu",
+  "headline": "AI Enabled Data Scientist",
+  "summary": "Data scientist with 2+ years shipping production machine learning pipelines, LLM systems, and analytics workflows with measurable business impact. Cut operational costs 72% on a production RAG system processing 5M+ records/month and improved fraud identification accuracy 27% while reducing false positives. Strong in Python, SQL, statistics, experimentation, machine learning, and LLM/agentic systems.",
+  "location": "Los Angeles, CA",
+  "email": "shamik1900@gmail.com",
+  "phone": "+1-213-255-6219",
+  "website": "https://www.shamik-basu.com/",
+  "interests": ["Table Tennis", "Football (Soccer)", "Piano", "Horror Movies", "Anime", "Sports"],
+  "links": {
+    "linkedin": "https://linkedin.com/in/shamikofficial/",
+    "github": "https://github.com/ShamikOfficial",
+    "devpost": "https://devpost.com/shamik1900",
+    "website": "https://www.shamik-basu.com/",
+    "resume": "assets/documents/resume.pdf"
+  },
+  "stats": [
+    { "label": "Years production ML", "value": "2+" },
+    { "label": "MS Data Science", "value": "USC" },
+    { "label": "Hackathon wins", "value": "1st place" }
+  ],
+  "highlights": [
+    {
+      "header": "1st Place - UCLA SAIRS Hackathon",
+      "blurb": "Won the sustainability track with EcoMate-AI, a multimodal agentic platform built in 24 hours.",
+      "date": "2025",
+      "image": "assets/images/highlights/ucla-sairs.jpg",
+      "link": "projects/ecomate-ai.html"
+    },
+    {
+      "header": "Shipped Trend Pilot",
+      "blurb": "Agentic AI for creator teams (FastAPI + Next.js + GPT-4o VLM) that catches trends, generates scripts, and assigns the work.",
+      "date": "2026",
+      "image": "assets/images/highlights/agentic-trend.jpg",
+      "link": "projects/agentic-trend-orchestrator.html"
+    },
+    {
+      "header": "Vice President - GRIDS at USC",
+      "blurb": "Leading a 250-member graduate data science community with workshops, ideathons, and projects.",
+      "date": "2025-Present",
+      "image": "assets/images/highlights/grids-usc.jpg",
+      "link": "https://linkedin.com/in/shamikofficial/"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Data Science Associate Intern (Part-Time)",
+      "company": "Liquidity AI Capital",
+      "location": "Los Angeles, CA",
+      "dates": "Apr 2026 - May 2026",
+      "summary": "Deployed production SLM inference in Docker, fine-tuning open-source models end-to-end (tokenization + LoRA adapters) for optimized, domain-specific inference on financial data."
+    },
+    {
+      "role": "Data Science Associate Intern (Part-Time)",
+      "company": "KCC Capital Partners",
+      "location": "Los Angeles, CA",
+      "dates": "Jan 2026 - Mar 2026",
+      "summary": "Automated M&A target sourcing with an agentic LangChain pipeline (Python) chaining LLM entity classification, web scraping, and structured extraction to identify and rank strategic buyers."
+    },
+    {
+      "role": "Data Scientist",
+      "company": "Bajaj Finserv Health",
+      "location": "Pune, India",
+      "dates": "Nov 2023 - Dec 2024",
+      "summary": "Architected a production RAG pipeline (LangChain + GPT-3.5 Turbo + REST APIs) processing 5M+ medical records/month - cutting operational costs 72% at 92% extraction accuracy. Added Langfuse observability and migrated batch jobs to a Kafka event-driven architecture for zero-downtime inference."
+    },
+    {
+      "role": "Associate Data Scientist",
+      "company": "Bajaj Finserv Health",
+      "location": "Pune, India",
+      "dates": "Jul 2022 - Oct 2023",
+      "summary": "Redesigned the production NER pipeline to boost fraud identification accuracy 27% while reducing false positives, and shipped a supervised model (logistic regression + feature engineering) that improved operational efficiency 22%."
+    },
+    {
+      "role": "Data Engineer Intern",
+      "company": "Bajaj Finserv Health",
+      "location": "Pune, India",
+      "dates": "Jan 2022 - Jun 2022",
+      "summary": "Scaled ETL and analytics to 10M+ records across 200+ features by designing a distributed system (C++, Trino, Docker) with optimized SQL, analytical query processing, and disaster recovery."
+    }
+  ],
+  "projects": [
+    {
+      "slug": "agentic-trend-orchestrator",
+      "name": "Trend Pilot",
+      "alternateName": "Agentic Trend Orchestrator",
+      "tagline": "Agentic AI assistant for creator teams - catches trends, decides what to film, and assigns the work. Multi-agent system with GPT-4o VLM trend detection.",
+      "date": "May 2026 - Jun 2026",
+      "tech": ["FastAPI", "Next.js", "Docker", "Python", "TypeScript", "GPT-4o VLM", "Milvus", "RAG", "Multi-Agent", "CI/CD"],
+      "links": {
+        "demo": "https://trendpilot.shamik-basu.com/",
+        "github": "https://github.com/ShamikOfficial/agentic-trend-orchestrator",
+        "report": "assets/documents/Trend Pilot Deck.pdf"
+      },
+      "youtube": "",
+      "video": "assets/video/Trend_Pilot_Intro.mp4"
+    },
+    {
+      "slug": "ecomate-ai",
+      "name": "EcoMate-AI",
+      "tagline": "1st-place multimodal agentic platform turning receipts and activity into sustainability actions.",
+      "date": "May 2025 - Jun 2025",
+      "award": "1st Place - UCLA SAIRS Hackathon 2025",
+      "tech": ["Gemini 2.5 Flash", "Python", "Streamlit", "Computer Vision", "NLP", "RAG"],
+      "links": {
+        "demo": "https://ecomateai.streamlit.app/",
+        "github": "https://github.com/ShamikOfficial/EcoMate-AI",
+        "devpost": "https://devpost.com/shamik1900"
+      },
+      "youtube": "tYTzNmGuq_E"
+    },
+    {
+      "slug": "custom-cuda-library",
+      "name": "Custom CUDA Library for CNN Pre-Processing",
+      "tagline": "Shared-memory tiled CUDA kernels delivering 115x CPU and 14x PyTorch preprocessing speedups.",
+      "date": "Jan 2026 - Feb 2026",
+      "tech": ["CUDA", "C/C++", "Python", "GPU Computing", "Jupyter"],
+      "links": {
+        "github": "https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library",
+        "report": "assets/documents/CUDA_Project_Report_Final.pdf"
+      },
+      "youtube": ""
+    },
+    {
+      "slug": "smooth-operation",
+      "name": "Smooth Operation",
+      "tagline": "Turns Atlassian workflow chaos into clarity with real-time flow graphs and heatmaps.",
+      "date": "2025",
+      "tech": ["Python", "AI", "Data Visualization", "Atlassian APIs"],
+      "links": {
+        "devpost": "https://devpost.com/shamik1900"
+      },
+      "youtube": "P2oTHZWDBxU"
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Southern California",
+      "degree": "Master of Science, Applied Data Science",
+      "location": "Los Angeles, CA",
+      "dates": "Jan 2025 - Dec 2026",
+      "gpa": "3.7 / 4.0",
+      "coursework": "Deep Learning, Machine Learning, Data Mining (MapReduce), Data Management"
+    },
+    {
+      "school": "SRM Institute of Science & Technology",
+      "degree": "Bachelor of Technology, Computer Science",
+      "location": "Chennai, India",
+      "dates": "May 2018 - Jun 2022",
+      "gpa": "3.46 / 4.0",
+      "coursework": "Algorithms, Artificial Intelligence, Computer Vision, Probability & Queueing Theory"
+    }
+  ],
+  "skills": {
+    "Languages & Databases": ["Python", "SQL", "R", "C/C++", "PostgreSQL", "MongoDB", "Spark", "Trino", "Apache Kafka"],
+    "ML & Analytics": ["Machine Learning", "Statistics", "Econometrics", "Causal Inference", "A/B Testing", "Feature Engineering", "NLP", "NER", "Forecasting", "Tableau", "Power BI"],
+    "Deep Learning & LLMs": ["PyTorch", "TensorFlow", "Hugging Face", "LoRA Fine-Tuning", "RAG", "LangChain", "Multi-Agent Orchestration"],
+    "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "REST APIs", "CI/CD", "Azure Synapse", "Langfuse", "Git"]
+  },
+  "leadership": [
+    {
+      "role": "Vice President",
+      "org": "GRIDS - Graduate Data Science Club, USC",
+      "dates": "Sep 2025 - Present",
+      "summary": "Lead analytics workshops, ideathons, and projects for a 250-member graduate data science community."
+    },
+    {
+      "role": "Graduate Mentor",
+      "org": "USC Viterbi School of Engineering",
+      "dates": "Jan 2025 - Present",
+      "summary": "Mentor graduate students on data science career paths, technical communication, and professional development."
+    }
+  ]
+}

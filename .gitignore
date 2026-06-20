@@ -25,3 +25,9 @@ build/
 .env
 .env.local
 
+# Local working copies (not deployed on the site)
+assets/documents/*.docx
+assets/documents/Resume__*.pdf
+assets/documents/Resume__Shamik_Basu_Data_Engineer.tex
+_check_site.py
+

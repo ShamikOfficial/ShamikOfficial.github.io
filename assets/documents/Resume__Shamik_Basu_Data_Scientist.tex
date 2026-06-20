@@ -1,0 +1,160 @@
+\documentclass[9pt,letterpaper]{article}
+
+\usepackage[top=0.23in, bottom=0.23in, left=0.44in, right=0.44in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{0.915}
+
+\definecolor{headgray}{RGB}{90,90,90}
+\definecolor{textcol}{RGB}{15,15,15}
+
+\hypersetup{colorlinks=false, hidelinks}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}
+  {\bfseries\fontsize{9.5pt}{11pt}\selectfont\color{textcol}}
+  {}{0em}{\MakeUppercase}
+  [\vspace{0.5pt}{\color[RGB]{90,90,90}\hrule height 0.4pt depth 0pt}\vspace{0.5pt}]
+\titlespacing{\section}{0pt}{5pt}{2.5pt}
+
+\newenvironment{workitems}{%
+  \begin{itemize}[after={\vspace{6pt}}]
+}{%
+  \end{itemize}
+}
+
+\setlist[itemize]{
+  leftmargin=0.9em,
+  itemsep=0pt,
+  parsep=0pt,
+  topsep=0pt,
+  partopsep=0pt,
+  before={\vspace{-4.5pt}},
+  after={\vspace{3pt}},
+  label=\textbullet
+}
+
+\newcommand{\projsep}{\vspace{2pt}}%
+
+\newcommand{\projend}{\vspace{-9pt}}%
+
+\newcommand{\jobtitle}[4]{%
+  \noindent
+  {\small\textbf{#1}} {\small\color{headgray}| #2 | #3}%
+  \hfill
+  {\small\color{headgray}\textit{#4}}\\[-7pt]
+}
+
+\newcommand{\projtitle}[2]{%
+  \noindent
+  {\small\textbf{#1}}%
+  \hfill
+  {\small\color{headgray}\textit{#2}}\\[-7pt]
+}
+
+\newcommand{\edutitle}[3]{%
+  \noindent
+  {\small\textbf{#1}} {\small\color{headgray}| #2}%
+  \hfill
+  {\small\color{headgray}\textit{#3}}\\[1pt]
+}
+
+\newcommand{\educourse}[1]{%
+  {\small\color{headgray}\textit{Coursework: #1}}\par\vspace{5pt}%
+}
+
+\newcommand{\skillrow}[2]{%
+  \noindent{\small\textbf{#1:}} {\small #2}\par\vspace{0.1pt}%
+}
+
+\begin{document}
+\color{textcol}
+
+%% ---- NAME & CONTACT ----
+\begin{center}
+  {\fontsize{19pt}{22pt}\selectfont\textbf{SHAMIK BASU}}\\[2pt]
+  {\small\color{headgray}\textit{Data Scientist}}\\[3pt]
+  {\footnotesize\color{headgray}
+    Los Angeles, CA
+    \textbar{} (213) 255-6219
+    \textbar{} \href{mailto:shamik1900@gmail.com}{shamik1900@gmail.com}
+    \textbar{} \href{https://www.linkedin.com/in/shamikofficial/}{linkedin.com/in/shamikofficial}
+    \textbar{} \href{https://github.com/ShamikOfficial}{github.com/ShamikOfficial}
+    \textbar{} \href{https://shamikofficial.github.io}{shamikofficial.github.io}
+  }
+\end{center}
+
+\vspace{-2pt}
+
+%% ---- PROFESSIONAL SUMMARY ----
+\section{Professional Summary}
+{\small Data scientist with 3+ years shipping production machine learning pipelines, LLM systems, and analytics workflows with measurable business impact. Cut operational costs by 72\% on production RAG processing 5M+ records/month and improved fraud identification accuracy by 27\% while reducing false positives. Skilled in Python and SQL, statistics, experimentation, causal inference, econometrics, machine learning, and forecasting.}
+%% ---- RELEVANT SKILLS ----
+\section{Relevant Skills}
+\skillrow{Languages \& Databases}{Python, SQL, R, C/C++, PostgreSQL, MongoDB, Spark, Trino, Apache Kafka}
+\skillrow{ML \& Analytics}{Machine learning, statistics, econometrics, causal inference, A/B experimentation, feature engineering, logistic regression, NLP, NER, forecasting, quantitative analysis, Tableau, Power BI}
+\skillrow{Deep Learning \& LLMs}{PyTorch, TensorFlow, Hugging Face Transformers, LoRA fine-tuning, RAG, LangChain, multi-agent orchestration}
+\skillrow{Cloud}{AWS (S3, Lambda, DynamoDB), Docker, Kubernetes, REST APIs, CI/CD, Azure Synapse, Langfuse observability, Git}
+\skillrow{Leadership}{VP of GRIDS, 250-member student-led graduate data science club at USC, \textbar{} Graduate Mentor for USC Viterbi Engineering}
+%% ---- WORK EXPERIENCE ----
+\section{Work Experience}
+\jobtitle{Data Science Associate Intern (Part-Time)}{Liquidity AI Capital}{Los Angeles, CA}{April 2026 - May 2026}
+\begin{workitems}
+  \item Deployed production SLM inference in Docker by fine-tuning open-source models end-to-end (tokenization and LoRA adapter training) with optimized domain-specific inference on financial data.
+\end{workitems}
+\jobtitle{Data Science Associate Intern (Part-Time)}{KCC Capital Partners}{Los Angeles, CA}{January 2026 - March 2026}
+\begin{workitems}
+  \item Automated M\&A target sourcing across active mandates by building an agentic LangChain pipeline (Python) chaining LLM entity classification, web scraping, and structured extraction to identify and rank strategic buyers.
+\end{workitems}
+\jobtitle{Data Scientist}{Bajaj Finserv Health}{Pune, India}{November 2023 - December 2024}
+\begin{workitems}
+  \item Cut operational costs by 72\% at 92\% extraction accuracy by architecting a production RAG pipeline (LangChain + GPT-3.5 Turbo + REST APIs) processing 5M+ medical records/month, replacing a manual clinical workflow.
+  \item Reduced GPU compute waste by 15\% by building Langfuse observability for agentic pipelines tracking token utilization, output drift, and latency to prioritize production optimizations.
+  \item Achieved zero-downtime real-time inference by migrating batch cronjobs to an Apache Kafka event-driven architecture, shipping in two-week agile sprints with automated integration tests.
+\end{workitems}
+\jobtitle{Associate Data Scientist}{Bajaj Finserv Health}{Pune, India}{July 2022 - October 2023}
+\begin{workitems}
+  \item Boosted fraud identification accuracy by 27\% while reducing false positives by redesigning the production NER pipeline, retraining entity extraction models, and improving name-matching heuristics.
+  \item Improved business performance and operational efficiency by 22\% by building a supervised machine learning model (logistic regression + feature engineering), statistically validating quantitative research findings, and operationalizing workforce predictions.
+\end{workitems}
+\jobtitle{Data Engineer Intern}{Bajaj Finserv Health}{Pune, India}{January 2022 - June 2022}
+\begin{workitems}
+  \item Scaled ETL and analytics to 10M+ records across 200+ features by designing a distributed system (C++, Trino, Docker) with optimized SQL, analytical query processing, and disaster recovery on an enterprise SQL cluster.
+\end{workitems}
+%% ---- PROJECTS ----
+\section{Projects}
+\projtitle{Custom CUDA Library for CNN Pre-Processing}{January 2026 - February 2026}
+\begin{itemize}
+  \item Achieved 115x CPU speedup at N=1024 (Tesla T4) and 14x PyTorch data preprocessing speedup by profiling and optimizing shared-memory tiled CUDA kernels (C/C++) for matrix multiplication and image convolution.
+  \item Delivered Python-bindable .so libraries for GPU-accelerated data preprocessing, integrating optimized kernels into ML pipelines without rewriting downstream Python code.
+\end{itemize}
+\projsep
+\projtitle{Agentic Trend Orchestrator}{May 2026 - June 2026}
+\begin{itemize}
+  \item Owned full SDLC through CI/CD deployment by building a multi-agent AI system (FastAPI + Next.js + Docker) with persistent memory and LLM-driven task orchestration.
+  \item Improved agent reliability by iterating on task completion rate, tool-use accuracy, and semantic drift metrics across orchestration workflows.
+\end{itemize}
+\projsep
+\projtitle{EcoMateAI}{May 2025 - June 2025}
+\begin{itemize}
+  \item Won 1st place at UCLA SAIRS Hackathon (Microsoft, IBM, NVIDIA, Google, LinkedIn) by shipping a multimodal agentic AI platform (Gemini 2.5 Flash) in 24 hours.
+  \item Ingested text, images, and structured data through multimodal data preprocessing and agent workflows to generate personalized sustainability recommendations.
+\end{itemize}
+%% ---- EDUCATION ----
+\section{Education}
+\edutitle{University of Southern California}{Masters, Applied Data Science}{January 2025 - December 2026}
+\educourse{Deep Learning, Machine Learning, Data Mining (MapReduce), Data Management}
+\vspace{2pt}
+\edutitle{SRM Institute of Science \& Technology}{Bachelor, Computer Science}{May 2018 - June 2022}
+\educourse{Algorithms, Artificial Intelligence, Computer Vision, Probability \& Queueing Theory}
+
+\end{document}

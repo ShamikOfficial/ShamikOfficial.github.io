@@ -1,1507 +1,470 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<script>
-(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='professional'?'professional':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
-</script>
-<title>Shamik Basu | AI Enabled Data Scientist | MS Data Science USC | ML &amp; AI</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shamik Basu - MS Data Science @ USC (GPA 3.7). Portfolio at www.shamik-basu.com. 2+ years building production ML, RAG, and LLM systems. 1st Place UCLA SAIRS Hackathon 2025. Los Angeles.">
-<meta name="keywords" content="Shamik Basu, AI enabled data scientist, shamik-basu.com, www.shamik-basu.com, Data Scientist, Machine Learning Engineer, USC Data Science, RAG, LLM, Python, PyTorch, LangChain, Los Angeles">
+<title>Shamik Basu | AI Enabled Data Scientist | MS Data Science USC</title>
+<meta name="description" content="Shamik Basu - AI Enabled Data Scientist, MS Data Science @ USC (GPA 3.7). 2+ years shipping production ML, RAG, and LLM systems. 1st Place UCLA SAIRS Hackathon. Based in Los Angeles. Portfolio at www.shamik-basu.com.">
+<meta name="keywords" content="Shamik Basu, AI Enabled Data Scientist, Machine Learning Engineer, USC Data Science, RAG, LLM, LangChain, CUDA, Python, PyTorch, Los Angeles, shamik-basu.com">
 <meta name="author" content="Shamik Basu">
-<meta property="og:title" content="Shamik Basu | AI Enabled Data Scientist">
-<meta property="og:description" content="MS Data Science @ USC (GPA 3.7). Primary portfolio at www.shamik-basu.com. Production RAG, LLM systems, and AI analytics at scale.">
-<meta property="og:url" content="https://www.shamik-basu.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://www.shamik-basu.com/assets/images/profile-picture.jpg">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shamik Basu | AI Enabled Data Scientist">
-<meta name="twitter:description" content="MS Data Science @ USC (GPA 3.7). www.shamik-basu.com - Production ML, RAG, and LLM.">
 <link rel="canonical" href="https://www.shamik-basu.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shamik Basu | AI Enabled Data Scientist">
+<meta property="og:description" content="MS Data Science @ USC (GPA 3.7). 2+ years of production ML, RAG, and LLM systems. 1st Place UCLA SAIRS Hackathon.">
+<meta property="og:url" content="https://www.shamik-basu.com/">
+<meta property="og:image" content="https://www.shamik-basu.com/assets/images/profile-picture.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shamik Basu | AI Enabled Data Scientist">
+<meta name="twitter:description" content="MS Data Science @ USC. Production ML, RAG, and LLM systems. 1st Place UCLA SAIRS Hackathon.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
 
-<style>
-/* ===== Theme tokens (Light = default, Dark) ===== */
-:root {
-  color-scheme: light;
-  --bg: #f8fafc;
-  --bg-page: #f1f5f9;
-  --text: #475569;
-  --text-heading: #0f172a;
-  --text-muted: #64748b;
-  --text-faint: #64748b;
-  --text-subtle: #64748b;
-  --border: rgba(15, 23, 42, 0.07);
-  --border-section: rgba(15, 23, 42, 0.06);
-  --nav-scrolled-bg: rgba(255, 255, 255, 0.82);
-  --nav-border: rgba(15, 23, 42, 0.06);
-  --nav-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
-  --accent: #1d4ed8;
-  --accent-hover: #1e40af;
-  --accent-soft: rgba(29, 78, 216, 0.08);
-  --accent-soft-border: rgba(29, 78, 216, 0.2);
-  --card-bg: #ffffff;
-  --card-border: rgba(15, 23, 42, 0.08);
-  --card-border-hover: #1d4ed8;
-  --card-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 16px rgba(15, 23, 42, 0.04);
-  --card-shadow-hover: 0 4px 12px rgba(15, 23, 42, 0.08), 0 12px 32px rgba(15, 23, 42, 0.06);
-  --hero-tagline: #475569;
-  --hero-photo-inner: #ffffff;
-  --hero-photo-shadow: rgba(15, 23, 42, 0.1);
-  --hero-glow: radial-gradient(ellipse 90% 70% at 50% -15%, rgba(29, 78, 216, 0.07), transparent 55%);
-  --stat-bg: #ffffff;
-  --stat-border: rgba(15, 23, 42, 0.08);
-  --stat-text: #475569;
-  --stat-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --btn-primary-fg: #ffffff;
-  --btn-secondary-fg: #0f172a;
-  --btn-secondary-border: rgba(15, 23, 42, 0.12);
-  --btn-secondary-hover: rgba(15, 23, 42, 0.04);
-  --btn-resume-hover-fg: #ffffff;
-  --timeline-line: rgba(15, 23, 42, 0.12);
-  --pill-green-bg: rgba(34, 197, 94, 0.1);
-  --mobile-panel-bg: rgba(255, 255, 255, 0.97);
-  --toggle-border: rgba(15, 23, 42, 0.1);
-  --toggle-bg: #ffffff;
-  --toggle-icon: #0f172a;
-  --theme-switch-bg: #ffffff;
-  --theme-switch-border: rgba(15, 23, 42, 0.1);
-  --project-card-bg: #ffffff;
-  --skill-pill-bg: #f8fafc;
-  --skill-pill-border: rgba(15, 23, 42, 0.08);
-  --skill-pill-hover: rgba(29, 78, 216, 0.08);
-  --tech-tag-bg: rgba(29, 78, 216, 0.06);
-  --tech-tag-border: rgba(29, 78, 216, 0.18);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 14px;
-  --radius-pill: 999px;
-}
-html[data-theme="professional"] {
-  color-scheme: dark;
-  --bg: #060a12;
-  --bg-page: #060a12;
-  --text: #94a3b8;
-  --text-heading: #f1f5f9;
-  --text-muted: #94a3b8;
-  --text-faint: #64748b;
-  --text-subtle: #64748b;
-  --border: rgba(255, 255, 255, 0.06);
-  --border-section: rgba(255, 255, 255, 0.06);
-  --nav-scrolled-bg: rgba(6, 10, 18, 0.82);
-  --nav-border: rgba(255, 255, 255, 0.06);
-  --nav-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
-  --accent: #5b9cf9;
-  --accent-hover: #7eb3fb;
-  --accent-soft: rgba(91, 156, 249, 0.12);
-  --accent-soft-border: rgba(91, 156, 249, 0.28);
-  --card-bg: rgba(255, 255, 255, 0.035);
-  --card-border: rgba(255, 255, 255, 0.09);
-  --card-border-hover: #5b9cf9;
-  --card-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 8px 32px rgba(0, 0, 0, 0.35);
-  --card-shadow-hover: 0 0 0 1px rgba(91, 156, 249, 0.35), 0 16px 48px rgba(0, 0, 0, 0.45);
-  --hero-tagline: #cbd5e1;
-  --hero-photo-inner: rgba(6, 10, 18, 0.9);
-  --hero-photo-shadow: rgba(0, 0, 0, 0.45);
-  --hero-glow: radial-gradient(ellipse 90% 70% at 50% -10%, rgba(91, 156, 249, 0.12), transparent 55%);
-  --stat-bg: rgba(255, 255, 255, 0.04);
-  --stat-border: rgba(255, 255, 255, 0.1);
-  --stat-text: #cbd5e1;
-  --stat-shadow: none;
-  --btn-primary-fg: #060a12;
-  --btn-secondary-fg: #f1f5f9;
-  --btn-secondary-border: rgba(255, 255, 255, 0.14);
-  --btn-secondary-hover: rgba(255, 255, 255, 0.06);
-  --btn-resume-hover-fg: #060a12;
-  --timeline-line: rgba(255, 255, 255, 0.1);
-  --pill-green-bg: rgba(34, 197, 94, 0.14);
-  --mobile-panel-bg: rgba(6, 10, 18, 0.97);
-  --toggle-border: rgba(255, 255, 255, 0.1);
-  --toggle-bg: rgba(255, 255, 255, 0.04);
-  --toggle-icon: #f1f5f9;
-  --theme-switch-bg: rgba(255, 255, 255, 0.04);
-  --theme-switch-border: rgba(255, 255, 255, 0.1);
-  --project-card-bg: rgba(255, 255, 255, 0.035);
-  --skill-pill-bg: rgba(255, 255, 255, 0.05);
-  --skill-pill-border: rgba(255, 255, 255, 0.1);
-  --skill-pill-hover: rgba(91, 156, 249, 0.12);
-  --tech-tag-bg: rgba(91, 156, 249, 0.12);
-  --tech-tag-border: rgba(91, 156, 249, 0.25);
-}
-
-/* ===== Reset & base ===== */
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.65;
-  letter-spacing: 0.01em;
-  color: var(--text);
-  background: var(--bg-page);
-  transition: background-color 0.25s ease, color 0.25s ease;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-img { max-width: 100%; height: auto; display: block; }
-a { color: inherit; text-decoration: none; }
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-button:focus-visible, a:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-/* ===== Layout ===== */
-.wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-.section {
-  padding: 88px 0;
-  border-top: 1px solid var(--border-section);
-  background: var(--bg);
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section-label {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin: 0 0 14px;
-  display: block;
-}
-
-.section-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  color: var(--text-heading);
-  margin: 0 0 14px;
-}
-
-.section-sub {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-muted);
-  margin: 0 0 44px;
-  max-width: 540px;
-}
-
-/* ===== Nav ===== */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 102;
-  padding: 18px 0;
-  transition: backdrop-filter 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-}
-.nav.scrolled {
-  backdrop-filter: blur(14px) saturate(1.2);
-  -webkit-backdrop-filter: blur(14px) saturate(1.2);
-  background: var(--nav-scrolled-bg);
-  border-bottom: 1px solid var(--nav-border);
-  box-shadow: var(--nav-shadow);
-}
-.nav-inner {
-  position: relative;
-  z-index: 103;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-}
-.nav-links a {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--text-muted);
-  position: relative;
-  padding: 4px 0;
-  transition: color 0.2s ease;
-}
-.nav-links a:hover { color: var(--text-heading); }
-.nav-links a.active { color: var(--text-heading); }
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background: var(--accent);
-  transition: width 0.2s ease;
-}
-.nav-links a:hover::after,
-.nav-links a.active::after { width: 100%; }
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-.theme-switch {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--theme-switch-border);
-  border-radius: var(--radius-pill);
-  padding: 4px;
-  background: var(--theme-switch-bg);
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
-}
-html[data-theme="professional"] .theme-switch {
-  box-shadow: none;
-}
-.theme-btn {
-  padding: 6px 14px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-family: inherit;
-  border: none;
-  border-radius: 6px;
-  background: transparent;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-.theme-btn[aria-pressed="true"] {
-  background: var(--accent);
-  color: #fff;
-}
-.theme-btn:focus-visible {
-  outline-offset: 2px;
-}
-.btn-resume {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 18px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: var(--radius-sm);
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  flex-shrink: 0;
-}
-.btn-resume:hover {
-  background: var(--accent);
-  color: var(--btn-resume-hover-fg);
-  transform: translateY(-1px);
-}
-
-/* Hamburger */
-.nav-toggle {
-  display: none;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: 1px solid var(--toggle-border);
-  border-radius: 8px;
-  background: var(--toggle-bg);
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-}
-.nav-toggle span {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background: var(--toggle-icon);
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-.nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
-.nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-.nav-mobile-panel {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--mobile-panel-bg);
-  z-index: 101;
-  padding: 88px 24px 32px;
-  flex-direction: column;
-  gap: 8px;
-}
-.nav.open .nav-mobile-panel {
-  display: flex;
-}
-.nav-mobile-panel a {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--text-heading);
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-}
-.nav-mobile-panel .btn-resume {
-  margin-top: 16px;
-  width: 100%;
-  padding: 12px;
-}
-
-@media (min-width: 769px) {
-  .nav-mobile-panel { display: none !important; }
-}
-.nav-mobile-theme {
-  padding-top: 8px;
-  margin-top: 8px;
-  border-top: 1px solid var(--border);
-}
-.nav-mobile-theme .theme-switch {
-  width: 100%;
-  justify-content: center;
-}
-
-/* ===== Hero ===== */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 108px 28px 96px;
-  background: var(--hero-glow), var(--bg);
-}
-.hero-inner {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}
-.hero-photo-wrap {
-  margin: 0 auto 44px;
-  width: fit-content;
-  border-radius: 50%;
-  padding: 6px;
-  border: 1px solid var(--accent-soft-border);
-  background: var(--accent-soft);
-  box-shadow:
-    0 0 0 1px var(--border),
-    0 16px 48px var(--hero-photo-shadow);
-  opacity: 0;
-  transform: translateY(18px);
-  animation: heroFade 0.65s ease forwards;
-}
-.hero-photo-wrap:hover .hero-photo {
-  transform: scale(1.03);
-}
-.hero-photo {
-  width: 176px;
-  height: 176px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  border: 2px solid var(--hero-photo-inner);
-  transition: transform 0.35s ease;
-}
-.hero-heading {
-  margin-bottom: 28px;
-}
-.hero-name {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 68px;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--text-heading);
-  text-transform: uppercase;
-  margin: 0 0 18px;
-  opacity: 0;
-  transform: translateY(22px);
-  animation: heroFade 0.65s ease 0.08s forwards;
-}
-.hero-tagline {
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.45;
-  color: var(--hero-tagline);
-  margin: 0;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0;
-  transform: translateY(22px);
-  animation: heroFade 0.65s ease 0.18s forwards;
-}
-@keyframes heroFade {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.stat-chips {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 36px;
-}
-.stat-chip {
-  padding: 10px 18px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--stat-text);
-  background: var(--stat-bg);
-  border: 1px solid var(--stat-border);
-  border-radius: var(--radius-pill);
-  box-shadow: var(--stat-shadow);
-}
-
-.hero-cta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 32px;
-}
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 30px;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--btn-primary-fg);
-  background: var(--accent);
-  border: none;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(29, 78, 216, 0.25);
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-html[data-theme="professional"] .btn-primary {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-.btn-primary:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1), 0 8px 20px rgba(29, 78, 216, 0.3);
-}
-html[data-theme="professional"] .btn-primary:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 30px;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--btn-secondary-fg);
-  background: transparent;
-  border: 1px solid var(--btn-secondary-border);
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-}
-.btn-secondary:hover {
-  border-color: var(--accent);
-  background: var(--btn-secondary-hover);
-  transform: translateY(-2px);
-}
-
-.social-row {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-.social-row a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: var(--text-muted);
-  transition: color 0.2s ease;
-}
-.social-row a:hover { color: var(--accent); }
-.social-row svg { width: 18px; height: 18px; flex-shrink: 0; }
-
-/* ===== Project cards ===== */
-.project-section-head {
-  margin-bottom: 14px;
-}
-.section-title-projects { margin-bottom: 0; }
-.project-carousel {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 12px;
-  width: 100%;
-  max-width: 100%;
-}
-.project-carousel > .project-nav-btn {
-  flex-shrink: 0;
-  align-self: center;
-}
-.project-nav-btn {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--card-bg);
-  color: var(--text-heading);
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: var(--card-shadow);
-}
-.project-nav-btn:hover {
-  border-color: var(--card-border-hover);
-  color: var(--accent);
-}
-.project-nav-btn:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-.project-slider {
-  flex: 1;
-  min-width: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scroll-padding-inline: 0;
-  overscroll-behavior-x: contain;
-  padding-bottom: 4px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  touch-action: pan-x;
-  container-type: inline-size;
-  container-name: projstrip;
-}
-.project-slider::-webkit-scrollbar {
-  display: none;
-}
-
-.project-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 16px;
-  padding-inline: 0;
-  padding-bottom: 8px;
-}
-.project-card {
-  background: var(--project-card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 30px 34px;
-  box-shadow: var(--card-shadow);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-  flex: 0 0 clamp(260px, 78vw, 480px);
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-  box-sizing: border-box;
-}
-@container projstrip (min-width: 200px) {
-  .project-card {
-    flex: 0 0 min(480px, calc(100cqi - 4px));
-  }
-}
-.project-card:hover {
-  border-color: var(--card-border-hover);
-  box-shadow: var(--card-shadow-hover);
-  transform: translateY(-3px);
-}
-.project-card-inner {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.project-main { flex: 1; min-width: 0; }
-.project-side {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-end;
-  text-align: right;
-}
-.award-badge {
-  display: inline-block;
-  padding: 4px 10px;
-  font-size: 11px;
-  font-weight: 500;
-  color: #fbbf24;
-  background: rgba(251,191,36,0.12);
-  border: 1px solid rgba(251,191,36,0.25);
-  border-radius: 6px;
-  margin-bottom: 12px;
-}
-.project-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 21px;
-  letter-spacing: -0.02em;
-  color: var(--text-heading);
-  margin: 0 0 8px;
-}
-.project-date {
-  font-size: 13px;
-  color: var(--text-subtle);
-  margin: 0 0 14px;
-}
-.project-bullets {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--text-muted);
-  font-size: 14px;
-}
-.project-bullets li { margin-bottom: 8px; }
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-}
-.tech-tag {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--accent);
-  padding: 5px 11px;
-  background: var(--tech-tag-bg);
-  border: 1px solid var(--tech-tag-border);
-  border-radius: var(--radius-sm);
-}
-.project-link {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent);
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
-.project-link:hover { color: var(--accent-hover); opacity: 1; }
-.github-more {
-  text-align: center;
-  margin-top: 36px;
-}
-.github-more a {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--accent);
-  transition: color 0.2s ease;
-}
-.github-more a:hover { color: var(--accent-hover); text-decoration: underline; }
-
-/* ===== Experience timeline ===== */
-.timeline { position: relative; padding-left: 0; }
-.timeline-item {
-  position: relative;
-  padding-left: 24px;
-  padding-bottom: 36px;
-  border-left: 2px solid var(--timeline-line);
-  margin-left: 6px;
-}
-.timeline-item:last-child { padding-bottom: 0; }
-.timeline-item.current { border-left-color: var(--accent); }
-.timeline-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 8px 12px;
-  margin-bottom: 12px;
-}
-.timeline-role {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: var(--text-heading);
-}
-.timeline-meta {
-  font-size: 14px;
-  color: var(--text-subtle);
-}
-.pill-current {
-  display: inline-block;
-  padding: 2px 8px;
-  font-size: 11px;
-  font-weight: 600;
-  color: #22c55e;
-  background: var(--pill-green-bg);
-  border-radius: 4px;
-}
-.timeline-bullets {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--text-muted);
-  font-size: 14px;
-}
-.timeline-bullets li { margin-bottom: 8px; }
-
-/* ===== Education & leadership grids ===== */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-}
-.edu-card, .lead-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 28px 30px;
-  box-shadow: var(--card-shadow);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-}
-.edu-card:hover, .lead-card:hover {
-  border-color: var(--card-border-hover);
-  box-shadow: var(--card-shadow-hover);
-  transform: translateY(-2px);
-}
-.edu-card img.logo { height: 40px; width: auto; margin-bottom: 16px; }
-.edu-degree {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: var(--text-heading);
-  margin: 0 0 6px;
-}
-.edu-school { font-size: 14px; color: var(--text-muted); margin: 0 0 4px; }
-.edu-meta { font-size: 13px; color: var(--text-subtle); margin: 0 0 12px; }
-.edu-gpa { font-size: 14px; margin: 0 0 8px; color: var(--text-muted); }
-.edu-gpa strong { color: var(--accent); font-weight: 600; }
-.edu-course { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; }
-
-.lead-role {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: var(--text-heading);
-  margin: 0 0 6px;
-}
-.lead-org { font-size: 14px; color: var(--accent); margin: 0 0 6px; }
-.lead-dates { font-size: 13px; color: var(--text-subtle); margin: 0 0 12px; }
-.lead-desc { font-size: 14px; color: var(--text-muted); margin: 0; line-height: 1.65; }
-
-/* ===== Skills ===== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.skill-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 22px 24px;
-  box-shadow: var(--card-shadow);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-}
-.skill-card:hover {
-  border-color: var(--card-border-hover);
-  box-shadow: var(--card-shadow-hover);
-  transform: translateY(-2px);
-}
-.skill-cat {
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  margin: 0 0 14px;
-  font-family: 'Inter', sans-serif;
-}
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.skill-pill {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
-  padding: 6px 11px;
-  background: var(--skill-pill-bg);
-  border: 1px solid var(--skill-pill-border);
-  border-radius: var(--radius-sm);
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
-.skill-pill:hover { background: var(--skill-pill-hover); }
-
-/* ===== Contact ===== */
-.contact-intro {
-  font-size: 18px;
-  color: var(--text-muted);
-  max-width: 480px;
-  margin: 0 auto 36px;
-  text-align: center;
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 32px;
-}
-.contact-card {
-  display: block;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 24px 24px;
-  box-shadow: var(--card-shadow);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-  cursor: pointer;
-}
-.contact-card:hover {
-  border-color: var(--card-border-hover);
-  box-shadow: var(--card-shadow-hover);
-  transform: translateY(-2px);
-}
-.contact-card .label { font-size: 12px; color: var(--text-subtle); margin-bottom: 6px; }
-.contact-card .value { font-size: 14px; color: var(--text-heading); word-break: break-all; }
-.contact-card svg { margin-bottom: 10px; color: var(--accent); }
-.contact-dl { text-align: center; }
-
-/* ===== Footer ===== */
-.site-footer {
-  text-align: center;
-  padding: 40px 24px 48px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--text-subtle);
-  border-top: 1px solid var(--border-section);
-  background: var(--bg);
-}
-.site-footer a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
-  .section { padding: 56px 0; }
-  .section-title { font-size: 26px; }
-  .nav-links { display: none; }
-  .nav-right .theme-switch { display: none; }
-  .nav-toggle { display: flex; }
-  .hero { padding: 96px 20px 72px; }
-  .hero-photo-wrap { margin-bottom: 36px; padding: 5px; }
-  .hero-photo { width: 132px; height: 132px; }
-  .hero-heading { margin-bottom: 22px; }
-  .hero-name { font-size: 40px; letter-spacing: -0.015em; }
-  .hero-tagline { font-size: 18px; max-width: 100%; }
-  .stat-chip { font-size: 13px; padding: 8px 14px; }
-  .project-nav-btn {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
-  }
-  .project-carousel {
-    gap: 8px;
-  }
-  .project-card-inner {
-    flex-direction: column;
-  }
-  .project-side {
-    align-items: flex-start;
-    text-align: left;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .skills-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .card-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 900px) and (min-width: 769px) {
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-}
-</style>
+<!-- Structured data: everything a recruiter or crawler needs to qualify me. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shamik Basu",
+  "jobTitle": "Data Scientist",
+  "description": "AI Enabled Data Scientist with 2+ years shipping production machine learning, RAG, and LLM systems. MS Data Science at USC.",
+  "url": "https://www.shamik-basu.com/",
+  "email": "mailto:shamik1900@gmail.com",
+  "telephone": "+1-213-255-6219",
+  "image": "https://www.shamik-basu.com/assets/images/profile-picture.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA", "addressCountry": "US" },
+  "sameAs": [
+    "https://linkedin.com/in/shamikofficial/",
+    "https://github.com/ShamikOfficial",
+    "https://devpost.com/shamik1900"
+  ],
+  "knowsAbout": [
+    "Machine Learning", "Deep Learning", "Large Language Models", "RAG", "LangChain",
+    "Multi-Agent Systems", "NLP", "CUDA / GPU Computing", "Python", "SQL", "PyTorch",
+    "TensorFlow", "Statistics", "A/B Testing", "Data Engineering", "Apache Kafka", "Docker", "AWS"
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "University of Southern California", "description": "MS, Applied Data Science (Jan 2025 - Dec 2026)" },
+    { "@type": "CollegeOrUniversity", "name": "SRM Institute of Science & Technology", "description": "BTech, Computer Science (2018 - 2022)" }
+  ],
+  "worksFor": { "@type": "Organization", "name": "Liquidity AI Capital" },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Data Scientist",
+    "skills": "Production ML pipelines, RAG, LLM systems, agentic orchestration, CUDA optimization, data engineering, experimentation"
+  },
+  "interest": [
+    "Table Tennis", "Football (Soccer)", "Piano", "Horror Movies", "Anime", "Sports"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Shamik Basu - Featured Projects",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": "https://www.shamik-basu.com/projects/agentic-trend-orchestrator.html", "name": "Trend Pilot (Agentic Trend Orchestrator)" },
+    { "@type": "ListItem", "position": 2, "url": "https://www.shamik-basu.com/projects/ecomate-ai.html", "name": "EcoMate-AI (1st Place, UCLA SAIRS Hackathon)" },
+    { "@type": "ListItem", "position": 3, "url": "https://www.shamik-basu.com/projects/custom-cuda-library.html", "name": "Custom CUDA Library for CNN Pre-Processing" },
+    { "@type": "ListItem", "position": 4, "url": "https://www.shamik-basu.com/projects/smooth-operation.html", "name": "Smooth Operation" }
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<header class="nav" id="nav">
+<header class="nav">
   <div class="nav-inner">
-    <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links" id="nav-desktop" aria-label="Primary">
-      <a href="#projects" data-nav="projects">Work</a>
-      <a href="#experience" data-nav="experience">Experience</a>
-      <a href="#education" data-nav="education">Education</a>
-      <a href="#skills" data-nav="skills">Skills</a>
-      <a href="#contact" data-nav="contact">Contact</a>
+    <a href="#top" class="nav-brand">Shamik Basu</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#projects" data-section="projects">Projects</a>
+      <a href="#experience" data-section="experience">Experience</a>
+      <a href="#leadership" data-section="leadership">Leadership</a>
+      <a href="#education" data-section="education">Education</a>
+      <a href="#skills" data-section="skills">Skills</a>
+      <a href="#contact" data-section="contact">Contact</a>
     </nav>
-    <div class="nav-right">
-      <div class="theme-switch" role="group" aria-label="Color theme">
-        <button type="button" class="theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
-        <button type="button" class="theme-btn" data-theme-set="professional" aria-pressed="false">Dark</button>
-      </div>
-      <a href="assets/documents/resume.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">View Resume</a>
+    <div class="nav-actions">
+      <button type="button" class="icon-btn theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36A5.39 5.39 0 0112 3z"/></svg>
+      </button>
+      <a href="assets/documents/resume.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Resume</a>
+      <button type="button" class="icon-btn menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </div>
   </div>
-  <div class="nav-mobile-panel" id="nav-mobile-panel" aria-hidden="true">
-    <a href="#projects">Work</a>
+  <nav class="mobile-menu" aria-label="Mobile">
+    <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
+    <a href="#leadership">Leadership</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
-    <a href="assets/documents/resume.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">View Resume</a>
-    <div class="nav-mobile-theme">
-      <div class="theme-switch" role="group" aria-label="Color theme">
-        <button type="button" class="theme-btn" data-theme-set="light" aria-pressed="true">Light</button>
-        <button type="button" class="theme-btn" data-theme-set="professional" aria-pressed="false">Dark</button>
+  </nav>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ===== Hero ===== -->
+<section class="hero wrap">
+  <div class="hero-inner">
+    <div class="hero-avatar">
+      <img src="assets/images/profile-picture.jpg" alt="Portrait of Shamik Basu" width="92" height="92" onerror="this.remove()">
+      <span aria-hidden="true">SB</span>
+    </div>
+    <div>
+      <h1>Shamik Basu</h1>
+      <p class="hero-tagline">AI Enabled Data Scientist</p>
+    </div>
+    <p class="hero-summary">I ship production machine learning, RAG, and LLM systems that move real business metrics - 72% lower cost on a 5M+ record/month pipeline, 27% better fraud detection, and 115x GPU speedups. Currently an MS Data Science student at USC.</p>
+    <p class="hero-fun">Off the clock, I play table tennis and football (soccer), and love playing the piano. Always happy to talk horror movies, anime, and sports.</p>
+    <div class="stat-row">
+      <span class="stat-chip">2+ yrs production ML</span>
+      <span class="stat-chip">MS Data Science @ USC</span>
+      <span class="stat-chip">1st Place - UCLA SAIRS Hackathon</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-meta">
+      <span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
+        Los Angeles, CA
+      </span>
+      <span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>
+        shamik1900@gmail.com
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Highlights slideshow ===== -->
+<section class="wrap" aria-label="Recent highlights" style="padding-bottom: 8px;">
+  <div class="slider">
+    <div class="slider-track">
+      <article class="highlight-slide active">
+        <div class="slide-bg" style="background-image:url('assets/images/highlights/ucla-sairs.jpg');"></div>
+        <div class="slide-body">
+          <span class="slide-date">2025 · Hackathon Win</span>
+          <h3>1st Place - UCLA SAIRS Hackathon</h3>
+          <p>Won the sustainability track with EcoMate-AI, a multimodal agentic platform built in 24 hours.</p>
+          <a class="slide-link" href="projects/ecomate-ai.html">Read the case study →</a>
+        </div>
+      </article>
+      <article class="highlight-slide">
+        <div class="slide-bg" style="background-image:url('assets/images/highlights/agentic-trend.jpg');"></div>
+        <div class="slide-body">
+          <span class="slide-date">2026 · Shipped</span>
+          <h3>Trend Pilot - Agentic AI for creator teams</h3>
+          <p>Multi-agent system (FastAPI + Next.js + GPT-4o VLM) that catches trends, generates scripts, and assigns the work.</p>
+          <a class="slide-link" href="projects/agentic-trend-orchestrator.html">Read the case study →</a>
+        </div>
+      </article>
+      <article class="highlight-slide">
+        <div class="slide-bg" style="background-image:url('assets/images/highlights/grids-usc.jpg');"></div>
+        <div class="slide-body">
+          <span class="slide-date">2025-Present · Leadership</span>
+          <h3>Vice President - GRIDS at USC</h3>
+          <p>Leading a 250-member graduate data science community with workshops, ideathons, and projects.</p>
+          <a class="slide-link" href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener">See on LinkedIn →</a>
+        </div>
+      </article>
+    </div>
+    <div class="slider-dots" role="tablist" aria-label="Highlights">
+      <button class="slider-dot active" data-index="0" aria-label="Highlight 1"></button>
+      <button class="slider-dot" data-index="1" aria-label="Highlight 2"></button>
+      <button class="slider-dot" data-index="2" aria-label="Highlight 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section class="section wrap" id="projects">
+  <p class="section-label">Work</p>
+  <h2 class="section-title">Featured Projects</h2>
+  <p class="section-sub">Impact-first builds across agentic AI, GPU computing, and applied ML. Each opens a full case study with the story, demo, and links.</p>
+
+  <div class="project-grid">
+
+    <!-- Agentic Trend Orchestrator -->
+    <article class="project-card">
+      <div class="project-media">
+        <video class="project-video" src="assets/video/Trend_Pilot_Intro.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Trend Pilot intro preview"></video>
+        <div class="media-links">
+          <a href="https://github.com/ShamikOfficial/agentic-trend-orchestrator" target="_blank" rel="noopener" aria-label="Trend Pilot on GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3>Trend Pilot</h3>
+        <p class="project-date">May 2026 - Jun 2026</p>
+        <p class="tagline">Agentic AI assistant for creator teams - catches trends, decides what to film, and assigns the work. Multi-agent system with GPT-4o VLM trend detection, shipped full-SDLC through CI/CD.</p>
+        <div class="tags">
+          <span class="tag">FastAPI</span><span class="tag">Next.js</span><span class="tag">GPT-4o VLM</span><span class="tag">Milvus</span><span class="tag">CI/CD</span>
+        </div>
+        <div class="project-actions">
+          <a href="projects/agentic-trend-orchestrator.html" class="btn btn-case">View case study</a>
+          <a href="https://trendpilot.shamik-basu.com/" class="btn btn-live" target="_blank" rel="noopener"><span class="live-dot" aria-hidden="true"></span>Live demo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- EcoMate-AI -->
+    <article class="project-card">
+      <div class="project-media">
+        <div class="video-embed" data-youtube="tYTzNmGuq_E" data-title="EcoMate-AI walkthrough" role="button" tabindex="0" aria-label="Play walkthrough">
+          <div class="video-poster" style="background-image:url('https://i.ytimg.com/vi/tYTzNmGuq_E/hqdefault.jpg');">
+            <span class="play-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+        <div class="media-links">
+          <a href="https://github.com/ShamikOfficial/EcoMate-AI" target="_blank" rel="noopener" aria-label="EcoMate-AI on GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://devpost.com/shamik1900" target="_blank" rel="noopener" aria-label="EcoMate-AI on Devpost" title="Devpost">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.002 1.61L0 12.004 6.002 22.39h11.996L24 12.004 17.998 1.61H6.002zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31 0 4.436-3.21 6.302-6.456 6.302H7.595V5.694zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861.009-2.569-1.096-3.853-3.767-3.853H10.11z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <span class="project-award">1st Place - UCLA SAIRS Hackathon 2025</span>
+        <h3>EcoMate-AI</h3>
+        <p class="project-date">May 2025 - Jun 2025</p>
+        <p class="tagline">Multimodal agentic platform (Gemini 2.5 Flash) that turns receipts, images, and activity into personalized sustainability actions - built in 24 hours.</p>
+        <div class="tags">
+          <span class="tag">Gemini 2.5 Flash</span><span class="tag">Python</span><span class="tag">Computer Vision</span><span class="tag">RAG</span>
+        </div>
+        <div class="project-actions">
+          <a href="projects/ecomate-ai.html" class="btn btn-case">View case study</a>
+          <a href="https://ecomateai.streamlit.app/" class="btn btn-live" target="_blank" rel="noopener"><span class="live-dot" aria-hidden="true"></span>Live demo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Custom CUDA Library -->
+    <article class="project-card">
+      <div class="project-media">
+        <img class="project-video project-video-contain" src="assets/images/CUDA%20Analysis.png" alt="CUDA benchmark analysis chart" loading="lazy">
+        <div class="media-links">
+          <a href="https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library" target="_blank" rel="noopener" aria-label="CUDA library on GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3>Custom CUDA Library for CNN Pre-Processing</h3>
+        <p class="project-date">Jan 2026 - Feb 2026</p>
+        <p class="tagline">Shared-memory tiled CUDA kernels delivering 115x CPU and 14x PyTorch preprocessing speedups, packaged as Python-bindable .so libraries.</p>
+        <div class="tags">
+          <span class="tag">CUDA</span><span class="tag">C/C++</span><span class="tag">Python</span><span class="tag">GPU Computing</span>
+        </div>
+        <div class="project-actions">
+          <a href="projects/custom-cuda-library.html" class="btn btn-case">View case study</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Smooth Operation -->
+    <article class="project-card">
+      <div class="project-media">
+        <div class="video-embed" data-youtube="P2oTHZWDBxU" data-title="Smooth Operation walkthrough" role="button" tabindex="0" aria-label="Play walkthrough">
+          <div class="video-poster" style="background-image:url('https://i.ytimg.com/vi/P2oTHZWDBxU/hqdefault.jpg');">
+            <span class="play-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+        <div class="media-links">
+          <a href="https://devpost.com/shamik1900" target="_blank" rel="noopener" aria-label="Smooth Operation on Devpost" title="Devpost">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.002 1.61L0 12.004 6.002 22.39h11.996L24 12.004 17.998 1.61H6.002zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31 0 4.436-3.21 6.302-6.456 6.302H7.595V5.694zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861.009-2.569-1.096-3.853-3.767-3.853H10.11z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3>Smooth Operation</h3>
+        <p class="project-date">2025</p>
+        <p class="tagline">Turns Atlassian workflow chaos into clarity with real-time flow graphs and heatmaps that reveal blockers, risks, and engagement.</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">AI</span><span class="tag">Data Visualization</span><span class="tag">Atlassian APIs</span>
+        </div>
+        <div class="project-actions">
+          <a href="projects/smooth-operation.html" class="btn btn-case">View case study</a>
+        </div>
+      </div>
+    </article>
+
+    </div>
+  <p style="margin-top:26px;"><a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener" class="link-arrow">See all projects on GitHub →</a></p>
+</section>
+
+<!-- ===== Experience ===== -->
+<section class="section wrap" id="experience">
+  <p class="section-label">Experience</p>
+  <h2 class="section-title">Where I've Worked</h2>
+  <p class="section-sub">Short and impact-first - full detail lives in my resume.</p>
+
+  <div class="timeline">
+    <div class="exp-item">
+      <div class="exp-head">
+        <span class="exp-role">Data Science Associate Intern (Part-Time)</span>
+        <span class="exp-dates">Apr 2026 - May 2026</span>
+      </div>
+      <p class="exp-company">Liquidity AI Capital · Los Angeles, CA</p>
+      <p>Deployed production SLM inference in Docker, fine-tuning open-source models end-to-end (tokenization + LoRA adapters) for optimized, domain-specific inference on financial data.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <span class="exp-role">Data Science Associate Intern (Part-Time)</span>
+        <span class="exp-dates">Jan 2026 - Mar 2026</span>
+      </div>
+      <p class="exp-company">KCC Capital Partners · Los Angeles, CA</p>
+      <p>Automated M&amp;A target sourcing with an agentic LangChain pipeline chaining LLM entity classification, web scraping, and structured extraction to identify and rank strategic buyers.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <span class="exp-role">Data Scientist</span>
+        <span class="exp-dates">Nov 2023 - Dec 2024</span>
+      </div>
+      <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
+      <p>Architected a production RAG pipeline (LangChain + GPT-3.5 Turbo) processing 5M+ medical records/month - cutting operational costs 72% at 92% extraction accuracy. Added Langfuse observability and Kafka event-driven inference for zero downtime.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <span class="exp-role">Associate Data Scientist</span>
+        <span class="exp-dates">Jul 2022 - Oct 2023</span>
+      </div>
+      <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
+      <p>Redesigned the production NER pipeline to boost fraud identification accuracy 27% with fewer false positives, and shipped a supervised model that improved operational efficiency 22%.</p>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <span class="exp-role">Data Engineer Intern</span>
+        <span class="exp-dates">Jan 2022 - Jun 2022</span>
+      </div>
+      <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
+      <p>Scaled ETL and analytics to 10M+ records across 200+ features with a distributed C++/Trino/Docker system, optimized SQL, and disaster recovery.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Leadership ===== -->
+<section class="section wrap" id="leadership">
+  <p class="section-label">Leadership</p>
+  <h2 class="section-title">Community &amp; Mentorship</h2>
+  <p class="section-sub">Building data science communities and mentoring the next generation of graduate students.</p>
+
+  <div class="cards">
+    <div class="info-card">
+      <h3>Vice President</h3>
+      <p class="muted">GRIDS - Graduate Data Science Club, USC</p>
+      <p class="muted">Sep 2025 - Present</p>
+      <p class="muted">Lead analytics workshops, ideathons, and projects for a 250-member graduate data science community.</p>
+    </div>
+    <div class="info-card">
+      <h3>Graduate Mentor</h3>
+      <p class="muted">USC Viterbi School of Engineering</p>
+      <p class="muted">Jan 2025 - Present</p>
+      <p class="muted">Mentor graduate students on data science career paths, technical communication, and professional development.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Education ===== -->
+<section class="section wrap" id="education">
+  <p class="section-label">Education</p>
+  <h2 class="section-title">Academic Background</h2>
+  <div class="cards">
+    <div class="info-card">
+      <h3>University of Southern California</h3>
+      <p class="muted">MS, Applied Data Science · Los Angeles, CA</p>
+      <p class="muted">Jan 2025 - Dec 2026 · <span class="gpa">GPA 3.7 / 4.0</span></p>
+      <p class="muted">Coursework: Deep Learning, Machine Learning, Data Mining (MapReduce), Data Management.</p>
+    </div>
+    <div class="info-card">
+      <h3>SRM Institute of Science &amp; Technology</h3>
+      <p class="muted">BTech, Computer Science · Chennai, India</p>
+      <p class="muted">May 2018 - Jun 2022 · <span class="gpa">GPA 3.46 / 4.0</span></p>
+      <p class="muted">Coursework: Algorithms, Artificial Intelligence, Computer Vision, Probability &amp; Queueing Theory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Skills ===== -->
+<section class="section wrap" id="skills">
+  <p class="section-label">Skills</p>
+  <h2 class="section-title">Technical Stack</h2>
+  <div class="skills">
+    <div class="skill-group">
+      <h3>Languages &amp; Databases</h3>
+      <div class="skill-pills">
+        <span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">R</span><span class="skill-pill">C/C++</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">MongoDB</span><span class="skill-pill">Spark</span><span class="skill-pill">Trino</span><span class="skill-pill">Kafka</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>ML &amp; Analytics</h3>
+      <div class="skill-pills">
+        <span class="skill-pill">Machine Learning</span><span class="skill-pill">Statistics</span><span class="skill-pill">Causal Inference</span><span class="skill-pill">A/B Testing</span><span class="skill-pill">NLP</span><span class="skill-pill">NER</span><span class="skill-pill">Forecasting</span><span class="skill-pill">Tableau</span><span class="skill-pill">Power BI</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Deep Learning &amp; LLMs</h3>
+      <div class="skill-pills">
+        <span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">Hugging Face</span><span class="skill-pill">LoRA</span><span class="skill-pill">RAG</span><span class="skill-pill">LangChain</span><span class="skill-pill">Multi-Agent</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Cloud &amp; DevOps</h3>
+      <div class="skill-pills">
+        <span class="skill-pill">AWS</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">REST APIs</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Azure Synapse</span><span class="skill-pill">Langfuse</span><span class="skill-pill">Git</span>
       </div>
     </div>
   </div>
-</header>
+</section>
 
-<main>
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div class="hero-photo-wrap">
-        <img class="hero-photo" src="assets/images/profile-picture.jpg" alt="Portrait of Shamik Basu" width="176" height="176">
-      </div>
-      <div class="hero-heading">
-        <h1 class="hero-name">Shamik Basu</h1>
-        <p class="hero-tagline">AI Enabled Data Scientist</p>
-      </div>
-      <div class="stat-chips">
-        <span class="stat-chip">2+ Years Production ML</span>
-        <span class="stat-chip">MS Data Science @ USC</span>
-        <span class="stat-chip">GPA 3.7 / 4.0</span>
-      </div>
-      <div class="hero-cta">
-        <a href="#projects" class="btn-primary">View My Work</a>
-        <a href="#contact" class="btn-secondary">Get In Touch</a>
-      </div>
-      <div class="social-row">
-        <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-        <a href="mailto:shamik1900@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/></svg>
-          Email
-        </a>
-        <a href="https://www.shamik-basu.com/" target="_blank" rel="noopener noreferrer" aria-label="Primary portfolio website">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-9.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          shamik-basu.com
-        </a>
-        <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Portfolio PDF (resume)">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-          Portfolio PDF
-        </a>
-      </div>
-    </div>
-  </section>
+<!-- ===== Contact ===== -->
+<section class="section wrap" id="contact">
+  <p class="section-label">Contact</p>
+  <h2 class="section-title">Let's Connect</h2>
+  <p class="section-sub">The fastest ways to reach me:</p>
+  <div class="contact-links">
+    <a class="contact-card" href="mailto:shamik1900@gmail.com">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>
+      <span><span class="c-label">Email</span><br><span class="c-value">shamik1900@gmail.com</span></span>
+    </a>
+    <a class="contact-card" href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      <span><span class="c-label">LinkedIn</span><br><span class="c-value">/in/shamikofficial</span></span>
+    </a>
+    <a class="contact-card" href="https://github.com/ShamikOfficial" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      <span><span class="c-label">GitHub</span><br><span class="c-value">/ShamikOfficial</span></span>
+    </a>
+    <a class="contact-card" href="https://devpost.com/shamik1900" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.002 1.61L0 12.004 6.002 22.39h11.996L24 12.004 17.998 1.61H6.002zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31 0 4.436-3.21 6.302-6.456 6.302H7.595V5.694zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861.009-2.569-1.096-3.853-3.767-3.853H10.11z"/></svg>
+      <span><span class="c-label">Devpost</span><br><span class="c-value">/shamik1900</span></span>
+    </a>
+  </div>
+</section>
 
-  <section class="section wrap" id="projects" data-section>
-    <p class="section-label">Work</p>
-    <div class="project-section-head">
-      <h2 class="section-title section-title-projects">Projects &amp; Impact</h2>
-    </div>
-    <p class="section-sub">Production systems and research built from scratch</p>
-
-    <div class="project-carousel" role="group" aria-label="Project carousel">
-      <button type="button" class="project-nav-btn" id="project-prev" aria-label="Previous projects">&#8592;</button>
-      <div class="project-slider" id="project-slider" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Featured projects">
-    <div class="project-list">
-      <article class="project-card">
-        <div class="project-card-inner">
-          <div class="project-main">
-            <h3 class="project-title">Agentic Trend Orchestrator</h3>
-            <p class="project-date">April 2026 – Present</p>
-            <ul class="project-bullets">
-              <li>Full-stack agentic AI workspace (Next.js + FastAPI) for creators: trend discovery pipelines, semantic content-performance signals, and team orchestration backed by persistent knowledge state.</li>
-              <li>Shipped authenticated product flows-workflow boards, real-time DM/group chat, trend-detection tooling, and video upload-with JWT / Auth.js integrated against REST APIs.</li>
-              <li>Production-grade deploy docs for Vercel (frontend) and Railway (API), aligning session cookies, CORS, and Auth.js issuer URLs across environments.</li>
-            </ul>
-            <div class="tech-tags">
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Auth.js</span>
-              <span class="tech-tag">JWT</span>
-              <span class="tech-tag">Vercel</span>
-              <span class="tech-tag">Tailwind CSS</span>
-            </div>
-          </div>
-          <div class="project-side">
-            <a href="https://project-l0sn8.vercel.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-            <a href="https://github.com/ShamikOfficial/agentic-trend-orchestrator" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-inner">
-          <div class="project-main">
-            <span class="award-badge">1st Place - UCLA SAIRS Hackathon 2025 · Sustainability Track</span>
-            <h3 class="project-title">EcoMate-AI</h3>
-            <p class="project-date">April 2025</p>
-            <ul class="project-bullets">
-              <li>Built an end-to-end Streamlit application using Gemini 2.5 Flash to analyze receipts and activity logs, estimating CO₂ emissions per item and generating ranked sustainability recommendations.</li>
-              <li>Designed the full pipeline: OCR extraction → emission-factor mapping → GenAI recommendations → interactive Plotly dashboard.</li>
-              <li>Presented live to industry panelists from Microsoft, IBM, NVIDIA, Google, and LinkedIn.</li>
-            </ul>
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Gemini 2.5 Flash</span>
-              <span class="tech-tag">Streamlit</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Plotly</span>
-              <span class="tech-tag">OCR</span>
-              <span class="tech-tag">RAG</span>
-            </div>
-          </div>
-          <div class="project-side">
-            <a href="https://ecomateai.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-            <a href="https://github.com/ShamikOfficial/EcoMate-AI" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-inner">
-          <div class="project-main">
-            <h3 class="project-title">Custom CUDA Library for CNN Pre-Processing</h3>
-            <p class="project-date">Jan – Feb 2025</p>
-            <ul class="project-bullets">
-              <li>Engineered custom CUDA kernels for matrix multiplication and image convolution, benchmarking CPU, naïve CUDA, tiled CUDA (shared memory), and cuBLAS across matrix sizes up to N=2048 on NVIDIA Tesla T4 GPUs.</li>
-              <li>Compiled optimized kernels into .so shared libraries with Python bindings, achieving exponential throughput gains and enabling GPU acceleration inside standard data science workflows.</li>
-            </ul>
-            <div class="tech-tags">
-              <span class="tech-tag">CUDA</span>
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">cuBLAS</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Jupyter</span>
-              <span class="tech-tag">GPU Computing</span>
-            </div>
-          </div>
-          <div class="project-side">
-            <a href="https://github.com/ShamikOfficial/GPU-Performance-Benchmarks" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-inner">
-          <div class="project-main">
-            <h3 class="project-title">Retail Sales Intelligence</h3>
-            <p class="project-date">2024</p>
-            <ul class="project-bullets">
-              <li>End-to-end retail analytics pipeline on a 10,000+ order US superstore dataset - EDA, regional trend analysis, customer segmentation, and a 90-day sales forecast.</li>
-              <li>Built interactive HTML report with Plotly; forecast model achieved MAE ~$1,200 on 90-day holdout.</li>
-            </ul>
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">pandas</span>
-              <span class="tech-tag">scikit-learn</span>
-              <span class="tech-tag">Plotly</span>
-              <span class="tech-tag">Matplotlib</span>
-              <span class="tech-tag">Jupyter</span>
-            </div>
-          </div>
-          <div class="project-side">
-            <a href="https://github.com/ShamikOfficial/Retail-Sales-Intelligence" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
-            <a href="https://shamikofficial.github.io/Super-Store-Analysis/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-card-inner">
-          <div class="project-main">
-            <h3 class="project-title">Smart Parking Optimizer</h3>
-            <p class="project-date">2022</p>
-            <ul class="project-bullets">
-              <li>Real-time parking slot allocation system using shortest-path algorithms on a live 2D map with tkinter GUI and SQLite backend.</li>
-              <li>Modular 4-layer architecture: GUI, allocation engine, authentication, and map renderer.</li>
-            </ul>
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">CUDA</span>
-              <span class="tech-tag">Algorithms</span>
-              <span class="tech-tag">SQLite</span>
-              <span class="tech-tag">tkinter</span>
-            </div>
-          </div>
-          <div class="project-side">
-            <a href="https://github.com/ShamikOfficial/Smart-Parking-Optimizer" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
-          </div>
-        </div>
-      </article>
-    </div>
-      </div>
-      <button type="button" class="project-nav-btn" id="project-next" aria-label="Next projects">&#8594;</button>
-    </div>
-
-    <p class="github-more"><a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer">View all projects on GitHub →</a></p>
-  </section>
-
-  <section class="section wrap" id="experience" data-section>
-    <p class="section-label">Experience</p>
-    <h2 class="section-title">Work History</h2>
-    <div class="timeline">
-      <div class="timeline-item current">
-        <div class="timeline-head">
-          <span class="timeline-role">Data Science Associate Intern</span>
-          <span class="pill-current">Current</span>
-        </div>
-        <p class="timeline-meta">KCC Capital Partners · Los Angeles, CA · Jan 2026 – Present</p>
-        <ul class="timeline-bullets">
-          <li>Fine-tuning and integrating an open-source SLM into a production JavaScript/Docker chatbot service to automate client service request classification and routing, reducing handling overhead for the automation team.</li>
-          <li>Evaluating model outputs against baseline response quality benchmarks to guide iteration on prompt design and fine-tuning parameters.</li>
-        </ul>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-head"><span class="timeline-role">Data Scientist</span></div>
-        <p class="timeline-meta">Bajaj Finserv Health · Pune, India · Nov 2023 – Dec 2024</p>
-        <ul class="timeline-bullets">
-          <li>Architected a real-time medical document analytics system using RAG, LangChain, and REST APIs - processing 5M+ records/month at 92% extraction accuracy, replacing a fully manual workflow.</li>
-          <li>Engineered LLM-based inference pipelines (GPT-3.5 Turbo) to automate high-complexity decision workflows, cutting operational costs by 72%.</li>
-          <li>Built modular monitoring pipelines with LangChain and Langfuse for model observability, reducing GPU compute utilization by 15%.</li>
-          <li>Integrated ML model outputs into Power BI dashboards, cutting ad-hoc reporting turnaround time by 42% and enabling self-serve analytics for stakeholders.</li>
-        </ul>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-head"><span class="timeline-role">Associate Data Scientist</span></div>
-        <p class="timeline-meta">Bajaj Finserv Health · Pune, India · Jul 2022 – Oct 2023</p>
-        <ul class="timeline-bullets">
-          <li>Developed a supervised ML model (Logistic Regression) for workforce performance prediction, improving efficiency outcomes by 22%.</li>
-          <li>Redesigned the NER-based name-matching algorithm in the fraud detection pipeline, increasing policyholder identification accuracy by 27% and reducing false positives.</li>
-          <li>Processed 10M+ records in Azure Synapse using SQL to deliver business intelligence reports for senior stakeholders.</li>
-        </ul>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-head"><span class="timeline-role">Data Engineer Intern</span></div>
-        <p class="timeline-meta">Bajaj Finserv Health · Pune, India · Jan 2022 – Jun 2022</p>
-        <ul class="timeline-bullets">
-          <li>Ran A/B tests and cohort analyses identifying key user behavior patterns that improved web conversion by 37%.</li>
-          <li>Designed a distributed analytics system in C++, Trino, and Docker supporting 10M+ records across 200+ features.</li>
-        </ul>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-head"><span class="timeline-role">Data Engineer Intern</span></div>
-        <p class="timeline-meta">Reomnify · Nov 2020 – Jan 2021</p>
-        <ul class="timeline-bullets">
-          <li>Engineered custom web scraping solutions for 500+ company templates with version control, reducing manual data collection overhead.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section wrap" id="education" data-section>
-    <p class="section-label">Education</p>
-    <h2 class="section-title">Academic Background</h2>
-    <div class="card-grid">
-      <article class="edu-card">
-        <img class="logo" src="assets/images/usc-logo.png" alt="University of Southern California logo" width="120" height="40" loading="lazy">
-        <h3 class="edu-degree">Master of Science, Data Science</h3>
-        <p class="edu-school">University of Southern California</p>
-        <p class="edu-meta">Los Angeles, CA · Jan 2025 – Dec 2026</p>
-        <p class="edu-gpa"><strong>GPA 3.7 / 4.0</strong></p>
-        <p class="edu-course"><strong>Coursework:</strong> Machine Learning, Deep Learning, Data Management, Data Science</p>
-      </article>
-      <article class="edu-card">
-        <img class="logo" src="assets/images/srm-logo.png" alt="SRM Institute of Science and Technology logo" width="120" height="40" loading="lazy">
-        <h3 class="edu-degree">Bachelor of Technology, Computer Science</h3>
-        <p class="edu-school">SRM Institute of Science and Technology</p>
-        <p class="edu-meta">Chennai, India · May 2018 – Jun 2022</p>
-        <p class="edu-gpa"><strong>GPA 3.46 / 4.0</strong></p>
-        <p class="edu-course"><strong>Coursework:</strong> Machine Learning, Artificial Intelligence, Data Structures &amp; Algorithms, Probability &amp; Queueing Theory</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section wrap" id="skills" data-section>
-    <p class="section-label">Skills</p>
-    <h2 class="section-title">Technical Stack</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <p class="skill-cat">Languages</p>
-        <div class="skill-tags">
-          <span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">C/C++</span><span class="skill-pill">CUDA</span><span class="skill-pill">Bash</span><span class="skill-pill">JavaScript</span><span class="skill-pill">R</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">ML / AI</p>
-        <div class="skill-tags">
-          <span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">scikit-learn</span><span class="skill-pill">LLMs</span><span class="skill-pill">RAG</span><span class="skill-pill">LangChain</span><span class="skill-pill">Langfuse</span><span class="skill-pill">NLP</span><span class="skill-pill">NER</span><span class="skill-pill">BERT</span><span class="skill-pill">spaCy</span><span class="skill-pill">Deep Learning</span><span class="skill-pill">Computer Vision</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Data Engineering</p>
-        <div class="skill-tags">
-          <span class="skill-pill">pandas</span><span class="skill-pill">NumPy</span><span class="skill-pill">Apache Kafka</span><span class="skill-pill">Spark</span><span class="skill-pill">Trino</span><span class="skill-pill">Informatica</span><span class="skill-pill">A/B Testing</span><span class="skill-pill">Predictive Modeling</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Databases</p>
-        <div class="skill-tags">
-          <span class="skill-pill">MySQL</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">MongoDB</span><span class="skill-pill">Azure Synapse</span><span class="skill-pill">Snowflake</span><span class="skill-pill">SQL Server</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Visualization</p>
-        <div class="skill-tags">
-          <span class="skill-pill">Power BI</span><span class="skill-pill">Tableau</span><span class="skill-pill">Plotly</span><span class="skill-pill">Matplotlib</span><span class="skill-pill">Streamlit</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <p class="skill-cat">Cloud &amp; DevOps</p>
-        <div class="skill-tags">
-          <span class="skill-pill">Microsoft Azure</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Next.js</span><span class="skill-pill">FastAPI</span><span class="skill-pill">REST APIs</span><span class="skill-pill">ELK Stack</span><span class="skill-pill">GCP</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section wrap" id="leadership" data-section>
-    <p class="section-label">Leadership</p>
-    <h2 class="section-title">Community &amp; Mentorship</h2>
-    <div class="card-grid">
-      <article class="lead-card">
-        <h3 class="lead-role">Vice President</h3>
-        <p class="lead-org">GRIDS - Graduates Rising in Data Science, USC</p>
-        <p class="lead-dates">Sep 2025 – Present</p>
-        <p class="lead-desc">Lead analytics workshops, ideathons, and data-driven projects for 250+ members across USC's largest data science organization.</p>
-      </article>
-      <article class="lead-card">
-        <h3 class="lead-role">Graduate Student Mentor</h3>
-        <p class="lead-org">USC Viterbi School of Engineering</p>
-        <p class="lead-dates">Jan 2025 – Present</p>
-        <p class="lead-desc">Mentoring 6 graduate students on data science career paths, technical communication, and professional development at USC.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section wrap" id="contact" data-section>
-    <p class="section-label">Contact</p>
-    <h2 class="section-title">Let's Work Together</h2>
-    <p class="contact-intro">Primary portfolio: <a href="https://www.shamik-basu.com/" target="_blank" rel="noopener noreferrer">www.shamik-basu.com</a></p>
-    <div class="contact-grid">
-      <a href="mailto:shamik1900@gmail.com" class="contact-card">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/></svg>
-        <div class="label">Email</div>
-        <div class="value">shamik1900@gmail.com</div>
-      </a>
-      <a href="https://linkedin.com/in/shamikofficial/" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        <div class="label">LinkedIn</div>
-        <div class="value">linkedin.com/in/shamikofficial</div>
-      </a>
-      <a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        <div class="label">GitHub</div>
-        <div class="value">github.com/ShamikOfficial</div>
-      </a>
-      <a href="https://www.shamik-basu.com/" target="_blank" rel="noopener noreferrer" class="contact-card">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-9.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        <div class="label">Portfolio website</div>
-        <div class="value">www.shamik-basu.com</div>
-      </a>
-    </div>
-    <div class="contact-dl">
-      <a href="assets/documents/resume.pdf" class="btn-primary" download>Download Resume ↓</a>
-    </div>
-  </section>
 </main>
 
-<footer class="site-footer">
-  Shamik Basu · <a href="https://www.shamik-basu.com/">www.shamik-basu.com</a> - primary portfolio · Built with HTML, CSS &amp; JavaScript
+<footer class="footer wrap">
+  <span>© 2026 Shamik Basu · <a href="https://www.shamik-basu.com/">www.shamik-basu.com</a></span>
+  <span>Built with clean HTML, CSS &amp; JavaScript</span>
 </footer>
 
-<script>
-(function () {
-  'use strict';
-
-  function syncThemeButtons() {
-    var t = document.documentElement.getAttribute('data-theme') || 'light';
-    document.querySelectorAll('.theme-btn[data-theme-set]').forEach(function (btn) {
-      btn.setAttribute('aria-pressed', btn.getAttribute('data-theme-set') === t ? 'true' : 'false');
-    });
-  }
-  document.querySelectorAll('.theme-btn[data-theme-set]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var theme = btn.getAttribute('data-theme-set');
-      document.documentElement.setAttribute('data-theme', theme);
-      try { localStorage.setItem('theme', theme); } catch (e) {}
-      syncThemeButtons();
-      var navEl = document.getElementById('nav');
-      var toggleEl = document.getElementById('nav-toggle');
-      var panelEl = document.getElementById('nav-mobile-panel');
-      if (navEl && navEl.classList.contains('open')) {
-        navEl.classList.remove('open');
-        if (toggleEl) {
-          toggleEl.setAttribute('aria-expanded', 'false');
-          toggleEl.setAttribute('aria-label', 'Open menu');
-        }
-        if (panelEl) panelEl.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-    });
-  });
-  syncThemeButtons();
-
-  // Nav scroll state
-  var nav = document.getElementById('nav');
-  function onScrollNav() {
-    if (window.scrollY > 60) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  }
-  window.addEventListener('scroll', onScrollNav, { passive: true });
-  onScrollNav();
-
-  // Mobile menu
-  var toggle = document.getElementById('nav-toggle');
-  var panel = document.getElementById('nav-mobile-panel');
-  if (toggle && panel) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      panel.setAttribute('aria-hidden', open ? 'false' : 'true');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-    panel.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-        panel.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      });
-    });
-  }
-
-  // Section fade-in
-  var sections = document.querySelectorAll('.section[data-section]');
-  var revealObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
-
-  sections.forEach(function (el) { revealObserver.observe(el); });
-
-  // Active nav links (IntersectionObserver - middle viewport band)
-  var navLinks = document.querySelectorAll('#nav-desktop a[data-nav]');
-  var sectionIds = ['projects', 'experience', 'education', 'skills', 'contact'];
-  var navObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        var id = entry.target.getAttribute('id');
-        navLinks.forEach(function (a) {
-          a.classList.toggle('active', a.getAttribute('data-nav') === id);
-        });
-      }
-    });
-  }, { root: null, rootMargin: '-32% 0px -48% 0px', threshold: [0, 0.05, 0.1] });
-
-  sectionIds.forEach(function (id) {
-    var el = document.getElementById(id);
-    if (el) navObserver.observe(el);
-  });
-
-  // Horizontal projects carousel (scroll-snap + arrows)
-  var projSlider = document.getElementById('project-slider');
-  var projPrev = document.getElementById('project-prev');
-  var projNext = document.getElementById('project-next');
-  if (projSlider && projPrev && projNext) {
-    var mqReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
-    function projScrollMotion() {
-      return mqReduce.matches ? 'auto' : 'smooth';
-    }
-    function projScrollStep() {
-      var card = projSlider.querySelector('.project-card');
-      if (!card) return 320;
-      var list = projSlider.querySelector('.project-list');
-      var gap = 20;
-      if (list) {
-        var g = window.getComputedStyle(list).gap;
-        var parsed = parseFloat(g);
-        if (!isNaN(parsed)) gap = parsed;
-      }
-      return card.getBoundingClientRect().width + gap;
-    }
-    function projScrollBy(direction) {
-      projSlider.scrollBy({
-        left: direction * projScrollStep(),
-        behavior: projScrollMotion(),
-      });
-    }
-    projPrev.addEventListener('click', function () {
-      projScrollBy(-1);
-    });
-    projNext.addEventListener('click', function () {
-      projScrollBy(1);
-    });
-    projSlider.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        projScrollBy(-1);
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        projScrollBy(1);
-      }
-    });
-  }
-})();
-</script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

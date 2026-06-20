@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trend Pilot (Agentic Trend Orchestrator) - Case Study | Shamik Basu</title>
+<meta name="description" content="Trend Pilot: an agentic AI assistant that helps small creator teams catch trends, decide what to film, and ship as a team. Multi-agent system (FastAPI + Next.js + Docker) with GPT-4o VLM trend detection and a Milvus vector pipeline, by Shamik Basu.">
+<link rel="canonical" href="https://www.shamik-basu.com/projects/agentic-trend-orchestrator.html">
+<meta property="og:title" content="Trend Pilot - Agentic AI for creator teams (Case Study)">
+<meta property="og:description" content="Catch trends, decide what to film, and ship as a team - a multi-agent AI system with GPT-4o VLM trend detection.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Trend Pilot",
+  "alternateName": "Agentic Trend Orchestrator",
+  "author": { "@type": "Person", "name": "Shamik Basu", "url": "https://www.shamik-basu.com/" },
+  "programmingLanguage": ["Python", "TypeScript"],
+  "codeRepository": "https://github.com/ShamikOfficial/agentic-trend-orchestrator",
+  "url": "https://trendpilot.shamik-basu.com/",
+  "about": "Agentic AI assistant for creator teams: trend detection, task orchestration, script generation, and video analysis",
+  "dateCreated": "2026-05"
+}
+</script>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Shamik Basu</a>
+    <div class="nav-actions">
+      <button type="button" class="icon-btn theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36A5.39 5.39 0 0112 3z"/></svg>
+      </button>
+      <a href="../index.html#projects" class="btn btn-ghost btn-sm">All projects</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="case-hero">
+    <a href="../index.html#projects" class="case-back">← Back to projects</a>
+    <p class="section-label">Agentic AI · May 2026 - Jun 2026</p>
+    <h1>Trend Pilot</h1>
+    <p class="tagline">An agentic AI assistant that helps small creator teams catch trends early, decide what to film, and ship as a team - the multi-agent "Agentic Trend Orchestrator," owned end-to-end from architecture through CI/CD.</p>
+    <div class="project-actions" style="gap:12px;">
+      <a href="https://trendpilot.shamik-basu.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Open live app</a>
+      <a href="https://github.com/ShamikOfficial/agentic-trend-orchestrator" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub</a>
+      <a href="../assets/documents/Trend%20Pilot%20Deck.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4v-2h14v2H5z"/></svg>
+        Download deck (PDF)
+      </a>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="case-video">
+      <video controls preload="metadata" aria-label="Trend Pilot intro walkthrough">
+        <source src="../assets/video/Trend_Pilot_Intro.mp4" type="video/mp4">
+        Your browser does not support embedded video. <a href="../assets/video/Trend_Pilot_Intro.mp4">Download the video</a>.
+      </video>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>The problem</h2>
+    <p>The creator economy is a <strong>$1.3 trillion</strong> opportunity, but the tooling targets big brands and agencies. Roughly <strong>60% of creators are small teams</strong> who get left behind. By the time a 2-3 person team spots a trend, debates it over Slack, and coordinates a shoot, the idea has changed and the trend is gone - with messy workflows and unclear ownership along the way.</p>
+  </section>
+
+  <section class="case-section">
+    <h2>Who it's for</h2>
+    <ul>
+      <li>Creator teams deciding <strong>what to film this week</strong>.</li>
+      <li>2-3 person teams coordinating shoots <strong>without the Slack chaos</strong> - the AI assigns tasks and tracks owners.</li>
+      <li>UGC creators delivering <strong>brand deals on tight deadlines</strong> across platforms.</li>
+      <li>Small agencies managing <strong>3-10 creator accounts</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="case-section">
+    <h2>What I built</h2>
+    <ul>
+      <li><strong>Trend detection</strong> - a multimodal pipeline that surfaces relevant, rising trends for a creator's niche.</li>
+      <li><strong>AI chat assistant</strong> - answers "what should I shoot?" and "how good is what I shot?"</li>
+      <li><strong>Task detect &amp; auto-assignment</strong> - turns a chosen trend into tasks, assigns owners, and tracks updates.</li>
+      <li><strong>Script generation</strong> - drafts shoot-ready scripts from a trend.</li>
+      <li><strong>Video upload &amp; analyze</strong> - ingests a clip and evaluates it before it goes live.</li>
+    </ul>
+  </section>
+
+  <section class="case-section">
+    <h2>How it works</h2>
+    <p>A multimodal <strong>trend-detection pipeline</strong> ingests audio, video, and text, transcribes and embeds it, and stores vectors in <strong>Milvus-lite</strong>. Retrieval feeds a <strong>GPT-4o VLM</strong> reasoning layer that drives recommendations, scripts, and task orchestration. The product is a <strong>multi-agent system with persistent memory</strong> built on <strong>FastAPI + Next.js + Docker</strong> and shipped through a <strong>CI/CD</strong> pipeline.</p>
+  </section>
+
+  <section class="case-section">
+    <h2>The value (illustrative)</h2>
+    <p>A modeled scenario from the product pitch - a food creator with a team of three:</p>
+    <div class="case-grid">
+      <div class="fact-card"><div class="fact-value">1.2M views</div><div class="fact-label">in 26 hours after a trend was caught - vs 8K views in 4 days the month before</div></div>
+      <div class="fact-card"><div class="fact-value">~22x ROI</div><div class="fact-label">modeled: +$3.3K/mo and ~60 hours saved</div></div>
+      <div class="fact-card"><div class="fact-value">25% → 60%</div><div class="fact-label">hit rate on posts</div></div>
+      <div class="fact-card"><div class="fact-value">10 → 5 hrs</div><div class="fact-label">time per post</div></div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Tech</h2>
+    <div class="skill-pills">
+      <span class="skill-pill">FastAPI</span><span class="skill-pill">Next.js</span><span class="skill-pill">Docker</span><span class="skill-pill">Python</span><span class="skill-pill">TypeScript</span><span class="skill-pill">GPT-4o VLM</span><span class="skill-pill">Milvus</span><span class="skill-pill">RAG</span><span class="skill-pill">Multi-Agent</span><span class="skill-pill">CI/CD</span>
+    </div>
+  </section>
+  <section class="case-section">
+    <div class="report-card">
+      <div class="report-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm0 2l4 4h-4V4zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
+      </div>
+      <div class="report-info">
+        <h2>Full project report</h2>
+        <p>Product deck covering the problem, target users, multi-agent architecture, GPT-4o VLM trend pipeline, and modeled ROI for creator teams.</p>
+      </div>
+      <a href="../assets/documents/Trend%20Pilot%20Deck.pdf" target="_blank" rel="noopener" class="btn btn-primary" download>Download PDF</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer wrap">
+  <span>© 2026 Shamik Basu · <a href="../index.html">Home</a></span>
+  <span><a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener">GitHub</a> · <a href="https://devpost.com/shamik1900" target="_blank" rel="noopener">Devpost</a></span>
+</footer>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
