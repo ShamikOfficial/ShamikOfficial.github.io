@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=3">
 
 <!-- Structured data: everything a recruiter or crawler needs to qualify me. -->
 <script type="application/ld+json">
@@ -473,6 +473,24 @@
   <span>Built with clean HTML, CSS &amp; JavaScript</span>
 </footer>
 
-<script src="assets/js/script.js"></script>
+<div class="calendar-backdrop" aria-hidden="true"></div>
+<aside class="calendar-panel" role="dialog" aria-modal="true" aria-labelledby="calendar-panel-title" aria-hidden="true">
+  <div class="calendar-panel-head">
+    <div>
+      <h2 id="calendar-panel-title">Book a meeting</h2>
+      <a class="calendar-fallback" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3zKOb4P00q16CON7kIHMigcoWwlm3bdonq4wnh5WpjqUZ3GxG1HROP2XfDn2QwpBov9DEEypsW?gv=true" target="_blank" rel="noopener">Open in new tab</a>
+    </div>
+    <button type="button" class="calendar-close" aria-label="Close calendar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <iframe class="calendar-frame" title="Book an appointment with Shamik Basu" allow="fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</aside>
+<button type="button" class="calendar-fab" data-open-calendar aria-label="Book a meeting" aria-expanded="false">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5zm2 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg>
+  <span>Book time</span>
+</button>
+
+<script src="assets/js/script.js?v=3"></script>
 </body>
 </html>

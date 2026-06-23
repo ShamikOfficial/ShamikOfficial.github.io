@@ -200,7 +200,7 @@ h1, h2, h3, h4 {
 }
 .calendar-panel-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
   padding: 12px 14px;
@@ -212,6 +212,14 @@ h1, h2, h3, h4 {
   font-size: 15px;
   font-weight: 600;
 }
+.calendar-fallback {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.calendar-fallback:hover { color: var(--accent); text-decoration: none; }
 .calendar-close {
   width: 32px;
   height: 32px;
@@ -225,11 +233,13 @@ h1, h2, h3, h4 {
   cursor: pointer;
 }
 .calendar-close:hover { border-color: var(--accent); color: var(--accent); }
-.calendar-panel iframe {
+.calendar-panel iframe,
+.calendar-panel .calendar-frame {
   flex: 1;
   width: 100%;
   min-height: 0;
   border: 0;
+  background: #fff;
 }
 body.calendar-open { overflow: hidden; }
 

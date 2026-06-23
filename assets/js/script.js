@@ -10,8 +10,16 @@
   var LINKEDIN = 'https://linkedin.com/in/shamikofficial/';
   var GITHUB = 'https://github.com/ShamikOfficial';
 
-  /* ---- Shared top bar + floating calendar (all pages) ---- */
-  function injectSiteChrome() {
+  function closestEl(node, selector) {
+    while (node && node.nodeType === 1) {
+      if (node.matches && node.matches(selector)) return node;
+      node = node.parentElement;
+    }
+    return null;
+  }
+
+  /* ---- Top bar (email, location, social) ---- */
+  function injectTopbar() {
     var nav = document.querySelector('header.nav');
     if (!nav || document.querySelector('.topbar')) return;
 
@@ -45,43 +53,32 @@
         '</div>' +
       '</div>';
     nav.insertBefore(topbar, nav.firstChild);
+  }
 
-    var backdrop = document.createElement('div');
-    backdrop.className = 'calendar-backdrop';
-    backdrop.setAttribute('aria-hidden', 'true');
+  /* ---- Floating calendar (static HTML in page; JS wires behavior) ---- */
+  function initCalendar() {
+    var panel = document.querySelector('.calendar-panel');
+    var backdrop = document.querySelector('.calendar-backdrop');
+    var fab = document.querySelector('.calendar-fab');
+    if (!panel || !backdrop || !fab || panel.dataset.calendarInit) return;
+    panel.dataset.calendarInit = '1';
 
-    var panel = document.createElement('div');
-    panel.className = 'calendar-panel';
-    panel.setAttribute('role', 'dialog');
-    panel.setAttribute('aria-modal', 'true');
-    panel.setAttribute('aria-labelledby', 'calendar-panel-title');
-    panel.setAttribute('aria-hidden', 'true');
-    panel.innerHTML =
-      '<div class="calendar-panel-head">' +
-        '<h2 id="calendar-panel-title">Book a meeting</h2>' +
-        '<button type="button" class="calendar-close" aria-label="Close calendar">' +
-          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>' +
-        '</button>' +
-      '</div>' +
-      '<iframe title="Book an appointment with Shamik Basu" loading="lazy"></iframe>';
-
-    var fab = document.createElement('button');
-    fab.type = 'button';
-    fab.className = 'calendar-fab';
-    fab.setAttribute('aria-label', 'Book a meeting');
-    fab.setAttribute('aria-expanded', 'false');
-    fab.setAttribute('data-open-calendar', '');
-    fab.innerHTML =
-      '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5zm2 4h10v2H7v-2zm0 4h7v2H7v-2z"/></svg>' +
-      '<span>Book time</span>';
-
-    document.body.appendChild(backdrop);
-    document.body.appendChild(panel);
-    document.body.appendChild(fab);
-
-    var iframe = panel.querySelector('iframe');
+    var iframe = panel.querySelector('.calendar-frame, iframe');
+    var closeBtn = panel.querySelector('.calendar-close');
     var loaded = false;
     var open = false;
+
+    function loadIframe() {
+      if (!iframe || loaded) return;
+      loaded = true;
+      /* Load after panel is visible — lazy iframes in hidden panels often never load in prod. */
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          iframe.src = CALENDAR_URL;
+          iframe.removeAttribute('loading');
+        });
+      });
+    }
 
     function setOpen(next) {
       open = next;
@@ -91,31 +88,35 @@
       panel.setAttribute('aria-hidden', open ? 'false' : 'true');
       backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
       fab.setAttribute('aria-expanded', open ? 'true' : 'false');
-      if (open && !loaded) {
-        iframe.src = CALENDAR_URL;
-        loaded = true;
-      }
+      if (open) loadIframe();
     }
 
     function toggleCalendar() { setOpen(!open); }
 
-    panel.querySelector('.calendar-close').addEventListener('click', function () { setOpen(false); });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () { setOpen(false); });
+    }
     backdrop.addEventListener('click', function () { setOpen(false); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && open) setOpen(false);
     });
     document.body.addEventListener('click', function (e) {
-      if (e.target.closest('[data-open-calendar]')) {
+      if (closestEl(e.target, '[data-open-calendar]')) {
         e.preventDefault();
         toggleCalendar();
       }
     });
   }
 
+  function initSiteChrome() {
+    injectTopbar();
+    initCalendar();
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', injectSiteChrome);
+    document.addEventListener('DOMContentLoaded', initSiteChrome);
   } else {
-    injectSiteChrome();
+    initSiteChrome();
   }
 
   /* ---- Theme toggle (light default, remembers choice) ---- */
@@ -228,5 +229,8 @@
   }
 
   /* ---- Touch profile.json so crawlers/agents discover the data file ---- */
-  try { fetch('assets/data/profile.json').catch(function () {}); } catch (e) {}
+  try {
+    var profilePath = document.body.getAttribute('data-profile-path') || 'assets/data/profile.json';
+    fetch(profilePath).catch(function () {});
+  } catch (e) {}
 })();
