@@ -112,9 +112,9 @@
     {
       "slug": "custom-cuda-library",
       "name": "Custom CUDA Library for CNN Pre-Processing",
-      "tagline": "Shared-memory tiled CUDA kernels delivering 115x CPU and 14x PyTorch preprocessing speedups.",
+      "tagline": "Open-source CUDA library for CNN preprocessing - shared-memory tiled kernels, Python .so bindings, 115x CPU speedup on Tesla T4.",
       "date": "Jan 2026 - Feb 2026",
-      "tech": ["CUDA", "C/C++", "Python", "GPU Computing", "Jupyter"],
+      "tech": ["CUDA", "C/C++", "cuBLAS", "Python", "ctypes", "NumPy", "GPU Computing"],
       "links": {
         "github": "https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library",
         "report": "assets/documents/CUDA_Project_Report_Final.pdf"

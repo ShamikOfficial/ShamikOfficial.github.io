@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Custom CUDA Library for CNN Pre-Processing - Case Study | Shamik Basu</title>
-<meta name="description" content="Custom CUDA library: shared-memory tiled kernels delivering 115x CPU and 14x PyTorch preprocessing speedups, packaged as Python-bindable .so libraries. Case study by Shamik Basu.">
+<meta name="description" content="Open-source CUDA library for CNN preprocessing: shared-memory tiled kernels, 115x CPU speedup, Python .so bindings. Repo: ShamikOfficial/CUDA-Accelerated-Python-Library">
 <link rel="canonical" href="https://www.shamik-basu.com/projects/custom-cuda-library.html">
-<meta property="og:title" content="Custom CUDA Library for CNN Pre-Processing - Case Study">
-<meta property="og:description" content="115x CPU and 14x PyTorch preprocessing speedups with shared-memory tiled CUDA kernels.">
+<meta property="og:title" content="Custom CUDA Library for CNN Pre-Processing">
+<meta property="og:description" content="GPU-accelerated matrix multiplication and image convolution with drop-in Python bindings. 115x CPU speedup on Tesla T4.">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,8 @@
   "author": { "@type": "Person", "name": "Shamik Basu", "url": "https://www.shamik-basu.com/" },
   "programmingLanguage": ["CUDA", "C++", "Python"],
   "codeRepository": "https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library",
-  "about": "Shared-memory tiled CUDA kernels for GPU-accelerated CNN preprocessing",
+  "url": "https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library",
+  "about": "Production-oriented CUDA kernels for GPU-accelerated CNN preprocessing with Python ctypes bindings",
   "dateCreated": "2026-01"
 }
 </script>
@@ -44,20 +45,20 @@
     <a href="../index.html#projects" class="case-back">← Back to projects</a>
     <p class="section-label">GPU Computing · Jan 2026 - Feb 2026</p>
     <h1>Custom CUDA Library for CNN Pre-Processing</h1>
-    <p class="tagline">Hand-optimized, shared-memory tiled CUDA kernels that accelerate CNN preprocessing - packaged so any Python ML pipeline can use them without a rewrite.</p>
+    <p class="tagline">An open-source CUDA library that accelerates CNN preprocessing - matrix multiplication and image convolution - with drop-in Python bindings so existing NumPy pipelines run on the GPU without a rewrite.</p>
     <div class="project-actions" style="gap:12px;">
       <a href="https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on GitHub</a>
       <a href="../assets/documents/CUDA_Project_Report_Final.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" download>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4v-2h14v2H5z"/></svg>
-        Download report (PDF)
+        Technical report (PDF)
       </a>
     </div>
   </section>
 
   <section class="case-section">
     <figure class="case-figure">
-      <img src="../assets/images/CUDA%20Analysis.png" alt="CUDA benchmark analysis comparing CPU, naive GPU, tiled GPU, and cuBLAS performance across matrix sizes" width="707" height="657" loading="lazy">
-      <figcaption class="case-figure-caption">Benchmark walkthrough coming soon - <a href="https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library" target="_blank" rel="noopener">read the code</a>.</figcaption>
+      <img src="../assets/images/CUDA%20Analysis.png" alt="Benchmark chart: CPU vs naive CUDA vs tiled CUDA vs cuBLAS across matrix sizes on Tesla T4" width="707" height="657" loading="lazy">
+      <figcaption class="case-figure-caption">Execution time vs. matrix size on Tesla T4 - full benchmarks and source in the <a href="https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library" target="_blank" rel="noopener">GitHub repo</a>.</figcaption>
     </figure>
   </section>
 
@@ -69,43 +70,45 @@
   </section>
 
   <section class="case-section">
-    <h2>The problem</h2>
-    <p>Data preprocessing - matrix multiplication and image convolution - is a hidden bottleneck in CNN training. Off-the-shelf CPU paths waste GPU time, and rewriting an entire pipeline in C++ to fix it isn't practical.</p>
+    <h2>Why this exists</h2>
+    <p>Most training pipelines preprocess on the CPU - normalization, augmentations, convolutions - then ship tensors to the GPU. That leaves expensive hardware idle while O(n³) matrix work and pixel loops run on a single thread pool. This project ships a reusable library instead of a one-off script: optimized CUDA kernels packaged as Python-callable shared objects.</p>
   </section>
 
   <section class="case-section">
-    <h2>What I built</h2>
+    <h2>Repository</h2>
+    <p>The full implementation, notebooks, and reproduction steps live in a public repo:</p>
+    <p><a href="https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library" target="_blank" rel="noopener" class="link-arrow">github.com/ShamikOfficial/CUDA-Accelerated-Python-Library →</a></p>
     <ul>
-      <li><strong>Matrix multiplication, four ways:</strong> a CPU baseline, a naive CUDA kernel (one thread per output element), a <strong>shared-memory tiled kernel</strong> (16x16 tiles), and a <strong>cuBLAS</strong> (<code>cublasSgemm</code>) reference - all benchmarked across N = 64 to 2048.</li>
-      <li><strong>Image convolution on the GPU:</strong> edge-detection, Gaussian-blur, and sharpen filters at 3x3, 5x5, and 7x7, with one CUDA thread computing each output pixel.</li>
-      <li><strong>Python-bindable .so libraries:</strong> wrapped the kernels behind <code>extern "C"</code> entry points (<code>nvcc -Xcompiler -fPIC -shared</code>) and loaded them from Python with <strong>ctypes</strong> over NumPy float32 arrays - GPU acceleration with no pipeline rewrite.</li>
-      <li>Timed precisely with <strong>CUDA events</strong> (with warm-up launches) on an <strong>NVIDIA Tesla T4</strong> (<code>-arch=sm_75</code>).</li>
+      <li><strong>Matrix module</strong> - CPU baseline, naive CUDA, shared-memory tiled CUDA (16×16 tiles), and cuBLAS reference, benchmarked for N = 64 to 2048.</li>
+      <li><strong>Convolution module</strong> - edge detection, sharpen, and Gaussian blur at 3×3, 5×5, and 7×7, with one GPU thread per output pixel.</li>
+      <li><strong>Python bindings</strong> - <code>libmatrix.so</code> and <code>libconvo.so</code> loaded via ctypes over NumPy float32 arrays.</li>
     </ul>
   </section>
 
   <section class="case-section">
-    <h2>How it works</h2>
+    <h2>Architecture</h2>
     <ul>
-      <li><strong>Tiling for memory reuse:</strong> each block loads a 16x16 tile of A and B into on-chip shared memory once, cutting the redundant global-memory traffic that bottlenecks the naive kernel.</li>
-      <li><strong>Drop-in Python interface:</strong> <code>ctypes</code> declares the argument types to match flattened NumPy arrays and calls the CUDA function directly, so existing data-science code stays unchanged.</li>
-      <li><strong>Configurable convolution:</strong> the active filter and window size are chosen from a CLI mode string (e.g. <code>edge_n3</code>, <code>sharpen_n7</code>), with zero-padded boundary handling and output clipped to 0-255.</li>
+      <li><strong>Tiled shared memory:</strong> each block loads a 16×16 tile of A and B into on-chip memory once, eliminating the redundant global reads that bottleneck the naive kernel.</li>
+      <li><strong>CUDA events timing:</strong> warm-up launches plus event-based measurement on Tesla T4 (<code>-arch=sm_75</code>) for reproducible benchmarks.</li>
+      <li><strong>Zero-padded convolution:</strong> boundary-safe filters with configurable modes (<code>edge_n3</code>, <code>sharpen_n7</code>, etc.) and output clipped to 0-255.</li>
     </ul>
   </section>
 
   <section class="case-section">
-    <h2>Key findings</h2>
+    <h2>Results</h2>
     <ul>
-      <li>The GPU outperforms the CPU at <strong>every</strong> size tested, and the gap widens sharply as matrices grow.</li>
-      <li><strong>Tiling</strong> helps most in a mid-size range; at very small sizes its overhead can outweigh the benefit.</li>
-      <li>Our optimized kernel is competitive with - occasionally faster than - <strong>cuBLAS</strong> on small matrices, while cuBLAS pulls ahead on the heaviest workloads.</li>
+      <li>GPU outperforms CPU at <strong>every</strong> matrix size tested; the gap widens sharply as N grows.</li>
+      <li>Tiling delivers the largest gains at medium-to-large sizes; overhead dominates at very small N.</li>
+      <li>Custom tiled kernel is competitive with cuBLAS on small matrices; cuBLAS pulls ahead at the heaviest workloads.</li>
+      <li>Convolution speedups scale with image area - GPU parallelism pays off once transfer cost is amortized.</li>
     </ul>
   </section>
 
   <section class="case-section">
     <h2>Impact</h2>
     <ul>
-      <li><strong>115x</strong> speedup over CPU at N=1024 and <strong>14x</strong> faster PyTorch preprocessing.</li>
-      <li>GPU-accelerated preprocessing usable from standard Python data-science workflows.</li>
+      <li><strong>115×</strong> speedup over CPU at N=1024 and <strong>14×</strong> faster PyTorch preprocessing.</li>
+      <li>Drop-in GPU acceleration for standard Python ML workflows - no pipeline rewrite required.</li>
     </ul>
   </section>
 
@@ -122,8 +125,8 @@
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm0 2l4 4h-4V4zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
       </div>
       <div class="report-info">
-        <h2>Full project report</h2>
-        <p>Deep-dive write-up with implementation details, benchmark tables across N = 64-2048 on a Tesla T4, convolution results, and analysis.</p>
+        <h2>Technical report</h2>
+        <p>Full technical report from the Clean source: Module 1 matrix multiplication (CPU, naive CUDA, tiled shared memory, cuBLAS), analysis Q&amp;A, benchmark charts, Python <code>libmatrix.so</code> bindings, Module 2 image convolution (grayscale, edge/sharpen/Gaussian filters with result images), CUDA port, and <code>libconvo.so</code> Python library.</p>
       </div>
       <a href="../assets/documents/CUDA_Project_Report_Final.pdf" target="_blank" rel="noopener" class="btn btn-primary" download>Download PDF</a>
     </div>

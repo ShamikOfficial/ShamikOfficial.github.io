@@ -25,9 +25,15 @@ build/
 .env
 .env.local
 
-# Local working copies (not deployed on the site)
+# Local working documents (site serves PDFs only - not Word/PPT/LaTeX sources)
 assets/documents/*.docx
-assets/documents/Resume__*.pdf
-assets/documents/Resume__Shamik_Basu_Data_Engineer.tex
-_check_site.py
+assets/documents/*.docx~
+assets/documents/*.pptx
+assets/documents/Resume__*
+assets/documents/*~$*
 
+# Temp / build scripts (report generators, extractors, checkers)
+_*.py
+_*.ps1
+_*.txt
+extract_*.ps1
