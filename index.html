@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=4">
+<link rel="stylesheet" href="assets/css/styles.css?v=7">
 
 <script type="application/ld+json">
 {
@@ -51,7 +51,9 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="#projects" data-section="projects">Projects</a>
       <a href="#experience" data-section="experience">Experience</a>
-      <a href="#background" data-section="background">Background</a>
+      <a href="#education" data-section="education">Education</a>
+      <a href="#leadership" data-section="leadership">Leadership</a>
+      <a href="#skills" data-section="skills">Skills</a>
       <a href="#contact" data-section="contact">Contact</a>
     </nav>
     <div class="nav-actions">
@@ -67,7 +69,9 @@
   <nav class="mobile-menu" aria-label="Mobile">
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
-    <a href="#background">Background</a>
+    <a href="#education">Education</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
     <a href="assets/documents/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
   </nav>
@@ -120,105 +124,103 @@
   </div>
 </section>
 
-<section class="section wrap" id="projects">
-  <p class="section-label">Work</p>
-  <h2 class="section-title">Featured Projects</h2>
-  <p class="section-sub">Each project links to a case study with architecture, demo, and code.</p>
+<section class="section wrap section--soft" id="projects">
+  <div class="section-head reveal">
+    <p class="section-label">Work</p>
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-sub">Shipped end-to-end — each with a case study, demo, and measurable impact.</p>
+  </div>
 
-  <div class="project-grid">
-
-    <article class="project-card">
-      <div class="project-media">
-        <video class="project-video" src="assets/video/Trend_Pilot_Intro.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Trend Pilot intro preview"></video>
-        <button type="button" class="video-mute-btn is-muted" aria-label="Unmute video" aria-pressed="true" title="Unmute">
-          <svg class="icon-muted" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 12A4.5 4.5 0 0014 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.796 8.796 0 0021 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a8.99 8.99 0 003.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-          <svg class="icon-unmuted" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-        </button>
-        <div class="media-links">
-          <a href="https://github.com/ShamikOfficial/agentic-trend-orchestrator" target="_blank" rel="noopener" aria-label="Trend Pilot on GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-        </div>
+  <!-- Featured hero project -->
+  <article class="project-featured reveal">
+    <div class="project-featured-media">
+      <video class="project-video" src="assets/video/Trend_Pilot_Intro.mp4" muted loop playsinline autoplay preload="metadata" aria-label="Trend Pilot intro preview"></video>
+      <button type="button" class="video-mute-btn is-muted" aria-label="Unmute video" aria-pressed="true" title="Unmute">
+        <svg class="icon-muted" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 12A4.5 4.5 0 0014 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.796 8.796 0 0021 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a8.99 8.99 0 003.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+        <svg class="icon-unmuted" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      </button>
+      <span class="project-badge project-badge--live">Live demo</span>
+    </div>
+    <div class="project-featured-body">
+      <div class="project-meta-row">
+        <span class="project-cat">Agentic AI</span>
+        <span class="project-date">May – Jun 2026</span>
       </div>
-      <div class="project-body">
-        <h3>Trend Pilot</h3>
-        <p class="project-date">May 2026 – Jun 2026</p>
-        <p class="tagline">Agentic AI for creator teams — trend detection, script generation, and task assignment. FastAPI + Next.js + GPT-4o VLM, shipped with CI/CD.</p>
-        <div class="tags">
-          <span class="tag">FastAPI</span><span class="tag">Next.js</span><span class="tag">GPT-4o VLM</span><span class="tag">Milvus</span><span class="tag">CI/CD</span>
-        </div>
-        <div class="project-actions">
-          <a href="projects/agentic-trend-orchestrator.html" class="btn btn-case">Case study</a>
-          <a href="https://trendpilot.shamik-basu.com/" class="btn btn-live" target="_blank" rel="noopener"><span class="live-dot" aria-hidden="true"></span>Live demo</a>
-        </div>
+      <h3>Trend Pilot</h3>
+      <p class="tagline">Multi-agent assistant for creator teams — catches trends, generates scripts, and assigns work. Full SDLC with FastAPI, Next.js, GPT-4o VLM, and CI/CD.</p>
+      <div class="impact-row">
+        <div class="impact-stat"><span class="impact-val">25→60%</span><span class="impact-lbl">post hit rate</span></div>
+        <div class="impact-stat"><span class="impact-val">~22×</span><span class="impact-lbl">modeled ROI</span></div>
       </div>
-    </article>
+      <div class="tags">
+        <span class="tag">FastAPI</span><span class="tag">Next.js</span><span class="tag">GPT-4o VLM</span><span class="tag">Milvus</span><span class="tag">CI/CD</span>
+      </div>
+      <div class="project-actions">
+        <a href="projects/agentic-trend-orchestrator.html" class="btn btn-case">Case study</a>
+        <a href="https://trendpilot.shamik-basu.com/" class="btn btn-live" target="_blank" rel="noopener"><span class="live-dot" aria-hidden="true"></span>Live demo</a>
+        <a href="https://github.com/ShamikOfficial/agentic-trend-orchestrator" class="btn btn-ghost btn-sm" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+  </article>
 
-    <article class="project-card">
+  <!-- Bento grid for remaining projects -->
+  <div class="project-bento">
+
+    <article class="project-card project-card--award reveal">
       <div class="project-media">
         <div class="video-embed" data-youtube="tYTzNmGuq_E" data-title="EcoMate-AI walkthrough" role="button" tabindex="0" aria-label="Play EcoMate-AI walkthrough">
           <div class="video-poster" style="background-image:url('https://i.ytimg.com/vi/tYTzNmGuq_E/hqdefault.jpg');">
             <span class="play-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
         </div>
-        <div class="media-links">
-          <a href="https://github.com/ShamikOfficial/EcoMate-AI" target="_blank" rel="noopener" aria-label="EcoMate-AI on GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-        </div>
+        <span class="project-badge project-badge--award">1st Place</span>
       </div>
       <div class="project-body">
-        <span class="project-award">1st Place — UCLA SAIRS Hackathon 2025</span>
+        <span class="project-cat">Hackathon · 24 hrs</span>
         <h3>EcoMate-AI</h3>
-        <p class="project-date">May 2025 – Jun 2025</p>
-        <p class="tagline">Multimodal agentic platform (Gemini 2.5 Flash) turning receipts and activity into sustainability actions — built in 24 hours.</p>
-        <div class="tags">
-          <span class="tag">Gemini 2.5 Flash</span><span class="tag">Python</span><span class="tag">Computer Vision</span><span class="tag">RAG</span>
+        <p class="tagline">Multimodal agentic platform (Gemini 2.5 Flash) — receipts and activity into sustainability actions.</p>
+        <div class="impact-row impact-row--compact">
+          <div class="impact-stat"><span class="impact-val">UCLA SAIRS</span><span class="impact-lbl">2025 winner</span></div>
         </div>
+        <div class="tags"><span class="tag">Gemini 2.5</span><span class="tag">CV</span><span class="tag">RAG</span></div>
         <div class="project-actions">
           <a href="projects/ecomate-ai.html" class="btn btn-case">Case study</a>
-          <a href="https://ecomateai.streamlit.app/" class="btn btn-live" target="_blank" rel="noopener"><span class="live-dot" aria-hidden="true"></span>Live demo</a>
+          <a href="https://ecomateai.streamlit.app/" class="btn btn-live" target="_blank" rel="noopener"><span class="live-dot" aria-hidden="true"></span>Demo</a>
         </div>
       </div>
     </article>
 
-    <article class="project-card">
+    <article class="project-card reveal">
       <div class="project-media">
         <img class="project-video project-video-contain" src="assets/images/CUDA%20Analysis.png" alt="CUDA benchmark analysis chart" loading="lazy" width="640" height="360">
-        <div class="media-links">
-          <a href="https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library" target="_blank" rel="noopener" aria-label="CUDA library on GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.28-.01-1.02-.02-2-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-        </div>
+        <span class="project-badge project-badge--perf">115× faster</span>
       </div>
       <div class="project-body">
-        <h3>Custom CUDA Library for CNN Pre-Processing</h3>
-        <p class="project-date">Jan 2026 – Feb 2026</p>
-        <p class="tagline">Open-source CUDA library — shared-memory tiled kernels and Python bindings delivering 115× CPU and 14× PyTorch speedups.</p>
-        <div class="tags">
-          <span class="tag">CUDA</span><span class="tag">C/C++</span><span class="tag">Python</span><span class="tag">GPU Computing</span>
-        </div>
+        <span class="project-cat">GPU Computing</span>
+        <h3>Custom CUDA Library</h3>
+        <p class="tagline">Shared-memory tiled kernels + Python bindings — 115× CPU and 14× PyTorch speedups on Tesla T4.</p>
+        <div class="tags"><span class="tag">CUDA</span><span class="tag">C/C++</span><span class="tag">Python</span></div>
         <div class="project-actions">
           <a href="projects/custom-cuda-library.html" class="btn btn-case">Case study</a>
+          <a href="https://github.com/ShamikOfficial/CUDA-Accelerated-Python-Library" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </article>
 
-    <article class="project-card">
+    <article class="project-card reveal">
       <div class="project-media">
         <div class="video-embed" data-youtube="P2oTHZWDBxU" data-title="Smooth Operation walkthrough" role="button" tabindex="0" aria-label="Play Smooth Operation walkthrough">
           <div class="video-poster" style="background-image:url('https://i.ytimg.com/vi/P2oTHZWDBxU/hqdefault.jpg');">
             <span class="play-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
         </div>
+        <span class="project-badge">Data Viz</span>
       </div>
       <div class="project-body">
+        <span class="project-cat">Workflow Analytics</span>
         <h3>Smooth Operation</h3>
-        <p class="project-date">2025</p>
-        <p class="tagline">Real-time flow graphs and heatmaps for Atlassian workflows — surfaces blockers, risks, and engagement patterns.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">AI</span><span class="tag">Data Visualization</span>
-        </div>
+        <p class="tagline">Real-time flow graphs and heatmaps for Atlassian — surfaces blockers, risks, and engagement.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">AI</span><span class="tag">Atlassian APIs</span></div>
         <div class="project-actions">
           <a href="projects/smooth-operation.html" class="btn btn-case">Case study</a>
         </div>
@@ -226,118 +228,195 @@
     </article>
 
   </div>
-  <p class="section-footer-link"><a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener" class="link-arrow">More on GitHub</a></p>
+  <p class="section-footer-link reveal"><a href="https://github.com/ShamikOfficial" target="_blank" rel="noopener" class="link-arrow">More on GitHub</a></p>
 </section>
 
 <section class="section wrap" id="experience">
-  <p class="section-label">Experience</p>
-  <h2 class="section-title">Where I've Worked</h2>
-  <p class="section-sub">Impact-first summary — full detail in my <a href="assets/documents/resume.pdf" target="_blank" rel="noopener">resume</a>.</p>
+  <div class="section-head reveal">
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Where I've Worked</h2>
+    <p class="section-sub">Impact-first — full detail in my <a href="assets/documents/resume.pdf" target="_blank" rel="noopener">resume</a>.</p>
+  </div>
 
-  <div class="timeline">
-    <div class="exp-item">
-      <div class="exp-head">
-        <span class="exp-role">Data Science Associate Intern</span>
-        <span class="exp-dates">Apr – May 2026</span>
+  <div class="timeline timeline--visual">
+    <div class="exp-item reveal">
+      <div class="exp-marker" aria-hidden="true"></div>
+      <div class="exp-content">
+        <div class="exp-head">
+          <span class="exp-role">Data Science Associate Intern</span>
+          <span class="exp-dates">Apr – May 2026</span>
+        </div>
+        <p class="exp-company">Liquidity AI Capital · Los Angeles, CA</p>
+        <p>Deployed production SLM inference in Docker with end-to-end LoRA fine-tuning for domain-specific financial inference.</p>
       </div>
-      <p class="exp-company">Liquidity AI Capital · Los Angeles, CA</p>
-      <p>Deployed production SLM inference in Docker with end-to-end LoRA fine-tuning for domain-specific financial inference.</p>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-head">
-        <span class="exp-role">Data Science Associate Intern</span>
-        <span class="exp-dates">Jan – Mar 2026</span>
+    <div class="exp-item reveal">
+      <div class="exp-marker" aria-hidden="true"></div>
+      <div class="exp-content">
+        <div class="exp-head">
+          <span class="exp-role">Data Science Associate Intern</span>
+          <span class="exp-dates">Jan – Mar 2026</span>
+        </div>
+        <p class="exp-company">KCC Capital Partners · Los Angeles, CA</p>
+        <p>Built agentic LangChain pipeline for M&amp;A target sourcing — LLM classification, web scraping, and structured extraction.</p>
       </div>
-      <p class="exp-company">KCC Capital Partners · Los Angeles, CA</p>
-      <p>Built agentic LangChain pipeline for M&amp;A target sourcing — LLM classification, web scraping, and structured extraction.</p>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-head">
-        <span class="exp-role">Data Scientist</span>
-        <span class="exp-dates">Nov 2023 – Dec 2024</span>
+    <div class="exp-item exp-item--highlight reveal">
+      <div class="exp-marker" aria-hidden="true"></div>
+      <div class="exp-content">
+        <div class="exp-head">
+          <span class="exp-role">Data Scientist</span>
+          <span class="exp-dates">Nov 2023 – Dec 2024</span>
+        </div>
+        <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
+        <div class="exp-metrics">
+          <span class="metric-chip">72% cost reduction</span>
+          <span class="metric-chip">5M+ records/mo</span>
+          <span class="metric-chip">92% accuracy</span>
+        </div>
+        <p>Production RAG pipeline (LangChain + GPT-3.5) with Langfuse observability and Kafka event-driven inference.</p>
       </div>
-      <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
-      <div class="exp-metrics">
-        <span class="metric-chip">72% cost reduction</span>
-        <span class="metric-chip">5M+ records/mo</span>
-        <span class="metric-chip">92% accuracy</span>
-      </div>
-      <p>Production RAG pipeline (LangChain + GPT-3.5) with Langfuse observability and Kafka event-driven inference.</p>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-head">
-        <span class="exp-role">Associate Data Scientist</span>
-        <span class="exp-dates">Jul 2022 – Oct 2023</span>
+    <div class="exp-item reveal">
+      <div class="exp-marker" aria-hidden="true"></div>
+      <div class="exp-content">
+        <div class="exp-head">
+          <span class="exp-role">Associate Data Scientist</span>
+          <span class="exp-dates">Jul 2022 – Oct 2023</span>
+        </div>
+        <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
+        <div class="exp-metrics">
+          <span class="metric-chip">+27% fraud accuracy</span>
+          <span class="metric-chip">+22% efficiency</span>
+        </div>
+        <p>Redesigned production NER pipeline and shipped supervised models with fewer false positives.</p>
       </div>
-      <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
-      <div class="exp-metrics">
-        <span class="metric-chip">+27% fraud accuracy</span>
-        <span class="metric-chip">+22% efficiency</span>
-      </div>
-      <p>Redesigned production NER pipeline and shipped supervised models with fewer false positives.</p>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-head">
-        <span class="exp-role">Data Engineer Intern</span>
-        <span class="exp-dates">Jan – Jun 2022</span>
+    <div class="exp-item reveal">
+      <div class="exp-marker" aria-hidden="true"></div>
+      <div class="exp-content">
+        <div class="exp-head">
+          <span class="exp-role">Data Engineer Intern</span>
+          <span class="exp-dates">Jan – Jun 2022</span>
+        </div>
+        <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
+        <p>Scaled ETL to 10M+ records across 200+ features with C++/Trino/Docker and optimized SQL.</p>
       </div>
-      <p class="exp-company">Bajaj Finserv Health · Pune, India</p>
-      <p>Scaled ETL to 10M+ records across 200+ features with C++/Trino/Docker and optimized SQL.</p>
     </div>
   </div>
 </section>
 
-<section class="section wrap" id="background">
-  <p class="section-label">Background</p>
-  <h2 class="section-title">Education, Skills &amp; Leadership</h2>
-
-  <div class="cards">
-    <div class="info-card">
-      <h3>University of Southern California</h3>
-      <p class="muted">MS, Applied Data Science · Los Angeles, CA</p>
-      <p class="muted">Jan 2025 – Dec 2026 · <span class="gpa">GPA 3.7</span></p>
-    </div>
-    <div class="info-card">
-      <h3>SRM Institute of Science &amp; Technology</h3>
-      <p class="muted">BTech, Computer Science · Chennai, India</p>
-      <p class="muted">2018 – 2022 · <span class="gpa">GPA 3.46</span></p>
-    </div>
-    <div class="info-card">
-      <h3>Vice President — GRIDS at USC</h3>
-      <p class="muted">Sep 2025 – Present</p>
-      <p class="muted">Workshops, ideathons, and projects for 250+ graduate data scientists.</p>
-    </div>
-    <div class="info-card">
-      <h3>Graduate Mentor — USC Viterbi</h3>
-      <p class="muted">Jan 2025 – Present</p>
-      <p class="muted">Career paths, technical communication, and professional development.</p>
-    </div>
+<section class="section wrap section--soft" id="education">
+  <div class="section-head reveal">
+    <p class="section-label">Education</p>
+    <h2 class="section-title">Academic Background</h2>
+    <p class="section-sub">Quantitative training across applied data science and computer science.</p>
   </div>
 
-  <div class="skills skills--compact">
-    <div class="skill-group">
-      <h3>Core</h3>
+  <div class="edu-grid">
+    <article class="edu-card reveal">
+      <div class="edu-icon" aria-hidden="true">USC</div>
+      <div class="edu-body">
+        <h3>University of Southern California</h3>
+        <p class="edu-degree">MS, Applied Data Science</p>
+        <p class="edu-meta">Los Angeles, CA · Jan 2025 – Dec 2026 · <span class="gpa">GPA 3.7 / 4.0</span></p>
+        <div class="skill-pills edu-coursework">
+          <span class="skill-pill">Deep Learning</span>
+          <span class="skill-pill">Machine Learning</span>
+          <span class="skill-pill">Data Mining</span>
+          <span class="skill-pill">Data Management</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="edu-card reveal">
+      <div class="edu-icon edu-icon--alt" aria-hidden="true">SRM</div>
+      <div class="edu-body">
+        <h3>SRM Institute of Science &amp; Technology</h3>
+        <p class="edu-degree">BTech, Computer Science</p>
+        <p class="edu-meta">Chennai, India · 2018 – 2022 · <span class="gpa">GPA 3.46 / 4.0</span></p>
+        <div class="skill-pills edu-coursework">
+          <span class="skill-pill">Algorithms</span>
+          <span class="skill-pill">Artificial Intelligence</span>
+          <span class="skill-pill">Computer Vision</span>
+          <span class="skill-pill">Probability &amp; Queueing</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section wrap" id="leadership">
+  <div class="section-head reveal">
+    <p class="section-label">Leadership</p>
+    <h2 class="section-title">Community &amp; Mentorship</h2>
+    <p class="section-sub">Building data science communities and mentoring the next generation of graduate students.</p>
+  </div>
+
+  <div class="leadership-grid">
+    <article class="lead-card reveal">
+      <div class="lead-stat">250+</div>
+      <h3>Vice President</h3>
+      <p class="lead-org">GRIDS — Graduate Data Science Club, USC</p>
+      <p class="lead-dates">Sep 2025 – Present</p>
+      <p class="lead-desc">Lead analytics workshops, ideathons, and projects for a 250-member graduate data science community.</p>
+    </article>
+
+    <article class="lead-card reveal">
+      <div class="lead-stat">1:1</div>
+      <h3>Graduate Mentor</h3>
+      <p class="lead-org">USC Viterbi School of Engineering</p>
+      <p class="lead-dates">Jan 2025 – Present</p>
+      <p class="lead-desc">Mentor graduate students on data science career paths, technical communication, and professional development.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section wrap section--soft" id="skills">
+  <div class="section-head reveal">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">Technical Stack</h2>
+    <p class="section-sub">Production ML, LLM systems, and the infrastructure to ship them.</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <h3>Languages &amp; Databases</h3>
       <div class="skill-pills">
-        <span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">PyTorch</span><span class="skill-pill">RAG</span><span class="skill-pill">LangChain</span><span class="skill-pill">Multi-Agent</span><span class="skill-pill">Statistics</span><span class="skill-pill">A/B Testing</span>
+        <span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">R</span><span class="skill-pill">C/C++</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">MongoDB</span><span class="skill-pill">Spark</span><span class="skill-pill">Trino</span><span class="skill-pill">Kafka</span>
       </div>
     </div>
-    <div class="skill-group">
-      <h3>Production</h3>
+    <div class="skill-card reveal">
+      <h3>ML &amp; Analytics</h3>
       <div class="skill-pills">
-        <span class="skill-pill">Docker</span><span class="skill-pill">Kafka</span><span class="skill-pill">AWS</span><span class="skill-pill">CI/CD</span><span class="skill-pill">REST APIs</span><span class="skill-pill">Spark</span><span class="skill-pill">CUDA</span><span class="skill-pill">Git</span>
+        <span class="skill-pill">Machine Learning</span><span class="skill-pill">Statistics</span><span class="skill-pill">Causal Inference</span><span class="skill-pill">A/B Testing</span><span class="skill-pill">NLP</span><span class="skill-pill">NER</span><span class="skill-pill">Forecasting</span><span class="skill-pill">Tableau</span><span class="skill-pill">Power BI</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <h3>Deep Learning &amp; LLMs</h3>
+      <div class="skill-pills">
+        <span class="skill-pill">PyTorch</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">Hugging Face</span><span class="skill-pill">LoRA</span><span class="skill-pill">RAG</span><span class="skill-pill">LangChain</span><span class="skill-pill">Multi-Agent</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <h3>Cloud &amp; DevOps</h3>
+      <div class="skill-pills">
+        <span class="skill-pill">AWS</span><span class="skill-pill">Docker</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">REST APIs</span><span class="skill-pill">CI/CD</span><span class="skill-pill">Azure Synapse</span><span class="skill-pill">Langfuse</span><span class="skill-pill">Git</span>
       </div>
     </div>
   </div>
 </section>
 
 <section class="section wrap" id="contact">
-  <p class="section-label">Contact</p>
-  <h2 class="section-title">Let's Connect</h2>
-  <p class="section-sub">Best way to reach me — I typically reply within 24 hours.</p>
+  <div class="section-head reveal">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Let's Connect</h2>
+    <p class="section-sub">Best way to reach me — I typically reply within 24 hours.</p>
+  </div>
 
   <div class="contact-grid">
     <a class="contact-card" href="mailto:shamik1900@gmail.com">
@@ -396,6 +475,6 @@
   <span>Book time</span>
 </button>
 
-<script src="assets/js/script.js?v=4"></script>
+<script src="assets/js/script.js?v=5"></script>
 </body>
 </html>

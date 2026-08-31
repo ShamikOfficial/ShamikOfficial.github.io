@@ -128,7 +128,7 @@
   });
 
   /* ---- Project video mute toggle ---- */
-  document.querySelectorAll('.project-media').forEach(function (media) {
+  document.querySelectorAll('.project-media, .project-featured-media').forEach(function (media) {
     var video = media.querySelector('video.project-video');
     var btn = media.querySelector('.video-mute-btn');
     if (!video || !btn) return;
@@ -161,6 +161,27 @@
       });
     }, { rootMargin: '-42% 0px -52% 0px' });
     document.querySelectorAll('section[id]').forEach(function (s) { observer.observe(s); });
+  }
+
+  /* ---- Scroll reveal ---- */
+  if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function (el, i) {
+      el.style.transitionDelay = (i % 4) * 0.06 + 's';
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
   }
 
   /* ---- Profile data hint for crawlers ---- */
