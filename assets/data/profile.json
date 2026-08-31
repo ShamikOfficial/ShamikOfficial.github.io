@@ -24,21 +24,18 @@
       "header": "1st Place - UCLA SAIRS Hackathon",
       "blurb": "Won the sustainability track with EcoMate-AI, a multimodal agentic platform built in 24 hours.",
       "date": "2025",
-      "image": "assets/images/highlights/ucla-sairs.jpg",
       "link": "projects/ecomate-ai.html"
     },
     {
       "header": "Shipped Trend Pilot",
       "blurb": "Agentic AI for creator teams (FastAPI + Next.js + GPT-4o VLM) that catches trends, generates scripts, and assigns the work.",
       "date": "2026",
-      "image": "assets/images/highlights/agentic-trend.jpg",
       "link": "projects/agentic-trend-orchestrator.html"
     },
     {
       "header": "Vice President - GRIDS at USC",
       "blurb": "Leading a 250-member graduate data science community with workshops, ideathons, and projects.",
       "date": "2025-Present",
-      "image": "assets/images/highlights/grids-usc.jpg",
       "link": "https://linkedin.com/in/shamikofficial/"
     }
   ],
