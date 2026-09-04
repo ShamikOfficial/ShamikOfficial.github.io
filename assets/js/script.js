@@ -1,39 +1,71 @@
-/* Shamik Basu — portfolio scripts (no dependencies) */
+/* Shamik Basu - portfolio scripts (no dependencies) */
 (function () {
   'use strict';
 
   var CALENDAR_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3zKOb4P00q16CON7kIHMigcoWwlm3bdonq4wnh5WpjqUZ3GxG1HROP2XfDn2QwpBov9DEEypsW?gv=true';
 
-  function closestEl(node, selector) {
-    while (node && node.nodeType === 1) {
-      if (node.matches && node.matches(selector)) return node;
-      node = node.parentElement;
+  /* ---- Theme ---- */
+  var root = document.documentElement;
+  try {
+    if (localStorage.getItem('theme') === 'dark') root.setAttribute('data-theme', 'dark');
+  } catch (e) {}
+
+  function syncThemeToggle() {
+    var isDark = root.getAttribute('data-theme') === 'dark';
+    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.title = isDark ? 'Light mode' : 'Dark mode';
+    });
+  }
+  syncThemeToggle();
+
+  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var isDark = root.getAttribute('data-theme') === 'dark';
+      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      try { localStorage.setItem('theme', isDark ? 'light' : 'dark'); } catch (e) {}
+      syncThemeToggle();
+    });
+  });
+
+  /* ---- Mobile menu ---- */
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.querySelector('.mobile-menu');
+  if (toggle && menu) {
+    function closeMenu() {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
     }
-    return null;
+    toggle.addEventListener('click', function () {
+      var isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+    menu.querySelectorAll('a, [data-open-calendar]').forEach(function (el) {
+      el.addEventListener('click', closeMenu);
+    });
   }
 
   /* ---- Calendar panel ---- */
   function initCalendar() {
     var panel = document.querySelector('.calendar-panel');
     var backdrop = document.querySelector('.calendar-backdrop');
-    var fab = document.querySelector('.calendar-fab');
-    if (!panel || !backdrop || !fab || panel.dataset.calendarInit) return;
+    if (!panel || !backdrop || panel.dataset.calendarInit) return;
     panel.dataset.calendarInit = '1';
 
     var iframe = panel.querySelector('.calendar-frame, iframe');
     var closeBtn = panel.querySelector('.calendar-close');
+    var openers = document.querySelectorAll('[data-open-calendar]');
     var loaded = false;
     var open = false;
+    var lastFocus = null;
 
     function loadIframe() {
       if (!iframe || loaded) return;
       loaded = true;
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-          iframe.src = CALENDAR_URL;
-          iframe.removeAttribute('loading');
-        });
-      });
+      iframe.src = CALENDAR_URL;
     }
 
     function setOpen(next) {
@@ -43,8 +75,16 @@
       document.body.classList.toggle('calendar-open', open);
       panel.setAttribute('aria-hidden', open ? 'false' : 'true');
       backdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
-      fab.setAttribute('aria-expanded', open ? 'true' : 'false');
-      if (open) loadIframe();
+      openers.forEach(function (btn) {
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      if (open) {
+        lastFocus = document.activeElement;
+        loadIframe();
+        if (closeBtn) closeBtn.focus();
+      } else if (lastFocus && lastFocus.focus) {
+        lastFocus.focus();
+      }
     }
 
     if (closeBtn) closeBtn.addEventListener('click', function () { setOpen(false); });
@@ -53,54 +93,25 @@
       if (e.key === 'Escape' && open) setOpen(false);
     });
     document.body.addEventListener('click', function (e) {
-      if (closestEl(e.target, '[data-open-calendar]')) {
+      var opener = e.target.closest && e.target.closest('[data-open-calendar]');
+      if (opener) {
         e.preventDefault();
         setOpen(!open);
       }
     });
   }
 
-  function initSiteChrome() {
-    initCalendar();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSiteChrome);
-  } else {
-    initSiteChrome();
-  }
-
-  /* ---- Theme toggle ---- */
-  var root = document.documentElement;
-  try {
-    if (localStorage.getItem('theme') === 'dark') root.setAttribute('data-theme', 'dark');
-  } catch (e) {}
-
-  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+  /* ---- Click-to-play local video ---- */
+  document.querySelectorAll('[data-play-video]').forEach(function (btn) {
+    var media = btn.closest('.project-featured-media, .project-media');
+    if (!media) return;
+    var video = media.querySelector('video');
+    if (!video) return;
     btn.addEventListener('click', function () {
-      var isDark = root.getAttribute('data-theme') === 'dark';
-      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      try { localStorage.setItem('theme', isDark ? 'light' : 'dark'); } catch (e) {}
+      media.classList.add('is-playing');
+      video.play().catch(function () {});
     });
   });
-
-  /* ---- Mobile menu ---- */
-  var toggle = document.querySelector('.menu-toggle');
-  var menu = document.querySelector('.mobile-menu');
-  if (toggle && menu) {
-    toggle.addEventListener('click', function () {
-      var isOpen = menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-    });
-    menu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-      });
-    });
-  }
 
   /* ---- Lazy YouTube embeds ---- */
   function loadYoutube(box) {
@@ -117,7 +128,6 @@
   }
 
   document.querySelectorAll('.video-embed[data-youtube]').forEach(function (box) {
-    if (!box.getAttribute('data-youtube')) return;
     box.addEventListener('click', function () { loadYoutube(box); });
     box.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
@@ -127,55 +137,33 @@
     });
   });
 
-  /* ---- Project video mute toggle ---- */
-  document.querySelectorAll('.project-media, .project-featured-media').forEach(function (media) {
-    var video = media.querySelector('video.project-video');
-    var btn = media.querySelector('.video-mute-btn');
-    if (!video || !btn) return;
-    function sync() {
-      var muted = video.muted;
-      btn.classList.toggle('is-muted', muted);
-      btn.setAttribute('aria-pressed', muted ? 'true' : 'false');
-      btn.setAttribute('aria-label', muted ? 'Unmute video' : 'Mute video');
-      btn.title = muted ? 'Unmute' : 'Mute';
-    }
-    btn.addEventListener('click', function () {
-      video.muted = !video.muted;
-      if (!video.muted) video.play().catch(function () {});
-      sync();
-    });
-    sync();
-  });
-
   /* ---- Active nav section ---- */
   var navLinks = document.querySelectorAll('.nav-links a[data-section]');
   if (navLinks.length && 'IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
+    var sectionObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var id = entry.target.getAttribute('id');
-          navLinks.forEach(function (a) {
-            a.classList.toggle('is-active', a.getAttribute('data-section') === id);
-          });
-        }
+        if (!entry.isIntersecting) return;
+        var id = entry.target.getAttribute('id');
+        navLinks.forEach(function (a) {
+          a.classList.toggle('is-active', a.getAttribute('data-section') === id);
+        });
       });
-    }, { rootMargin: '-42% 0px -52% 0px' });
-    document.querySelectorAll('section[id]').forEach(function (s) { observer.observe(s); });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    document.querySelectorAll('section[id]').forEach(function (s) { sectionObserver.observe(s); });
   }
 
   /* ---- Scroll reveal ---- */
   if ('IntersectionObserver' in window) {
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
 
     document.querySelectorAll('.reveal').forEach(function (el, i) {
-      el.style.transitionDelay = (i % 4) * 0.06 + 's';
+      el.style.transitionDelay = (i % 3) * 0.05 + 's';
       revealObserver.observe(el);
     });
   } else {
@@ -184,9 +172,5 @@
     });
   }
 
-  /* ---- Profile data hint for crawlers ---- */
-  try {
-    var profilePath = document.body.getAttribute('data-profile-path') || 'assets/data/profile.json';
-    fetch(profilePath).catch(function () {});
-  } catch (e) {}
+  initCalendar();
 })();
