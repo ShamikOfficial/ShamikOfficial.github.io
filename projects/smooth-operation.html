@@ -4,24 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smooth Operation - Case Study | Shamik Basu</title>
-<meta name="description" content="Smooth Operation turns Atlassian workflow chaos into clarity with real-time flow graphs and heatmaps that reveal blockers, risks, and engagement. Hackathon project by Shamik Basu.">
+<meta name="description" content="Smooth Operation is an Atlassian Forge app with work-item heatmaps, analytics, smart search, and vulnerability scanning for Jira and Confluence. Built for Codegeist 2025 by Shamik Basu.">
 <link rel="canonical" href="https://www.shamik-basu.com/projects/smooth-operation.html">
 <meta property="og:title" content="Smooth Operation - Case Study">
-<meta property="og:description" content="Real-time flow graphs and heatmaps that turn Atlassian chaos into clarity.">
+<meta property="og:description" content="Atlassian Forge app: heatmaps, analytics, smart search, and vulnerability scanning for Jira and Confluence.">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/styles.css?v=11">
+<link rel="stylesheet" href="../assets/css/styles.css?v=12">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CreativeWork",
+  "@type": "SoftwareSourceCode",
   "name": "Smooth Operation",
   "author": { "@type": "Person", "name": "Shamik Basu", "url": "https://www.shamik-basu.com/" },
-  "url": "https://devpost.com/shamik1900",
-  "about": "Real-time flow graphs and heatmaps that turn Atlassian workflow chaos into clarity"
+  "url": "https://devpost.com/software/smooth-operator-j0lmx6",
+  "programmingLanguage": ["JavaScript", "React", "Node.js"],
+  "about": "Atlassian Forge app that adds heatmaps, analytics, smart search, and vulnerability scanning to Jira and Confluence",
+  "dateCreated": "2025-12"
 }
 </script>
 </head>
@@ -42,11 +44,11 @@
 <main class="wrap">
   <section class="case-hero">
     <a href="../index.html#projects" class="case-back">← Back to projects</a>
-    <p class="section-label">Data Visualization · Hackathon</p>
+    <p class="section-label">Atlassian Forge · Codegeist 2025</p>
     <h1>Smooth Operation</h1>
-    <p class="tagline">Turns Atlassian workflow chaos into clarity - real-time flow graphs and heatmaps surface blockers, risks, and engagement so teams collaborate faster and with less friction.</p>
+    <p class="tagline">An Atlassian Forge app that turns Jira and Confluence chaos into clarity. Real-time heatmaps, analytics, smart search, and vulnerability scanning help teams spot blockers, manage risk, and move faster.</p>
     <div class="project-actions" style="gap:12px;">
-      <a href="https://devpost.com/shamik1900" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on Devpost</a>
+      <a href="https://devpost.com/software/smooth-operator-j0lmx6" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View on Devpost</a>
     </div>
   </section>
 
@@ -61,35 +63,85 @@
   </section>
 
   <section class="case-section">
-    <h2>The problem</h2>
-    <p>Across Jira and Confluence, work state is scattered and hard to read at a glance. Teams can't easily see where things are stuck, which work is risky, or where engagement is dropping - so blockers hide until they hurt.</p>
+    <div class="case-grid">
+      <div class="fact-card"><div class="fact-value">4 features</div><div class="fact-label">Heatmap, analytics, smart search, vulnerability scan</div></div>
+      <div class="fact-card"><div class="fact-value">Privacy first</div><div class="fact-label">Runs entirely inside the Forge sandbox, no external AI APIs</div></div>
+    </div>
   </section>
 
   <section class="case-section">
-    <h2>What I built</h2>
+    <h2>The problem</h2>
+    <p>Standard Jira boards hide context. Teams click through dozens of issues to check deadlines, security status, or dependency chains. The tool should surface risk and context up front, not make people hunt for it.</p>
     <ul>
-      <li>Real-time <strong>flow graphs</strong> that visualize how work moves through an Atlassian workspace.</li>
-      <li><strong>Heatmaps</strong> that highlight blockers, risk, and engagement hot spots at a glance.</li>
-      <li>An interface designed to help teams <strong>collaborate faster and without friction</strong>.</li>
+      <li><strong>Risk:</strong> Which issues are near deadline or contain sensitive data?</li>
+      <li><strong>Agility:</strong> Which items are stalling, and where is the information?</li>
+      <li><strong>Backlog:</strong> How can the whole backlog be visualized for sprint planning?</li>
+    </ul>
+  </section>
+
+  <section class="case-section">
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Work Items Heatmap:</strong> Color-coded board based on status and deadline proximity for hassle-free backlog management and sprint planning.</li>
+      <li><strong>Advanced Analytics:</strong> Activity score, last activity, and sub-task progress for standups, plus due-date actions when dates are missing or overdue.</li>
+      <li><strong>Embedded Smart Search:</strong> Context-aware search across Jira (JQL) and Confluence (CQL) so people can find related tasks and docs without pinging teammates.</li>
+      <li><strong>Vulnerability Scanning:</strong> Checks issue content for secrets like API keys and passwords, with one-click Fix (hash) or Remove actions.</li>
+    </ul>
+  </section>
+
+  <section class="case-section">
+    <h2>How we built it</h2>
+    <ul>
+      <li>Built entirely on <strong>Atlassian Forge</strong> with <strong>React</strong> and the native UI Kit for speed, security, and deep product integration.</li>
+      <li><strong>Privacy first:</strong> Smart search optimization and vulnerability scanning run inside the Forge sandbox with no external AI or API services.</li>
+      <li><strong>Heatmap:</strong> Dynamic rendering and custom color logic (red through blue) from live Jira status and due dates, with pagination for large backlogs.</li>
+      <li><strong>Smart Search:</strong> Uses issue context (project key, summary keywords) to enhance queries before hitting JQL and CQL APIs.</li>
+      <li><strong>Analytics:</strong> Custom metrics drive UI, including conditional due-date buttons and sub-task progress bars.</li>
+    </ul>
+  </section>
+
+  <section class="case-section">
+    <h2>Challenges</h2>
+    <ul>
+      <li><strong>Scale:</strong> Large-backlog heatmap rendering required pagination and chunked loads (6 items at a time).</li>
+      <li><strong>Sandboxed scanning:</strong> Regex-based secret detection had to stay fast inside Forge resource limits.</li>
+      <li><strong>Unified search:</strong> Aggregating Jira and Confluence results into one readable pane needed careful data shaping.</li>
+    </ul>
+  </section>
+
+  <section class="case-section">
+    <h2>Outcome</h2>
+    <ul>
+      <li>Delivered a private "smart" experience without external AI services, suited to enterprise security needs.</li>
+      <li>Shipped a heatmap that makes backlog and deadline risk readable at a glance.</li>
+      <li>Made security actionable with one-click Fix and Remove for sensitive content.</li>
+      <li>Submitted to <strong>Codegeist 2025: Atlassian Williams Racing Edition</strong>.</li>
     </ul>
   </section>
 
   <section class="case-section">
     <h2>Tech</h2>
     <div class="skill-pills">
-      <span class="skill-pill">Python</span><span class="skill-pill">AI</span><span class="skill-pill">Data Visualization</span><span class="skill-pill">Atlassian APIs</span>
+      <span class="skill-pill">Atlassian Forge</span>
+      <span class="skill-pill">React</span>
+      <span class="skill-pill">Node.js</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">JQL</span>
+      <span class="skill-pill">Bitbucket</span>
+      <span class="skill-pill">YAML</span>
     </div>
   </section>
+
   <section class="case-section">
     <div class="report-card">
       <div class="report-icon">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm0 2l4 4h-4V4zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
       </div>
       <div class="report-info">
-        <h2>Full project report</h2>
-        <p>A detailed write-up for this project is coming soon.</p>
+        <h2>Full write-up on Devpost</h2>
+        <p>Inspiration, build notes, challenges, and next steps for Smooth Operation.</p>
       </div>
-      <span class="btn btn-primary" aria-disabled="true">Coming soon</span>
+      <a href="https://devpost.com/software/smooth-operator-j0lmx6" target="_blank" rel="noopener" class="btn btn-primary">Open Devpost</a>
     </div>
   </section>
 </main>
@@ -121,6 +173,6 @@
   <span>Book time</span>
 </button>
 
-<script src="../assets/js/script.js?v=7"></script>
+<script src="../assets/js/script.js?v=8"></script>
 </body>
 </html>

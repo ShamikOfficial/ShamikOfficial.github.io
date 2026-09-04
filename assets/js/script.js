@@ -101,16 +101,25 @@
     });
   }
 
-  /* ---- Click-to-play local video ---- */
-  document.querySelectorAll('[data-play-video]').forEach(function (btn) {
+  /* ---- Video mute toggle (autoplay starts muted by browser policy) ---- */
+  document.querySelectorAll('.video-mute-btn').forEach(function (btn) {
     var media = btn.closest('.project-featured-media, .project-media');
-    if (!media) return;
-    var video = media.querySelector('video');
+    var video = media && media.querySelector('video');
     if (!video) return;
+
+    function sync() {
+      btn.classList.toggle('is-muted', video.muted);
+      btn.setAttribute('aria-pressed', video.muted ? 'true' : 'false');
+      btn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
+      btn.title = video.muted ? 'Unmute' : 'Mute';
+    }
+
     btn.addEventListener('click', function () {
-      media.classList.add('is-playing');
-      video.play().catch(function () {});
+      video.muted = !video.muted;
+      if (!video.muted) video.play().catch(function () {});
+      sync();
     });
+    sync();
   });
 
   /* ---- Lazy YouTube embeds ---- */
